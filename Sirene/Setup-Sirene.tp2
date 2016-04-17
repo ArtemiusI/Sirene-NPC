@@ -1,0 +1,235 @@
+BACKUP ~Sirene/backup~
+AUTHOR ~Artemius_I~
+AUTO_TRA ~Sirene/translations/%s~
+LANGUAGE ~English~
+         ~English~
+         ~Sirene/setup.tra~
+
+BEGIN ~Sirene NPC for BG:EE~
+
+COPY ~Sirene/2da~ ~override~
+COPY ~Sirene/audio~ ~override~
+COPY ~Sirene/portraits~ ~override~
+COPY ~Sirene/items~ ~override~
+COPY ~Sirene/spells~ ~override~
+
+INCLUDE ~Sirene/fl#add_kit_ee.tpa~
+ADD_KIT ~C0ILM~
+
+ // appended to CLASWEAP.2da
+ ~C0ILM		1           1           1           1           1           1           1           1~
+
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~C0ILM		2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+    
+ // appended to ABCLASRQ.2da
+ ~C0ILM				13      0	13	14	13	0~
+
+ // appended to ABCLSMOD.2da
+ ~C0ILM				0	0	0	0	0	0~
+
+ // appended to ABDCDSRQ.2da
+ ~C0ILM                		0       0       0       0       0       0~
+
+ // appended to ABDCSCRQ.2da
+ ~C0ILM                 	0       0       0       0       0	0~
+
+ // appended to ALIGNMNT.2da
+ ~C0ILM                  	1       1       1       0       0	0       0       0       0~
+
+ // appended to DUALCLAS.2da
+ ~C0ILM                  	0       0       0       0       0       0~
+
+ // path to your CLAB-style 2da file 
+ ~Sirene/2da/C0ILMCL.2da~
+
+ // PC races and classes allowed to use this kit, from KITTABLE.2da
+ ~~
+
+ // usability flags, added to the end of the KITLIST.2da entry
+ ~0x00000008     6~
+
+ // HLA table to use; see LUABBR.2da
+ ~LUPA0~
+
+ // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+ ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN4,2 POTN14,5 HAM07 SW1H27 STAF08~
+
+ // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da
+  SAY ~martyr~
+  SAY ~Martyr~
+  SAY ~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
+
+Advantages:
+- Hit Die: d12
+- May use the Sacrifice ability once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
+
+SACRIFICE: The martyr heals the target for 1d6+1 per level hit points and deals 1d6+1 per level nonlethal damage to <PRO_HIMHER>self.
+
+- May use the Martyrdom ability once per day starting at level 5. Gains an additional use every 7 levels thereafter.
+
+MARTYRDOM: The target gains a +4 bonus to armor class and 50% resistance to physical damage for 5 rounds while the martyr loses the same amount.
+
+- 12th level: Gains 10% resistance to physical damage. An additional 5% is gained at levels 16 and 20.
+- 15th level: May use the Ilmater's Grace ability once per day.
+
+ILMATER'S GRACE: The martyr regenerates for 3 hit points per second for 1 turn.
+
+Disadvantages:
+- -1 penalty to THAC0 every 5 levels (starting at level 1).
+- May not cast Protection from Evil.
+- May not Turn Undead.
+- May not use ranged weapons.~
+
+LAF fl#add_kit_ee
+  STR_VAR
+    kit_name = C0ILM
+    clswpbon = ~1 0 3~
+	hpclass = ~HPBARB~
+    numwslot = 3
+END
+
+COPY ~Sirene/spells/C0ilmsp1.spl~ ~override~
+SAY NAME1 ~Sacrifice~
+SAY NAME2 ~Sacrifice~
+SAY UNIDENTIFIED_DESC ~Sacrifice
+The martyr heals the target for 1d6+1 per level hit points and deals 1d6+1 per level nonlethal damage to <PRO_HIMHER>self.~
+
+COPY ~Sirene/spells/C0ilmsp2.spl~ ~override~
+SAY NAME1 ~Martyrdom~
+SAY NAME2 ~Martyrdom~
+SAY UNIDENTIFIED_DESC ~Martyrdom
+The target gains a +4 bonus to armor class and 50% resistance to physical damage for 5 rounds while the martyr loses the same amount.~
+
+COPY ~Sirene/spells/C0ilmsp3.spl~ ~override~
+SAY NAME1 ~Ilmater's Grace~
+SAY NAME2 ~Ilmater's Grace~
+SAY UNIDENTIFIED_DESC ~Ilmater's Grace
+The martyr regenerates for 3 hit points per second for 1 turn.~
+
+EXTEND_TOP ~AR3400.bcs~ ~Sirene/Scripts/AR3400.baf~
+
+APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
+  ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+COPY ~Sirene/creatures/C0Sirene.cre~ ~override/C0Sirene.cre~
+  SAY NAME1 ~Sirene~
+  SAY NAME2 ~Sirene~
+  WRITE_ASCII 0x248 ~C0Sirene~ #8  //override script
+  WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
+  WRITE_ASCII 0x2cc ~C0Sirene~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~SireneS~ #8   //small portrait
+  WRITE_ASCII 0x3c ~SireneM~ #8   //medium portrait
+  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
+  SAY MORALE ~I'll not die this day!~ [C0SIR001]
+  SAY HAPPY ~You are... an inspiration to me.~
+  SAY UNHAPPY_ANNOYED ~I do not approve of the path you're taking us.~
+  SAY UNHAPPY_SERIOUS ~My mercy and patience are running thin.~
+  SAY UNHAPPY_BREAKING_POINT ~I'll not be a martyr to your evil cause.~
+  SAY LEADER ~I shall lead by example.~ [C0SIR002]
+  SAY TIRED ~I am exhausted.~ [C0SIR003]
+  SAY BORED ~Are we waiting for something?~ [C0SIR004]
+  SAY BATTLE_CRY1 ~Attack!~ [C0SIR005]
+  SAY BATTLE_CRY2 ~Make peace with your gods!~ [C0SIR006]
+  SAY BATTLE_CRY3 ~To battle!~ [C0SIR007]
+  SAY BATTLE_CRY4 ~~
+  SAY BATTLE_CRY5 ~~
+  SAY DAMAGE ~Ah!~ [C0SIR008]
+  SAY DYING ~No... uh...~ [C0SIR009]
+  SAY HURT ~Ugh, my wounds need tending!~ [C0SIR010]
+  SAY AREA_FOREST ~The forest is so beautiful, and I truly appreciate the calm.~
+  SAY AREA_CITY ~The city is a haven of suffering...~
+  SAY AREA_DUNGEON ~There is evil amongst the darkness, my friend. Stay alert.~
+  SAY AREA_DAY ~It's a beautiful day.~
+  SAY AREA_NIGHT ~The dark will not hide our enemies.~
+  SAY SELECT_COMMON1 ~You have need of me?~ [C0SIR011]
+  SAY SELECT_COMMON2 ~I am by your side.~ [C0SIR012]
+  SAY SELECT_COMMON3 ~Yes?~ [C0SIR013]
+  SAY SELECT_ACTION1 ~Certainly.~ [C0SIR014]
+  SAY SELECT_ACTION2 ~Very well.~ [C0SIR015]
+  SAY SELECT_ACTION3 ~As you wish.~ [C0SIR016]
+  SAY SELECT_ACTION4 ~How can I help?~ [C0SIR017]
+  SAY SELECT_ACTION5 ~Ready and willing.~ [C0SIR018]
+  SAY SELECT_ACTION6 ~Tell me your needs.~ [C0SIR019]
+  SAY SELECT_ACTION7 ~I am here.~ [C0SIR020]
+  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SIR021]
+  SAY CRITICAL_MISS ~Ugh!~ [C0SIR022]
+  SAY TARGET_IMMUNE ~What? That can't be!~
+  SAY INVENTORY_FULL ~I dropped that, 'twas too much of a burden.~
+  SAY SPELL_DISRUPTED ~Ilmater forgive me...~
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  WRITE_ASCII 0x248 ~C0Sirene~ #8
+  WRITE_ASCII 0x2cc ~C0Sirene~  #8
+  WRITE_ASCII 0x280 ~C0Sirene~  #32
+  WRITE_ASCII 0X34  ~SireneM~ #8
+  WRITE_ASCII 0x3c  ~SireneL~ #8
+
+COMPILE	~Sirene/Dialogue/BC0Siren.d~ 
+	~Sirene/Dialogue/C0Sirene.d~ 
+	~Sirene/Dialogue/C0SirenEE.d~ 
+	~Sirene/Dialogue/C0SirenJ.d~
+	~Sirene/Dialogue/C0SirenP.d~
+
+	~Sirene/Scripts/C0DornF.baf~ 
+	~Sirene/Scripts/C0Sirene.baf~
+	~Sirene/Scripts/C0SirenD.baf~
+	~Sirene/Scripts/C0reset.baf~
+	
+EXTEND_BOTTOM ~Dorn.bcs~ ~Sirene/scripts/c0dornf.baf~
+
+APPEND ~pdialog.2da~
+~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
+UNLESS ~C0Siren~
+
+APPEND ~interdia.2da~
+~C0Sirene       BC0Siren C0SirenEE~
+UNLESS ~C0Siren~
+  
+COPY ~Sirene/items/C0sw2h.BAM~ ~override~
+COPY ~Sirene/Items/C0SW2H.itm~ ~override/C0SW2H.itm~
+SAY NAME1 ~Two-handed Sword~
+SAY NAME2 ~Brimstone +1~
+SAY DESC ~This two-handed sword is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which disorients foes and makes it more difficult to retaliate.
+
+This weapon can only be wielded by tieflings.
+
+STATISTICS:
+
+Combat abilities:
+ Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+
+Equipped abilities:
+ -1 Constitution
+ 20% resistance to fire damage
+
+THAC0: +1
+Damage: 1d10+1, 1 fire damage (slashing)
+Speed Factor: 8
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 10~
+
+// Alternate Portrait
+
+BEGIN ~Alternate Portrait (BG2 style) by Isandir~
+
+COPY ~Sirene/Portraits/Sirene2L.bmp~ ~override/SireneL.bmp~
+COPY ~Sirene/Portraits/Sirene2M.bmp~ ~override/SireneM.bmp~
+COPY ~Sirene/Portraits/Sirene2S.bmp~ ~override/SireneS.bmp~

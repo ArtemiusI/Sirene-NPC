@@ -1,0 +1,30 @@
+IF
+	!Dead("C0Sirene")
+	!Dead("C0Dorn")
+	Global("C0SireneDornConflict","GLOBAL",1)
+THEN
+  RESPONSE #100
+	LeaveParty()
+    DialogInterrupt(FALSE)
+	EquipMostDamagingMelee()
+	Spell(Myself,ASSASSIN_POISON)
+	Attack("C0Sirene")
+END
+
+IF
+  Global("C0SireneDornConflict","GLOBAL",1)
+  HaveSpell(BLACKGUARD_ABSORB_HEALTH)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    Spell("C0Sirene",BLACKGUARD_ABSORB_HEALTH)
+END
+
+IF
+	Dead("C@Sirene")
+THEN
+  RESPONSE #100
+    DialogInterrupt(TRUE)
+	StartDialogueNoSet(Player1)
+	SetGlobal("C0SireneDornConflict","GLOBAL",2)
+END

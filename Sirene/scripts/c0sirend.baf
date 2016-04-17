@@ -1,0 +1,16 @@
+// PC talk 6
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    Global("C0SireneTalksBG1","GLOBAL",11)
+    RealGlobalTimerExpired("C0SireneTalksBG1Timer","GLOBAL")
+	!AreaType("DUNGEON")
+	!AreaType("OUTDOOR")
+	!Global("C0SireneTalksBG1Stopped","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("C0SireneTalksBG1","GLOBAL",12)
+    StartDialogueNoSet(Player1)
+END
