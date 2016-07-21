@@ -1,0 +1,13 @@
+IF
+	InParty("c0sirene")
+	!Dead("c0sirene")
+	IsValidForPartyDialogue("C0Sirene")
+	Global("C02SireneMystery","GLOBAL",0)
+  THEN
+  RESPONSE #100
+  	SetGlobal("C02SireneMystery","GLOBAL",1)
+	CreateCreatureDoor("c02sirb",[1130.3500],S)
+	Wait(2)
+	ActionOverride("c02sirb",Dialogue(Player1)
+	Continue()
+END

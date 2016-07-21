@@ -1,0 +1,22 @@
+IF
+  Global("bd_mdd1290d_ot","bd4300",1)
+  Global("bd_mdd1290d_ot_C0Sirene","bd4300",0)
+  InParty("C0Sirene")
+THEN
+  RESPONSE #100
+    DisplayStringHead("C0Sirene",~They come without end, <CHARNAME>. We may have no choice but to strike at the source.~) // 'This is another fine mess thou hast gotten us into.'
+    SetGlobal("bd_mdd1290d_ot","bd4300",2)
+    SetGlobal("bd_mdd1290d_ot_C0Sirene","bd4300",1)
+END
+
+IF
+  Global("bd_plot","global",586)
+  !GlobalTimerNotExpired("bd_mdd1341a_ot_timer","bd4300")
+  Global("bd_ot2_C0Sirene","bd4300",0)
+  InParty("C0Sirene")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("bd_mdd1341a_ot_timer","bd4300",4)
+    SetGlobal("bd_ot2_C0Sirene","bd4300",1)
+    DisplayStringHead("C0Sirene",~'Twas victory, but not without sacrifice... may the lost be honored for their deeds.~)
+END

@@ -10,7 +10,7 @@ This mod adds a new joinable NPC to the game: Sirene, a tiefling paladin of Ilma
 
 She can be found at the Song of the Morning, the temple of Lathander east of Beregost, outside the entrance to the main temple. She will only join a PC of nonevil alignment.
 
-She comes at level 2 with her personal two-handed sword and the following stats:
+She begins at level 2 with her personal two-handed sword and the following stats:
 
 	STR: 15
 	DEX: 17
@@ -24,7 +24,9 @@ As a tiefling, she also has 10% fire and cold resistance.
 
 She has fourteen friendship talks with the PC. You can imply that you're interested in a romantic relationship regardless of race and alignment, but it won't develop into a full romance as of yet. There are currently no quests.
 
-She is compatible with all NPCs except Dorn, who she will come to conflict with quickly and force you to choose between them or let them come to blows.
+She is compatible with all NPCs except Dorn in BG1, who she will come to conflict with quickly and force you to choose between them or let them come to blows.
+
+Sirene currently has crossmod banter with White by Lava Del'Vortel.
 
 -----------------------
  Martyr Kit
@@ -64,16 +66,35 @@ Sirene has fourteen friendship dialogues with the PC. She has no romance in the 
 She will begin her dialogues after completing the Nashkel mines quest, and will pause it prior to certain chapters if you have completed a certain stage of the friendship. Only talk 6 is area-conditional- you can trigger it by resting in an inn.
 
 -----------------------
- Alternate Portrait
------------------------
-
-A new portrait created by the incredible artist Isandir is now an optional component. This portrait is in Baldur's Gate II art style and will be used for the BG2 component. Those that prefer the alternative may now use it in the first game.
-
------------------------
  Installation
 -----------------------
 
 Unzip the files into your Baldur's Gate: Enhanced Edition folder (usually C:/Program Files/Baldur's Gate Enhanced Edition/Data/00766) and run Setup-Sirene.exe
+
+-----------------------
+ FAQ
+-----------------------
+
+Q: (SoD) Where do I find Sirene?
+A: At the Iron Throne building. If you miss her she'll show up at the army camps later.
+
+Q: (SoD) Any quests?
+A: No, but there is are a couple of encounters.
+
+Q: (SoD) What are they?
+A: They should be hard to miss. As long as you do all the sidequests you should find them.
+
+Q: (SoD) New items?
+A: Three, one from the encounter and another from a minor mod-added NPC. As for the third... well, keep Jaheira around for a while and you'll see.
+
+Q: (SoD) Are there any conflicts?
+A: None, at least fatally. Sirene and Dorn will not tolerate each other normally, but it's possible to convince them to making a truce.
+
+Q: (SoD) How do I keep both Sirene and Dorn in the party?
+A: Have a Charisma stat higher than 16.
+
+Q: (SoD) The <SPOILER> is kicking my ass!
+A: Yeah... I tried to make it a somewhat difficult fight. Breach will make it a whole lot easier, but if you don't have it, you'll need to wear out its buffs for a bit. Since it's only one enemy, perhaps summoned creatures could be helpful?
 
 -----------------------
  Credits
@@ -81,7 +102,7 @@ Unzip the files into your Baldur's Gate: Enhanced Edition folder (usually C:/Pro
 
 Author: Artemius_I
 Portrait: sporeboy - http://sporeboy.deviantart.com/art/Kitty-10791404
-Alternate Portrait (BG2 style): Isandir - http://isandir.com/about-isandir-custom-portraits-baldurs-gate/
+Alternative Portrait - Isandir
 Soundset: Bioware - Icewind Dale
 
 -----------------------
@@ -94,15 +115,38 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
-v1.1
- - Marl 'violent' interjection fixed
- - Brimstone description typo corrected
- - Friendship talks expanded
- - Portrait by Isandir added
- - New icons for spells added
+v2.0 beta
+- Added content for Siege of Dragonspear
+- Minor changes to text
+- Brimstone now properly 'usable by tieflings'
+- Martyr ability scaling rebalanced
+- Martyr ability visuals improved
+- BG1-Sirene now increases in experience when joined to match the PC (up to 32,000XP)
+- PID is now disabled during combat
+- Temporarily disabled Fighter/Cleric alternate class until issues are ironed out
+
+v1.5.1
+- Fixed soundset issues related to resetting via PID
+
+v1.5
+- Added alternative classes (paladin, cavalier, inquisitor, undead hunter, fighter/cleric)
+
+v1.4
+- Fixed banters with Rasaad and Neera
+- Fixed Cloakwood Mines interjections
+
+v1.3
+- Another new icon and description image for Brimstone
+- Expanded PID with flirts and HP-dependent responses
+- (optional) Crossmod banter with White NPC
+
+v1.2
+- Fixed 'wounded' dialogue bug that caused dialogue to initiate endlessly
+- Added delay between first and second friendship talks
+- New icon and description image for Brimstone
 
 v1.0
- - Initial mod release
+ - Initial full release
  - TotSC interjections and dialogue added
  - Errors in banter scripts with Coran and Alora fixed
  - 24 bit portrait added (thanks Lava Del'Vortel)
@@ -111,5 +155,6 @@ v0.beta.1
  - v0.beta.03 - Changed some I_C_T strings to I_C_T2 so that Sirene no longer hijacks NPC actions during interjections (thanks WhiteAgnus)
  - v0.beta.02 - Added missing strings that caused friendship to stall indefinitely
  - v0.beta.01 - Fixed area codes for talk 13, removed useless Viconia script
+ 
 v0.beta
  - initial release of mod for playtesting

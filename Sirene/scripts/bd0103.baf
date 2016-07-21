@@ -1,0 +1,13 @@
+IF
+  OR(2)
+    InMyArea("C0Sirene")
+    InPartyAllowDead("C0Sirene")
+  GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+  RESPONSE #100
+    ActionOverride("C0Sirene",LeaveParty())
+	ActionOverride("PlayerChest00",TakeCreatureItems("C0Sirene",BACKPACK))
+    SmallWait(1)
+    ActionOverride("C0Sirene",DestroySelf())
+    Continue()
+END

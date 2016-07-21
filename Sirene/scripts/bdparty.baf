@@ -1,0 +1,38 @@
+// Return to camp
+
+IF
+  Global("bd_npc_camp","locals",1)
+  Name("c0sirene",Myself)
+  Switch("bd_npc_camp_chapter","global")
+  OR(2)
+    !Range("ff_camp",999)
+    NextTriggerObject("ff_camp")
+  !IsOverMe("c0sirene")
+THEN
+  RESPONSE #2
+	EscapeAreaMove("BD1000",119,3607,E)
+  RESPONSE #3
+	EscapeAreaMove("BD7100",569,3606,NW)
+  RESPONSE #4
+	EscapeAreaMove("BD3000",838,1754,N)
+END
+
+IF
+  GlobalLT("bd_npc_camp","locals",2)
+  Global("bd_joined","locals",0)
+  Name("c0sirene",Myself)
+  NextTriggerObject("ff_camp")
+  IsOverMe("c0sirene")
+  Switch("bd_npc_camp_chapter","global")
+THEN
+  RESPONSE #2
+    SetGlobal("bd_npc_camp","locals",2)
+    SaveLocation("LOCALS","bd_default_loc",[119.3607])
+  RESPONSE #3
+    SetGlobal("bd_npc_camp","locals",2)
+    SaveLocation("LOCALS","bd_default_loc",[569.3606])
+  RESPONSE #4
+    SetGlobal("bd_npc_camp","locals",2)
+    SaveLocation("LOCALS","bd_default_loc",[838.1754])
+    ChangeAIScript("bdasc3",CLASS)
+END

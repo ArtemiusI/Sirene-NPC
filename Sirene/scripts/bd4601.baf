@@ -1,0 +1,11 @@
+IF
+  Global("bd_hellevator_ot_C0Sirene","bd4601",0)
+  InParty("C0Sirene")
+  !GlobalTimerNotExpired("bd_hellevator_timer","bd4601")
+  !ActuallyInCombat()
+THEN
+  RESPONSE #100
+    SetGlobal("bd_hellevator_ot_C0Sirene","bd4601",1)
+    SetGlobalTimer("bd_hellevator_timer","bd4601",7)
+    DisplayStringHead("C0Sirene",~I feel a strange foreboding, <CHARNAME>. We are approaching a great and ancient evil.~)
+END

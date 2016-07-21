@@ -1,0 +1,48 @@
+IF
+  Global("C02SireneSpawns","BD0111",0)
+  BeenInParty("C0Sirene")
+THEN
+  RESPONSE #100
+    MoveGlobal("BD0111","C0Sirene",[571.535])
+    ApplySpellRES("bdresurr","C0Sirene")
+    SmallWait(1)
+    ActionOverride("C0Sirene",Face(S))
+	ApplySpellRES("bdrejuve","C0Sirene")
+    ChangeEnemyAlly("C0Sirene",NEUTRAL)
+    ChangeSpecifics("C0Sirene",ALLIES)
+    ActionOverride("C0Sirene",SetGlobal("C0SireneJoined","locals",0))
+    ActionOverride("C0Sirene",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP1"))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP1"))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP1"))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP2"))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP2"))
+    ActionOverride("C0Sirene",RemoveSpellRes("C0ILMSP2"))
+    ActionOverride("C0Sirene",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("C0Sirene",ChangeAIScript("C02Siren",OVERRIDE))
+    ActionOverride("C0Sirene",ChangeAIScript("DEFAULT",CLASS))
+    ActionOverride("C0Sirene",ChangeAIScript("",RACE))
+    ActionOverride("C0Sirene",ChangeAIScript("",GENERAL))
+    ActionOverride("C0Sirene",ChangeAIScript("",DEFAULT))
+    ActionOverride("C0Sirene",SetDialog("C02Siren"))
+	ActionOverride("C0Sirene",SetPlayerSound(Myself,@2,EXISTANCE5))
+    SetGlobal("C02SireneSpawns","BD0111",1)
+    Continue()
+END
+
+IF
+  Global("C02SireneSpawns","BD0111",0)
+  !BeenInParty("C0Sirene")
+THEN
+  RESPONSE #100
+    CreateCreature("c02siren",[571.535],S)
+    ApplySpell("C0Sirene",0)
+    SetGlobal("C02SireneSpawns","BD0111",1)
+	ChangeSpecifics("C0Sirene",ALLIES)
+	ActionOverride("C0Sirene",ChangeAIScript("C02Siren",OVERRIDE))
+	ActionOverride("C0Sirene",ChangeAIScript("DEFAULT",CLASS))
+	ActionOverride("C0Sirene",ChangeAIScript("",RACE))
+	ActionOverride("C0Sirene",ChangeAIScript("",GENERAL))
+	ActionOverride("C0Sirene",ChangeAIScript("",DEFAULT))
+	Continue()
+END

@@ -1,0 +1,14 @@
+IF
+  Global("chapter","global",13)
+  GlobalTimerExpired("bd_jail_visitors_timer","bd0104")
+  Global("bd_jail_visitors","bd0104",4)
+  Global("C02SireneRomanceActive","global",2)
+  !Dead("C02Sirene")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_jail_visitors","bd0104",5)
+    SetGlobalTimer("bd_jail_visitors2_timer","bd0104",TEN_ROUNDS)
+    MoveGlobal("bd0104","C0Sirene",[720.620])
+	ActionOverride("C0Sirene",Polymorph(THIEF_FEMALE_ELF))
+    ActionOverride("C0Sirene",ChangeAIScript("bdvisit",OVERRIDE))
+END

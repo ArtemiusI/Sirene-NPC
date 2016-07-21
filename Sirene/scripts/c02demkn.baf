@@ -1,0 +1,9 @@
+IF
+	See(Player1)
+	Global("C02DemonKnight","LOCALS",0)
+THEN
+RESPONSE #100
+	SetGlobal("C02DemonKnight","LOCALS",1)
+	DisplayStringHead(Myself,~**IN THE NAME OF THE CHOSEN, I SHALL REND THE FLESH FROM THY BONES!**~)
+	Continue()
+END

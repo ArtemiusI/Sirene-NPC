@@ -1,0 +1,9 @@
+IF
+  InParty("C0Sirene")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SetGlobal("C0Sirene_party_epilogue","global",1)
+    ActionOverride("C0Sirene",LeaveParty())
+    ActionOverride("C0Sirene",DestroyAllDestructableEquipment())
+END

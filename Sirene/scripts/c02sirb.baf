@@ -1,0 +1,8 @@
+IF
+	Global("C02MysteryShout","LOCALS",1)
+THEN
+RESPONSE #100
+	DisplayStringHead(Myself,~Come, Nazthuret. I call upon you to test these whelps.~)
+	SetGlobal("C02MysteryShout","LOCALS",2)
+	Continue()
+END

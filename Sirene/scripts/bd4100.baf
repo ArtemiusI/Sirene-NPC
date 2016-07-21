@@ -1,0 +1,49 @@
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_C0Sirene_ot","bd4100",0)
+  ReputationLT(Player1,10)
+  InParty("C0Sirene")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",ONE_ROUND)
+    DisplayStringHead("C0Sirene",~What- what have you done, <CHARNAME>?! Have... have you fallen into the darkness at last?~)
+END
+
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_C0Sirene_ot","bd4100",0)
+  !ReputationLT(Player1,10)
+  InParty("C0Sirene")
+  OR(2)
+  Global("C02SireneRomanceActive","GLOBAL",1)
+  Global("C02SireneRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
+    DisplayStringHead("C0Sirene",~No. NO! <CHARNAME> could not have been the one... <PRO_HESHE> could not!~)
+END
+
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_C0Sirene_ot","bd4100",0)
+  !ReputationLT(Player1,10)
+  InParty("C0Sirene")
+  !Global("C02SireneRomanceActive","GLOBAL",1)
+  !Global("C02SireneRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+  RESPONSE #100
+    SetGlobal("bd_C0Sirene_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
+    DisplayStringHead("C0Sirene",~No... 'twas not <CHARNAME>! <PRO_HESHE> is a good <PRO_MANWOMAN>, it could not possibly have been <PRO_HESHE>!~)
+END
