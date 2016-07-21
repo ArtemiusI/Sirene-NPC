@@ -49,8 +49,8 @@ EXIT
 	
 // Neera
 
-CHAIN IF ~InParty("Neera")
-See("Neera")
+CHAIN IF ~InParty("C0Sirene")
+See("C0Sirene")
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
@@ -72,8 +72,8 @@ EXIT
 
 // Rasaad
 
-CHAIN IF ~InParty("Rasaad")
-See("Rasaad")
+CHAIN IF ~InParty("C0Sirene")
+See("C0Sirene")
 !StateCheck("Rasaad",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)

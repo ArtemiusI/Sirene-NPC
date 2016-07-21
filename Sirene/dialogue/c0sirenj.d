@@ -7,7 +7,8 @@ BEGIN C0SIRENJ
 // 1.
 CHAIN IF ~Global("C0SireneTalksBG1","GLOBAL",2)~ THEN C0SIRENJ t1
 ~I feel I must thank you on behalf of those who suffered in the mines, my <PRO_LADYLORD>. You have done an honorable deed.~
-DO ~IncrementGlobal("C0SireneTalksBG1","GLOBAL",1)~
+DO ~IncrementGlobal("C0SireneTalksBG1","GLOBAL",1)
+RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)~
 END
 	++ ~It was nothing.~ + t1.1
 	++ ~My thanks for the compliment.~ + t1.2
@@ -376,7 +377,7 @@ END
 END
 
 // 5
-CHAIN IF ~Global("C0SireneTalksBG1","GLOBAL",10) HPPercentLT(Myself,75)~ THEN C0SIRENJ t5
+CHAIN IF ~Global("C0SireneTalksBG1","GLOBAL",10)~ THEN C0SIRENJ t5
 ~Ach, I had thought these bruises would fade sooner, yet they remain.~
 DO ~IncrementGlobal("C0SireneTalksBG1","GLOBAL",1)
 RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)~
@@ -1823,22 +1824,22 @@ END
 // Mines
 
 I_C_T DRASUS 0 C0SireneDRASUS0
-== C0SIRENJ ~I suppose you consider yourself any better? I doubt you shall pose any more of a threat.~
+== C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I suppose you consider yourself any better? I doubt you shall pose any more of a threat.~
 == DRASUS ~Shut it, wench.~
 END
 
 I_C_T TIPIAN 1 C0SireneTIPIAN1
-== C0SIRENJ ~Ilmater protect you, poor man.~
+== C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Ilmater protect you, poor man.~
 == TIPIAN ~Aye, may he indeed.~
 END
 
 I_C_T TIPIAN 2 C0SireneTIPIAN2
-== C0SIRENJ ~Davaeorn? A name for the cruel man whom endorses such a horrible thing as slavery, then... rest assured, we shall give him the punishment he deserves.~
+== C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Davaeorn? A name for the cruel man whom endorses such a horrible thing as slavery, then... rest assured, we shall give him the punishment he deserves.~
 == TIPIAN ~It can't come quick enough.~
 END
 
 I_C_T OGRMA2 0 C0SireneOGREMA20
-== C0SIRENJ ~Foul purveyor of pain! You shall never torture another innocent again!~
+== C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Foul purveyor of pain! You shall never torture another innocent again!~
 END
 
 I_C_T2 DAVAEO 0 C0SireneDAVAEO0
@@ -2236,12 +2237,18 @@ END
 
 APPEND C0SIRENJ
 
-IF ~IsGabber(Player1)~ THEN BEGIN pid
+IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])~ THEN BEGIN pid
  SAY ~You have need of me?~ [C0SIR011]
-	+ ~RandomNum(4,1)~ + ~How are you?~ + a1
-	+ ~RandomNum(4,2)~ + ~How are you?~ + a2
-	+ ~RandomNum(4,3)~ + ~How are you?~ + a3
-	+ ~RandomNum(4,4)~ + ~How are you?~ + a4
+	+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~(Flirt)~ + flirtmenu
+	+ ~HPPercentGT(Myself,74) RandomNum(4,1)~ + ~How are you?~ + a1
+	+ ~HPPercentGT(Myself,74) RandomNum(4,2)~ + ~How are you?~ + a2
+	+ ~HPPercentGT(Myself,74) RandomNum(4,3)~ + ~How are you?~ + a3
+	+ ~HPPercentGT(Myself,74) RandomNum(4,4)~ + ~How are you?~ + a4
+	+ ~HPPercentLT(Myself,75) HPPercentGT(Myself,49) RandomNum(4,1)~ + ~How are you?~ + b1
+	+ ~HPPercentLT(Myself,75) HPPercentGT(Myself,49) RandomNum(4,2)~ + ~How are you?~ + b2
+	+ ~HPPercentLT(Myself,75) HPPercentGT(Myself,49) RandomNum(4,3)~ + ~How are you?~ + b3
+	+ ~HPPercentLT(Myself,75) HPPercentGT(Myself,49) RandomNum(4,4)~ + ~How are you?~ + b4
+	+ ~HPPercentLT(Myself,50)~ + ~How are you?~ + c1
 	+ ~Global("C0SireneMatch","GLOBAL",1) GlobalLT("C0SireneTalksBG1","GLOBAL",11)~ + ~Do you think you could consider us becoming more than friends?~ + romance1
 	+ ~Global("C0SireneMatch","GLOBAL",1) GlobalGT("C0SireneTalksBG1","GLOBAL",10) GlobalLT("C0SireneTalksBG1","GLOBAL",17)~ + ~Do you think you could consider us becoming more than friends?~ + romance2
 	+ ~Global("C0SireneMatch","GLOBAL",1) GlobalGT("C0SireneTalksBG1","GLOBAL",16)~ + ~Do you think you could consider us becoming more than friends?~ + romance3
@@ -2250,6 +2257,310 @@ IF ~IsGabber(Player1)~ THEN BEGIN pid
 	+ ~Global("C0SireneTalksBG1Stopped","GLOBAL",1)~ + ~I don't mind if you want to talk to me again.~ + startdialog
 	++ ~Is there a problem with your voice?~ + stringfix	
 	++ ~Not at the moment.~ EXIT
+END
+
+IF ~~ flirtmenu
+SAY ~What do you need, <CHARNAME>?~
++ ~RandomNum(3,1)~ + ~(Smile at her)~ + f1.1
++ ~RandomNum(3,2)~ + ~(Smile at her)~ + f1.2
++ ~RandomNum(3,3)~ + ~(Smile at her)~ + f1.3
++ ~RandomNum(3,1)~ + ~(Take her hand)~ + f2.1
++ ~RandomNum(3,2)~ + ~(Take her hand)~ + f2.2
++ ~RandomNum(3,3)~ + ~(Take her hand)~ + f2.3
++ ~RandomNum(3,1)~ + ~(Watch her)~ + f3.1
++ ~RandomNum(3,2)~ + ~(Watch her)~ + f3.2
++ ~RandomNum(3,3)~ + ~(Watch her)~ + f3.3
++ ~RandomNum(3,1)~ + ~(Brush dust off her cloak)~ + f4.1
++ ~RandomNum(3,2)~ + ~(Brush dust off her cloak)~ + f4.2
++ ~RandomNum(3,3)~ + ~(Brush dust off her cloak)~ + f4.3
++ ~RandomNum(3,1)~ + ~(Massage her shoulders)~ + f5.1
++ ~RandomNum(3,2)~ + ~(Massage her shoulders)~ + f5.2
++ ~RandomNum(3,3)~ + ~(Massage her shoulders)~ + f5.3
++ ~RandomNum(3,1)
+HPPercentLT("C0Sirene",100)
+OR(2)
+Class(Player1,DRUID_ALL)
+Class(Player1,PALADIN_ALL)
+Class(Player1,CLERIC_ALL)~ + ~(Treat her wounds)~ + f6.1
++ ~RandomNum(3,2)
+HPPercentLT("C0Sirene",100)
+OR(2)
+Class(Player1,DRUID_ALL)
+Class(Player1,PALADIN_ALL)
+Class(Player1,CLERIC_ALL)~ + ~(Treat her wounds)~ + f6.2
++ ~RandomNum(3,3)
+HPPercentLT("C0Sirene",100)
+OR(2)
+Class(Player1,DRUID_ALL)
+Class(Player1,PALADIN_ALL)
+Class(Player1,CLERIC_ALL)~ + ~(Treat her wounds)~ + f6.3
++ ~RandomNum(3,1)~ + ~(Offer to carry her backpack)~ + f7.1
++ ~RandomNum(3,2)~ + ~(Offer to carry her backpack)~ + f7.2
++ ~RandomNum(3,3)~ + ~(Offer to carry her backpack)~ + f7.3
++ ~RandomNum(3,1)
+Class(Player1,BARD_ALL)~ + ~(Sing her a song)~ + f8.1
++ ~RandomNum(3,2)
+Class(Player1,BARD_ALL)~ + ~(Sing her a song)~ + f8.2
++ ~RandomNum(3,3)
+Class(Player1,BARD_ALL)~ + ~(Sing her a song)~ + f8.3
++ ~RandomNum(3,1)~ + ~(Brush against her shoulder while you walk)~ + f9.1
++ ~RandomNum(3,2)~ + ~(Brush against her shoulder while you walk)~ + f9.2
++ ~!Race(Player1,GNOME)
+!Race(Player1,DWARF)
+!Race(Player1,HALFLING) RandomNum(3,3)~ + ~(Brush against her shoulder while you walk)~ + f9.3
++ ~RandomNum(3,1)~ + ~Thank you for protecting me.~ + f10.1
++ ~RandomNum(3,2)~ + ~Thank you for protecting me.~ + f10.2
++ ~RandomNum(3,3)~ + ~Thank you for protecting me.~ + f10.3
++ ~RandomNum(3,1)~ + ~What do you think of me?~ + f11.1
++ ~ReputationGT(Player1,12) RandomNum(3,2)~ + ~What do you think of me?~ + f11.2
++ ~RandomNum(3,3)~ + ~What do you think of me?~ + f11.3
++ ~AreaType(FOREST) RandomNum(3,1)~ + ~(Offer her a flower)~ + f12.1
++ ~AreaType(FOREST) RandomNum(3,2)~ + ~(Offer her a flower)~ + f12.2
++ ~AreaType(FOREST) RandomNum(3,3)~ + ~(Offer her a flower)~ + f12.3
++ ~Gender(Player1,FEMALE) RandomNum(3,1)~ + ~(Brush her hair)~ + f13.1a
++ ~Gender(Player1,FEMALE) RandomNum(3,2)~ + ~(Brush her hair)~ + f13.2
++ ~Gender(Player1,FEMALE) RandomNum(3,3)~ + ~(Brush her hair)~ + f13.3
++ ~Gender(Player1,MALE) RandomNum(3,1)~ + ~(Brush her hair)~ + f13.1b
++ ~Gender(Player1,MALE) RandomNum(3,2)~ + ~(Brush her hair)~ + f13.2
++ ~Gender(Player1,MALE) RandomNum(3,3)~ + ~(Brush her hair)~ + f13.3
++ ~RandomNum(3,1)~ + ~(Kiss her hand)~ + f14.1
++ ~RandomNum(3,2)~ + ~(Kiss her hand)~ + f14.2
++ ~RandomNum(3,3)~ + ~(Kiss her hand)~ + f14.3
+++ ~Nothing.~ EXIT
+END
+
+IF ~~ f1.1
+SAY ~(Sirene smiles back at you, somewhat nervously.)~
+IF ~~ EXIT
+END
+
+IF ~~ f1.2
+SAY ~What makes you smile, my friend? Did something good happen?~
+IF ~~ EXIT
+END
+
+IF ~~ f1.3
+SAY ~(Sirene blushes and turns away.)~
+IF ~~ EXIT
+END
+
+IF ~~ f2.1
+SAY ~(Sirene pulls her hand away in shock at your touch, but relaxes when she realizes it is you.)~
+= ~Ah! Forgive me, <CHARNAME>, I thought... no, forget it.~
+IF ~~ EXIT
+END
+
+IF ~~ f2.2
+SAY ~(Sirene seems uncertain of whether to relax or withdraw, but ultimately decides to allow you to hold her hand while you walk.)~
+IF ~~ EXIT
+END
+
+IF ~~ f2.3
+SAY ~<CHARNAME>, I... I am not a child. I can walk without aid.~
+IF ~~ EXIT
+END
+
+IF ~~ f3.1
+SAY ~(You watch Sirene walk by your side, looking down at the ground. She does not notice you watching her.)~
+IF ~~ EXIT
+END
+
+IF ~~ f3.2
+SAY ~(Sirene's most striking features, aside from the horns on her forehead, are her high cheekbones and slightly-glowing green eyes, as well as the thin scar on the left side of her face.)~
+IF ~~ EXIT
+END
+
+IF ~~ f3.3
+SAY ~(It takes you a while to realize that Sirene is watching you as well. She is about to say something but bites her lower lip and looks away awkwardly.)~
+IF ~~ EXIT
+END
+
+IF ~~ f4.1
+SAY ~(You straighten out Sirene's white cloak and brush off the specks of dirt that have gathered within the creases.)~
+= ~Ah... thank you, <CHARNAME>.~
+IF ~~ EXIT
+END
+
+IF ~~ f4.2
+SAY ~(While you are cleaning her cloak, Sirene reaches for your face and wipes some dirt off your cheek with her thumb.)~
+IF ~~ EXIT
+END
+
+IF ~~ f4.3
+SAY ~*sigh* If only the bloodstains could be cleared away as easily, <CHARNAME>...~
+IF ~~ EXIT
+END
+
+IF ~~ f5.1
+SAY ~(You get to work on removing Sirene's shoulder pauldrons, but she takes your hands.)~
+= ~<CHARNAME>... you do not need to. But, thank you.~
+IF ~~ EXIT
+END
+
+IF ~~ f5.2
+SAY ~(While the party takes a brief break, Sirene removes enough of her armor so that you may begin massaging her.)~
+= ~(You feel that her muscles are tense and knotted, and she sighs in relief as you loosen them.)~
+= ~(When you are finished, Sirene takes your hands and kisses them.)~
+IF ~~ EXIT
+END
+
+IF ~~ f5.3
+SAY ~(laugh) I fear that my armor would make it difficult, <CHARNAME>. Perhaps when we make camp.~
+IF ~~ EXIT
+END
+
+IF ~~ f6.1
+SAY ~You are too kind, <CHARNAME>...~
+IF ~~ DO ~ForceSpell("C0Sirene",CLERIC_CURE_LIGHT_WOUNDS)~ EXIT
+END
+
+IF ~~ f6.2
+SAY ~No, please do not waste your spells on me. I can treat my own wounds... there are others who need them more.~
+IF ~~ EXIT
+END
+
+IF ~~ f6.3
+SAY ~(Sirene breathes in relief as her wounds begin to close.)~
+IF ~~ DO ~ForceSpell("C0Sirene",CLERIC_CURE_LIGHT_WOUNDS)~ EXIT
+END
+
+IF ~~ f7.1
+SAY ~No, no, I can carry this much, but thank you.~
+IF ~~ EXIT
+END
+
+IF ~~ f7.2
+SAY ~(Sirene hands you her pack albeit with some reluctance.)~
+= ~I wish I could refuse, but the day has been far too long... forgive my weakness, <CHARNAME>.~
+IF ~~ EXIT
+END
+
+IF ~~ f7.3
+SAY ~I appreciate it, <CHARNAME>, but I do not wish to give you any more burdens.~
+IF ~~ EXIT
+END
+
+IF ~~ f8.1
+SAY ~Oh... that song was familiar... but I cannot recall from where. May I hear it again?~
+IF ~~ EXIT
+END
+
+IF ~~ f8.2
+SAY ~Your voice is so beautiful, <CHARNAME>.~
+IF ~~ EXIT
+END
+
+IF ~~ f8.3
+SAY ~(Sirene listens to your song intently and hums along when you reach the chorus.)~
+IF ~~ EXIT
+END
+
+IF ~~ f9.1
+SAY ~I would not mind if we remained this way for a while, <CHARNAME>... *blush* if... if you do not mind, that is.~
+IF ~~ EXIT
+END
+
+IF ~~ f9.2
+SAY ~(Sirene touches your arm and smiles at you while you walk.)~
+IF ~~ EXIT
+END
+
+IF ~~ f9.3
+SAY ~(Sirene inclines her head as though about to lean on your shoulder, but seems to change her mind at the last second.)~
+IF ~~ EXIT
+END
+
+IF ~~ f10.1
+SAY ~You do not need to thank me, <CHARNAME>, I am... I am but doing my duty.~
+IF ~~ EXIT
+END
+
+IF ~~ f10.2
+SAY ~You can count on me, my friend... I will protect you with my life, if need be.~
+IF ~~ EXIT
+END
+
+IF ~~ f10.3
+SAY ~Nothing will harm you so long as I live, <CHARNAME>.~
+IF ~~ EXIT
+END
+
+IF ~~ f11.1
+SAY ~What do I think? I... I cannot put my thoughts into words at the moment.~
+IF ~~ EXIT
+END
+
+IF ~~ f11.2
+SAY ~Y-you are a wonderful person, <CHARNAME>... do I truly need to say more?~
+= ~(She smiles shyly at you.)~
+IF ~~ EXIT
+END
+
+IF ~~ f11.3
+SAY ~I, um... whatever thoughts I have may not be worth mentioning. *blush*~
+IF ~~ EXIT
+END
+
+IF ~~ f12.1
+SAY ~'Tis beautiful, <CHARNAME>... do you intend to give it to someone?~
+++ ~Of course. (Hand the flower to her.)~ + f12.1a
+++ ~Not in particular.~ + f12.1b
+END
+
+IF ~~ f12.1a
+SAY ~M-me? I... oh, gods, I am... I need to hide my face...~
+IF ~~ EXIT
+END
+
+IF ~~ f12.1b
+SAY ~Oh... a shame. But 'tis a beautiful flower regardless.~
+IF ~~ EXIT
+END
+
+IF ~~ f12.2
+SAY ~What a lovely gift, <CHARNAME>... I will treasure it.~
+IF ~~ EXIT
+END
+
+IF ~~ f12.3
+SAY ~(Sirene takes the flower silently and pins it on her armor. She laughs gently.)~
+= ~'Tis childish, I know, but I do like it.~
+IF ~~ EXIT
+END
+
+IF ~~ f13.1a
+SAY ~Hm, 'tis a pleasant feeling to have another woman brush my hair, <CHARNAME>...~
+IF ~~ EXIT
+END
+
+IF ~~ f13.1b
+SAY ~'Tis strange to have my hair brushed by a man, <CHARNAME>... but I do not mind.~
+IF ~~ EXIT
+END
+
+IF ~~ f13.2
+SAY ~(Sirene's hair is unkempt and in different lengths, likely due to combat. However, its vibrant red color is still pleasing to the eye.)~
+IF ~~ EXIT
+END
+
+IF ~~ f13.3
+SAY ~I would not waste your time, <CHARNAME>... 'twould only become a mess again, once our next battle is done.~
+IF ~~ EXIT
+END
+
+IF ~~ f14.1
+SAY ~(You lay a gentle kiss on the back of Sirene's hand, and she blushes in embarrassment.)~
+IF ~~ EXIT
+END
+
+IF ~~ f14.2
+SAY ~(When you bring Sirene's hand close to your face, you notice that her nails are black and shiny, and slightly curved at the edge, though they appear to be completely natural.)~
+IF ~~ EXIT
+END
+
+IF ~~ f14.3
+SAY ~Oh, my... how courteous of you, <CHARNAME>.~
+IF ~~ EXIT
 END
 
 IF ~~ a1
@@ -2272,6 +2583,31 @@ SAY ~I'm alright.~
 IF ~~ EXIT
 END
 
+IF ~~ b1
+SAY ~Mmm, I am wounded, but... I think I will be fine.~
+IF ~~ EXIT
+END
+
+IF ~~ b2
+SAY ~This pain will pass...~
+IF ~~ EXIT
+END
+
+IF ~~ b3
+SAY ~My injuries are not light, but I am glad they were not inflicted upon you, my friend.~
+IF ~~ EXIT
+END
+
+IF ~~ b4
+SAY ~I would... like a moment to treat my wounds, if you would allow it.~
+IF ~~ EXIT
+END
+
+IF ~~ c1
+SAY ~Ugh, I know I should not complain, but... this bleeding will not stop. I require aid.~
+IF ~~ EXIT
+END
+
 IF ~~ romance1
 SAY ~I don't think we know each other well enough for that yet, <CHARNAME>.~
 IF ~~ EXIT
@@ -2288,7 +2624,7 @@ IF ~~ EXIT
 END
 
 IF ~~ romance4
-SAY ~I'm sorry, <CHARNAME>. I don't think so.~
+SAY ~Forgive me, <CHARNAME>. I do not think so.~
 IF ~~ DO ~SetGlobal("C0SireneMatch","GLOBAL",3)~ EXIT
 END
 

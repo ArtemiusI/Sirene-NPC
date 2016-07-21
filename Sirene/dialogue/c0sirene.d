@@ -71,7 +71,7 @@ END
 
 IF ~~ j11
  SAY ~<CHARNAME> it is, then. Shall we go?~
-IF ~~ DO ~SetGlobal("C0SireneJoined","GLOBAL",1) JoinParty()~ EXIT
+IF ~~ DO ~SetGlobal("C0SireneJoined","LOCALS",1) JoinParty()~ EXIT
 END
 
 IF ~~ j12
