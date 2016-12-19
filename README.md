@@ -175,13 +175,6 @@ v1.2
 - Added delay between first and second friendship talks
 - New icon and description image for Brimstone
 
-v1.1
- - Marl 'violent' interjection fixed
- - Brimstone description typo corrected
- - Friendship talks expanded
- - Portrait by Isandir added
- - New icons for spells added
-
 v1.0
  - Initial full release
  - TotSC interjections and dialogue added
