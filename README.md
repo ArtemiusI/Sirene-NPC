@@ -1,5 +1,3 @@
-# Sirene-NPC
-Sirene NPC mod for BG:EE
 ---------------------------------------
  Sirene NPC Mod for BG:EE by Artemius_I
 ---------------------------------------
@@ -26,9 +24,11 @@ As a tiefling, she also has 10% fire and cold resistance.
 
 She has fourteen friendship talks with the PC. You can imply that you're interested in a romantic relationship regardless of race and alignment, but it won't develop into a full romance as of yet. There are currently no quests.
 
-She is compatible with all NPCs except Dorn in BG1, who she will come to conflict with quickly and force you to choose between them or let them come to blows.
+If the party falls below a reputation of 9, Sirene will warn the protagonist. If it continues to fall to below 5, she will leave permanently. She may be more tolerant and forgiving than followers of more militant faiths, but she has a limit.
 
-Sirene currently has crossmod banter with White by Lava Del'Vortel.
+She is compatible with all NPCs except Dorn in BG1, who she will come to conflict with quickly and force you to choose between them or let them come to blows. However, in Siege of Dragonspear, a sufficiently charismatic PC may convince them to hold a temporary truce.
+
+Sirene currently has crossmod banter with White and Verr'Sza by Lava Del'Vortel.
 
 -----------------------
  Martyr Kit
@@ -36,25 +36,23 @@ Sirene currently has crossmod banter with White by Lava Del'Vortel.
 
 MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
 
-ADVANTAGES:
-
+Advantages:
 - Hit Die: d12
 - May use the Sacrifice ability once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
 
-SACRIFICE: The martyr heals the target for 1d6+1 per level hit points and deals 1d6+1 per level nonlethal damage to <PRO_HIMHER>self.
+SACRIFICE: The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to <HIMHER>self up to a maximum of 1d6+20 at 10th level.
 
 - May use the Martyrdom ability once per day starting at level 5. Gains an additional use every 7 levels thereafter.
 
-MARTYRDOM: The target gains a +4 bonus to armor class and 50% resistance to physical damage for 5 rounds while the martyr loses the same amount.
+MARTYRDOM: The target gains a +4 bonus to armor class and 50% resistance to physical damage while the martyr loses the same amount for 5 rounds + 1 round for every 3 levels gained.
 
 - 12th level: Gains 10% resistance to physical damage. An additional 5% is gained at levels 16 and 20.
 - 15th level: May use the Ilmater's Grace ability once per day.
 
 ILMATER'S GRACE: The martyr regenerates for 3 hit points per second for 1 turn.
 
-DISADVANTAGES:
-
-- -1 penalty to THAC0/damage every 5 levels (starting at level 1).
+Disadvantages:
+- -1 penalty to THAC0 every 5 levels (starting at level 1).
 - May not cast Protection from Evil.
 - May not Turn Undead.
 - May not use ranged weapons.
@@ -66,6 +64,8 @@ DISADVANTAGES:
 Sirene has fourteen friendship dialogues with the PC. She has no romance in the traditional sense, but a PC of either gender with 12 or above charisma may flirt with her during these conversations. You can stop her from talking to you by directly asking her via PID.
 
 She will begin her dialogues after completing the Nashkel mines quest, and will pause it prior to certain chapters if you have completed a certain stage of the friendship. Only talk 6 is area-conditional- you can trigger it by resting in an inn.
+
+In Siege of Dragonspear, Sirene will have a brief romantic arc with the PC with around six talks.
 
 -----------------------
  Installation
@@ -95,7 +95,7 @@ A: None, at least fatally. Sirene and Dorn will not tolerate each other normally
 Q: (SoD) How do I keep both Sirene and Dorn in the party?
 A: Have a Charisma stat higher than 16.
 
-Q: (SoD) The <SPOILER> is kicking my ass!
+Q: (SoD) The *SPOILER!* is kicking my ass!
 A: Yeah... I tried to make it a somewhat difficult fight. Breach will make it a whole lot easier, but if you don't have it, you'll need to wear out its buffs for a bit. Since it's only one enemy, perhaps summoned creatures could be helpful?
 
 -----------------------
@@ -112,3 +112,86 @@ Soundset: Bioware - Icewind Dale
 -----------------------
 
 The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious reasons.
+
+-----------------------
+ Change Log
+-----------------------
+
+v2.1.1
+- Updated an item's icon and fixed it for fighter/cleric alternate class
+
+v2.1
+- Alternate classes component fixed
+- Fighter/cleric alternate class re-added
+
+v2.0.6
+- Fixed several minor item bugs
+- Fixed problem with kit duplicating innates
+
+v2.0.5
+- Fixed romance-related stutter issue
+
+v2.0.4
+- Fixed a dialog error involving Thrix
+- Lovetalk timers now three in-game days and not real-time days (whoops...)
+- Fixed an error involving an improper number of innate abilities
+
+v2.0.3
+- Fixed 'rapid-fire' banter - minimum 20 minute delay between banters
+
+v2.0.2
+- PID-breaking 'Aun Argent' talk variable fixed
+
+v2.0.1
+- Post-Korlasz crypt talk added
+
+v2.0 beta
+- Added content for Siege of Dragonspear
+- Minor changes to text
+- Brimstone now properly 'usable by tieflings'
+- Martyr ability scaling rebalanced
+- Martyr ability visuals improved
+- BG1-Sirene now increases in experience when joined to match the PC (up to 32,000XP)
+- PID is now disabled during combat
+- Temporarily disabled Fighter/Cleric alternate class until issues are ironed out
+
+v1.5.1
+- Fixed soundset issues related to resetting via PID
+
+v1.5
+- Added alternative classes (paladin, cavalier, inquisitor, undead hunter, fighter/cleric)
+
+v1.4
+- Fixed banters with Rasaad and Neera
+- Fixed Cloakwood Mines interjections
+
+v1.3
+- Another new icon and description image for Brimstone
+- Expanded PID with flirts and HP-dependent responses
+- (optional) Crossmod banter with White NPC
+
+v1.2
+- Fixed 'wounded' dialogue bug that caused dialogue to initiate endlessly
+- Added delay between first and second friendship talks
+- New icon and description image for Brimstone
+
+v1.1
+ - Marl 'violent' interjection fixed
+ - Brimstone description typo corrected
+ - Friendship talks expanded
+ - Portrait by Isandir added
+ - New icons for spells added
+
+v1.0
+ - Initial full release
+ - TotSC interjections and dialogue added
+ - Errors in banter scripts with Coran and Alora fixed
+ - 24 bit portrait added (thanks Lava Del'Vortel)
+
+v0.beta.1
+ - v0.beta.03 - Changed some I_C_T strings to I_C_T2 so that Sirene no longer hijacks NPC actions during interjections (thanks WhiteAgnus)
+ - v0.beta.02 - Added missing strings that caused friendship to stall indefinitely
+ - v0.beta.01 - Fixed area codes for talk 13, removed useless Viconia script
+ 
+v0.beta
+ - initial release of mod for playtesting
