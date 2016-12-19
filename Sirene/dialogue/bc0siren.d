@@ -218,9 +218,9 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-Global("C0SireneDynaheir1","GLOBAL",0)~ THEN BC0SIREN C0SireneDynaheir2
+Global("C0SireneDynaheir2","GLOBAL",0)~ THEN BC0SIREN C0SireneDynaheir2
 ~Which gods do the people of Rashemen worship, lady Dynaheir?~
-DO ~SetGlobal("C0SireneDynaheir1","GLOBAL",1)~
+DO ~SetGlobal("C0SireneDynaheir2","GLOBAL",1)~
 == BDYNAH ~We follow many gods as those of this land do, but all hathran revere the triumvirate of goddesses: Bhalla, Khelliara and The Hidden One.~
 == BC0Siren ~The- forgive me, but I have never heard these names before.~
 == BDYNAH ~Thou wouldst call them by different names in the west. I believe you would be more familiar with their common names - Chauntea, Mielikki and Mystra.~

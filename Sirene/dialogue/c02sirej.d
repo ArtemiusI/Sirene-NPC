@@ -601,7 +601,7 @@ DO ~IncrementGlobal("C02SireneLT","GLOBAL",1)~
 END
 	++ ~I know. But we have no choice but to pursue them.~ + lt6.1
 	++ ~Are you afraid, Sirene?~ + lt6.2
-	++ ~Would you like to say behind?~ + lt6.3
+	++ ~Would you like to stay behind?~ + lt6.3
 	++ ~Better do it while you're able then. Let's hop in.~ + lt6.0
 
 APPEND C02SIREJ
@@ -1017,7 +1017,7 @@ END
 I_C_T BDRAEANN 4 C0SireneBDRAEANN4
 == BDRAEANN IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~But I suppose you're more than familiar with our lot already, seeing as you've got one with you and whatnot. Which Plane are you from, then?~
 == C02SIREJ ~I am afraid I must disappoint you, Raeanndra, but though I may have fiend blood, I was born and have lived as a Prime.~
-== BDRAEANN ~Really, now? *sniff* Aye, you got the smell o one, no doubt. Got a nose for that sort of thing where our lot is concerned. Still, well met.~
+== BDRAEANN ~Really, now? *sniff* Aye, you got the smell o' one, no doubt. Got a nose for that sort of thing where our lot is concerned. Still, well met.~
 END
 
 // Sacrifice
@@ -2672,7 +2672,7 @@ END
 IF ~~ ilmater
 SAY ~'Tis true, <CHARNAME>. There are fewer of my order as those of Helm or Torm, but there is always a need for warriors in any faith... to protect our own, and those in need.~
 = ~Though there are misconceptions of the Ilmatari, we do not suffer without cause. Many pacifists of my faith will inflict self-harm to seek greater strength. My willingness to throw myself into combat is the same, in a way. Though my reasons for fighting are mainly to protect others, the act itself has given me the strength to protect those that others cannot.~
-= ~I cannot deny that I long for a life of peace, but... I am willing to accept that I will fall for the sake of service before it. If I survive long enough, perhaps I shall travel to Castle Dasaajk, in the Purple Hills of Tethyr to seek our others of my order, to do my duty alongside my brothers and sisters.~
+= ~I cannot deny that I long for a life of peace, but... I am willing to accept that I will fall for the sake of service before it. If I survive long enough, perhaps I shall travel to Castle Dasaajk in the Purple Hills of Tethyr to seek out others of my order, to do my duty alongside my brothers and sisters.~
 = ~But that will not come for some time, and I have a duty to serve you, first and foremost. And perhaps... my dreams for the future shall change, in time.~
 IF ~~ EXIT
 END

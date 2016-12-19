@@ -1,14 +1,3 @@
-// KIT
-
-IF
-  InParty(Myself)
-  Global("C0SireneKit","LOCALS",0)
-THEN
-  RESPONSE #100
-    AddKit(C0ILM)
-    SetGlobal("C0SireneKit","LOCALS",1)
-END
-
 // EXPERIENCE
 
 IF
@@ -2429,14 +2418,64 @@ END
 
 IF
 	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_neera_romanceactive","global",1)
 THEN
   RESPONSE #100
 	SetGlobal("bd_neera_romanceactive","global",3)
-	SetGlobal("bd_safana_romanceactive","global",3)
-	SetGlobal("bd_corwin_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_rasaad_romanceactive","global",1)
+THEN
+  RESPONSE #100
 	SetGlobal("bd_rasaad_romanceactive","global",3)
-	SetGlobal("bd_glint_romanceactive","global",3)
-	SetGlobal("bd_viconia_romanceactive","global",3)
-	SetGlobal("bd_voghiln_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_dorn_romanceactive","global",1)
+THEN
+  RESPONSE #100
 	SetGlobal("bd_dorn_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_corwin_romanceactive","global",1)
+THEN
+  RESPONSE #100
+	SetGlobal("bd_corwin_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_glint_romanceactive","global",1)
+THEN
+  RESPONSE #100
+	SetGlobal("bd_glint_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_voghiln_romanceactive","global",1)
+THEN
+  RESPONSE #100
+	SetGlobal("bd_voghiln_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_viconia_romanceactive","global",1)
+THEN
+  RESPONSE #100
+	SetGlobal("bd_viconia_romanceactive","global",3)
+END
+
+IF
+	Global("C02SireneRomanceActive","GLOBAL",2)
+	Global("bd_safana_romanceactive","global",1)
+THEN
+  RESPONSE #100
+	SetGlobal("bd_safana_romanceactive","global",3)
 END

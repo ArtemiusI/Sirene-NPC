@@ -1,14 +1,3 @@
-// KIT
-
-IF
-  InParty(Myself)
-  Global("C0SireneKit","LOCALS",0)
-THEN
-  RESPONSE #100
-    AddKit(C0ILM)
-    SetGlobal("C0SireneKit","LOCALS",1)
-END
-
 // EXPERIENCE
 
 IF

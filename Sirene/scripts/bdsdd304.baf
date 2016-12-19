@@ -1,10 +1,9 @@
 IF
   Global("C02SireneHealsHyreth","GLOBAL",1)
-  NextTriggerObject("C0Sirene")
 THEN
   RESPONSE #100
     CutSceneId("C0Sirene")
-    ForceSpellRES("c0ilmsp1","bdhyreth")
+    ForceSpellRES("c0ilms1","bdhyreth")
     Wait(3)
     EndCutSceneMode()
     ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
