@@ -207,8 +207,7 @@ IF
 	OR(2)
 	  Global("C02SireneRomanceActive","GLOBAL",1)
 	  Global("C02SireneRomanceActive","GLOBAL",2)
-	OR(2)
-      Global("C02SireneLT","GLOBAL",6)
+    Global("C02SireneLT","GLOBAL",6)
 THEN
   RESPONSE #100
 	SetGlobalTimer("C02SireneRomanceTimer","GLOBAL",THREE_DAYS)
@@ -1393,7 +1392,7 @@ IF
 InMyArea(Player1)
 InParty("Jaheira")
 InParty(Myself)
-PartyHasItem("c0scloak")
+PartyHasItem("c02sclck")
 !ActuallyInCombat()
 !See([ENEMY])
 Global("C02SireneJaheira","GLOBAL",2)
