@@ -1,6 +1,6 @@
 IF
 	!Dead("C0Sirene")
-	!Dead("C0Dorn")
+	!Dead("Dorn")
 	Global("C0SireneDornConflict","GLOBAL",1)
 THEN
   RESPONSE #100
@@ -21,7 +21,7 @@ THEN
 END
 
 IF
-	Dead("C@Sirene")
+	Dead("C0Sirene")
 THEN
   RESPONSE #100
     DialogInterrupt(TRUE)
