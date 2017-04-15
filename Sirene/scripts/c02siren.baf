@@ -728,7 +728,7 @@ ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I'm sorry that I cut off our
 RealSetGlobalTimer("BD_BANTER_DELAY","LOCALS",4)
 SetGlobal("C02SireneCorwin2","LOCALS",10)
 RESPONSE #10
-DisplayStringHead(Myself,~I took no offence, Corwin, but I had no idea your duty troubled you so.~)
+DisplayStringHead(Myself,~I took no offense, Corwin, but I had no idea your duty troubled you so.~)
 RealSetGlobalTimer("BD_BANTER_DELAY","LOCALS",4)
 SetGlobal("C02SireneCorwin2","LOCALS",20)
 RESPONSE #20

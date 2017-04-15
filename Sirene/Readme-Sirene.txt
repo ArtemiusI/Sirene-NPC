@@ -117,6 +117,9 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
+v2.1.2
+- Added Legacy of Bhaal compatibility (no more absurd stats)
+
 v2.1.1
 - Updated an item's icon and fixed it for fighter/cleric alternate class
 
