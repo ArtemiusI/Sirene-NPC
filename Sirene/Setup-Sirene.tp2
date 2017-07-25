@@ -194,12 +194,12 @@ COMPILE	~Sirene/Dialogue/BC0Siren.d~
 EXTEND_BOTTOM ~Dorn.bcs~ ~Sirene/scripts/c0dornf.baf~
 
 APPEND ~pdialog.2da~
-~C0Sirene        C0SirenP	C0SirenJ	C02SireD~
-UNLESS ~C0Siren~
+~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
+UNLESS ~C0Sirene~
 
 APPEND ~interdia.2da~
 ~C0Sirene       BC0Siren C0SirenEE~
-UNLESS ~C0Siren~
+UNLESS ~C0Sirene~
   
 COPY ~Sirene/items/C0sw2h.BAM~ ~override~
 COPY ~Sirene/items/C0csw2h.BAM~ ~override~

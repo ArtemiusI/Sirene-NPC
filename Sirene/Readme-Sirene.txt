@@ -117,6 +117,9 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
+v2.2
+- Fixed bug in dream script that caused several talks not to fire
+
 v2.1.2
 - Added Legacy of Bhaal compatibility (no more absurd stats)
 

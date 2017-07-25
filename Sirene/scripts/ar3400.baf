@@ -1,9 +1,8 @@
 IF
-	Global("C0SireneSpawns","AR3400",0)
-	GlobalLT("Chapter","GLOBAL",8)
+	Global("C0SireneSpawns","GLOBAL",0)
 THEN
 RESPONSE #100
-	SetGlobal("C0SireneSpawns","AR3400",1)
+	SetGlobal("C0SireneSpawns","GLOBAL",1)
 	CreateCreature("C0Sirene",[1255.1150],2)
 	Continue()
 END

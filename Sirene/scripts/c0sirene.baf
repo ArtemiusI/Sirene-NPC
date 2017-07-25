@@ -620,7 +620,7 @@ END
 
 IF
 	!Dead("C0Sirene")
-	!Dead("Dorn")
+	!Dead("C0Dorn")
 	Global("C0SireneDornConflict","GLOBAL",1)
 THEN
   RESPONSE #100
