@@ -1,0 +1,1763 @@
+// BANTERS
+
+// Baeloth
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Baeloth")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneBaeloth","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneBaeloth","GLOBAL",1)
+SetGlobalTimer("C02SireneBaelothTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Baeloth")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneBaeloth","GLOBAL",1)
+GlobalTimerExpired("C02SireneBaelothTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneBaeloth1","MYAREA",-1)
+Switch("C02SireneBaeloth1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Baeloth",DisplayStringHead("Baeloth",~Most fascinating! A fiend-blooded fighter following a faith for flatulent fools! What I wouldn't have given up to have you fighting in my Black Pits.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneBaeloth1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Your inane babbling makes no sense to me, drow. Speak plainly, or not at all.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneBaeloth1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Baeloth",DisplayStringHead("Baeloth",~A pity I no longer have ownership of that esteemed establishment. Your value as a gladiator would have topped the charts!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneBaeloth1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~I doubt you can even hear me. Ilmater only knows why I am even listening to this.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneBaeloth1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Baeloth",DisplayStringHead("Baeloth",~Perhaps I could start anew. Yes... now where could I find a nabassu for a bargain...~))
+SetGlobalTimer("C02SireneBaelothTalk","GLOBAL",THREE_DAYS)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneBaeloth1","MYAREA",-1)
+END
+
+// Corwin
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("CORWIN")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneCorwin","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneCorwin","GLOBAL",1)
+SetGlobalTimer("C02SireneCorwinTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("CORWIN")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneCorwin","GLOBAL",1)
+GlobalTimerExpired("C02SireneCorwinTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneCorwin1","MYAREA",-1)
+Switch("C02SireneCorwin1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I'm surprised that you can devote yourself entirely to this life, my lady. Do you have no family?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~None that I know of. I was abandoned not long after I was born.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin1","MYAREA",20)
+RESPONSE #20
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I see. I suppose it'd be out of the question to understand what your duty's like.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Is't truly so difficult, Corwin? Your duty to the Fist is not unlike mine. We are both protectors, though those we choose to protect may be different.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+SetGlobal("C02SireneCorwin1","MYAREA",40)
+RESPONSE #40
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~It's not the same. I have a responsibility towards my daughter, even more than to the Fist. Everything I've done since Rohma's birth was to give her a brighter future.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+SetGlobal("C02SireneCorwin1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Do you believe that is any less noble a duty than mine? 'Tis not, Corwin.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin1","MYAREA",60)
+RESPONSE #60
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I didn't mean it like that. I-~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+SetGlobal("C02SireneCorwin1","MYAREA",70)
+RESPONSE #70
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~*sigh* Forget it. This isn't worth talking about. I'm sorry for wasting your time.~))
+SetGlobal("C02SireneCorwin","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneCorwinTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneCorwin1","MYAREA",-1)
+END
+
+IF
+InMyArea(Player1)
+InParty("CORWIN")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneCorwin","GLOBAL",2)
+GlobalTimerExpired("C02SireneCorwinTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneCorwin2","MYAREA",-1)
+Switch("C02SireneCorwin2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I'm sorry that I cut off our talk so abruptly before. It was rude of me.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~I took no offense, Corwin, but I had no idea your duty troubled you so.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",20)
+RESPONSE #20
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~It didn't, until Rohma came into the picture. Now I have to live every day fearing I might have to choose between my love for my home and love for my daughter.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Forgive me, Corwin. I was ignorant in thinking that we were so alike. There is clearly still much I do not understand.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",40)
+RESPONSE #40
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~No, it's fine. A younger me would have wanted to be someone like you - putting your life on the line for the sake of duty. But I can't die. Not when I have Rohma.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",50)
+RESPONSE #50
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~Damn it all. Sometimes I wonder if I was being selfish when I refused to give her up to someone who could better care for her. Not that I regret it... I never have.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneCorwin2","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~I understand, my friend. 'Tis an unworthy parent who would not love their child above all else. You are not in the wrong.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+SetGlobal("C02SireneCorwin2","MYAREA",70)
+RESPONSE #70
+ActionOverride("CORWIN",DisplayStringHead("CORWIN",~I wish I could believe that as much as you did.~))
+SetGlobal("C02SireneCorwin","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneCorwinTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneCorwin2","MYAREA",-1)
+END
+
+// Dorn
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("DORN")
+InParty("C0Sirene")
+!ActuallyInCombat()
+HPPercentLT("DORN",75)
+Global("C02SireneDornWounded","GLOBAL",0)
+Global("C02SireneDornConflict","GLOBAL",2)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneDornWounded","GLOBAL",1)
+END
+
+IF
+InMyArea(Player1)
+InParty("DORN")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneDornWounded","GLOBAL",1)
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneDornWounded1","MYAREA",-1)
+Switch("C02SireneDornWounded1","MYAREA")
+THEN
+RESPONSE #0
+MoveToObject("DORN")
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+SetGlobal("C02SireneDornWounded1","MYAREA",10)
+RESPONSE #10
+ActionOverride("DORN",DisplayStringHead("DORN",~Remove your hands from me, woman. I require no healing.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",20)
+RESPONSE #20
+DisplayStringHead("C0Sirene",~If you would rather bleed to death, blackguard, then I will gladly allow you to do so.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",30)
+RESPONSE #30
+ActionOverride("DORN",DisplayStringHead("DORN",~It would take a weakling like yourself to bleed out from such pitiful injuries. I am no weakling.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",40)
+RESPONSE #40
+DisplayStringHead("C0Sirene",~Your arrogance will be the death of you, fiend. I can only hope the day comes soon.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",50)
+RESPONSE #50
+ActionOverride("DORN",DisplayStringHead("DORN",~You are the truly arrogant one, wench, to believe you may take on the wounds of everyone around you.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",60)
+RESPONSE #60
+ActionOverride("DORN",DisplayStringHead("DORN",~Your pain will crush you, until your frail form can no longer bear the weight, and you will suffer the pain of countless wounds upon your body. You will-~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDornWounded1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~Enough! I will waste no more effort on you. I have allies to tend to.~)
+ForceSpell("DORN",PALADIN_LAY_ON_HANDS)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneDornWounded1","MYAREA",-1)
+END
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Dorn")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneDorn","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneDorn","GLOBAL",1)
+SetGlobalTimer("C02SireneDornTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Dorn")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneDorn","GLOBAL",1)
+GlobalTimerExpired("C02SireneDornTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneDorn1","MYAREA",-1)
+Switch("C02SireneDorn1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Dorn",DisplayStringHead("Dorn",~Tell me, paladin. What is there to be gained to serve a deity who offers nothing, yet demands that you endure suffering for the sake of weaklings?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Only one such as you could see faith as a nothing more than a matter of exchange, blackguard.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Dorn",DisplayStringHead("Dorn",~It is an interesting fantasy, believing that your pain should be endured for some greater cause. Pain is a weakness - accepting it, more so.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Tell me then, Dorn. What do you truly desire, besides power? What does your demon offer you that is worth such inhumanity?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Dorn",DisplayStringHead("Dorn",~Do not think that my servitude is one of comfort and ease, woman. In that manner, we are quite similar.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~What? Have you gone completely mad?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",60)
+RESPONSE #60
+ActionOverride("Dorn",DisplayStringHead("Dorn",~You are just as I am - a pawn to some greater power. We both serve as dogs to a master, through blood and slaughter.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~We are *nothing* alike. Do not even dare to insinuate it.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn1","MYAREA",80)
+RESPONSE #70
+ActionOverride("Dorn",DisplayStringHead("Dorn",~True. I am far stronger than you can ever hope to become. That is difference enough.~))
+SetGlobal("C02SireneDorn","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneDornTalk","GLOBAL",ONE_DAY)
+SetGlobal("C02SireneDorn1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Dorn")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneDorn","GLOBAL",2)
+GlobalTimerExpired("C02SireneDornTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneDorn2","MYAREA",-1)
+Switch("C02SireneDorn2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Dorn",DisplayStringHead("Dorn",~What power you have is squandered by your restraint, fiendling. Do not reject your blood - embrace it! If you do, perhaps you could even match my prowess.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+SetGlobal("C02SireneDorn2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Do not think to tempt me with your poisonous words. I have heard them before, and I can only respond with the edge of my blade.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Dorn",DisplayStringHead("Dorn",~Such a waste of potential. You are a disgrace to your blood, woman.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~And you are a disgrace to whatever humanity is within you, Dorn. I would urge you to seek the light, if I could not see you too drunk in the darkness to find it.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Dorn",DisplayStringHead("Dorn",~Light? Foolish woman, have you forgotten that the light is our enemy? That is the only thing keeping us allies.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDorn2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Aye, that it is. But once the light has faded, I will see that you no longer live to wreak suffering upon another.~)
+SetGlobal("C02SireneDorn","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneDornTalk","GLOBAL",ONE_DAY)
+SetGlobal("C02SireneDorn2","MYAREA",-1)
+END
+
+// Dynaheir
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Dynaheir")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneDynaheir","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneDynaheir","GLOBAL",1)
+SetGlobalTimer("C02SireneDynaheirTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Dynaheir")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneDynaheir","GLOBAL",1)
+GlobalTimerExpired("C02SireneDynaheirTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneDynaheir1","MYAREA",-1)
+Switch("C02SireneDynaheir1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Thy skill with a blade is remarkable, Sirene. Thou mayst lack Minsc's strength at arms, but there is a certain... elegance, to thy style.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Thank you for your praise, m'lady Dynaheir. Though if 'tis elegance you speak of, I could not think of matching you outside of battle.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~I only ever speak the truth as I see it. Yet... 'twas not all. I may be uneducated in the ways of combat, yet I can clearly see a... reluctance in thy attack.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Ah... well, that is...~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Art thou fearful of killing, Sirene? I wouldst think 'twould be unworthy for a champion of faith.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~*sigh* Yes. I am ashamed to say it, but I am, despite my many years of training.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",60)
+RESPONSE #60
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~I see 'tis discomforting for thee to speak of. I shall question thee no longer.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~...thank you, my lady.~)
+SetGlobal("C02SireneDynaheir","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneDynaheirTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneDynaheir1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Dynaheir")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneDynaheir","GLOBAL",2)
+GlobalTimerExpired("C02SireneDynaheirTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneDynaheir2","MYAREA",-1)
+Switch("C02SireneDynaheir2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~When we last conversed, we spoke of thy reluctance to kill. If thou dost not mind, might we return to this subject?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Aye, I suppose we may, lady Dynaheir. Ask me what you will.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Then I ask thee - if thou dost not wisheth to slay another living being, then why dost thou take the path of a paladin?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Are... are you saying that you doubt me, my lady?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Nay, I do not mean it as such. But thy talents in healing are remarkable. Thou couldst have become a priestess of thy faith, and avoided battle altogether.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~*sigh* I have considered it myself, many times...~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Then why dost thou remain on this path that thou despiseth?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~I do not know. Perhaps 'tis in my blood to revel in bloodshed, as much as it repulses me. Or perhaps this is the way I wish to protect others from suffering.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneDynaheir2","MYAREA",80)
+RESPONSE #80
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Perhaps 'tis both. I sense thy mind is confused. I ask that thou consider the reason for thy desire to remain in the battlefield, and whether 'tis truly what thou shouldst become.~))
+SetGlobal("C02SireneDynaheir","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneDynaheir2","MYAREA",-1)
+END
+
+// Edwin
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Edwin")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneEdwin","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneEdwin","GLOBAL",1)
+SetGlobalTimer("C02SireneEdwinTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Edwin")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneEdwin","GLOBAL",1)
+GlobalTimerExpired("C02SireneEdwinTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneEdwin1","MYAREA",-1)
+Switch("C02SireneEdwin1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Edwin",DisplayStringHead("Edwin",~Tell me why 'tis necessary to drag this self-righteous tiefling with us wherever we go, <CHARNAME>.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~What have I done to provoke your ire, mage?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Edwin",DisplayStringHead("Edwin",~What have you done?! Everything you do provokes me, fiendling! You throw yourself at our foes like a mad beast! How do you expect me to aim my fireballs with you darting about like an irksome fly?!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+SetGlobal("C02SireneEdwin1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~My position in combat has not stopped you from casting recklessly before.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Edwin",DisplayStringHead("Edwin",~Such an indignity! You have no shame for inhibiting my power, and therefore my worth to this war! I must hold back my magic because of you!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Use your full power if you must, mage. Perhaps I will feel the difference, but better that I suffer the consequences of your company than our allies.~)
+SetGlobal("C02SireneEdwin","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneEdwinTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneEdwin1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Edwin")
+InParty("C0Sirene")
+PartyHasItem("c0sw2h")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneEdwin","GLOBAL",2)
+GlobalTimerExpired("C02SireneEdwinTalk","GLOBAL")
+HPPercentGT("Edwin",25)
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneEdwin2","MYAREA",-1)
+Switch("C02SireneEdwin2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Edwin",DisplayStringHead("Edwin",~Tiefling, that sword that you carry has a... most interesting result from my magical appraisal.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~This blade? I have carried it for two years. 'Tis enchanted, true... but no more so than any other weapon we have.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Edwin",DisplayStringHead("Edwin",~That is the conclusion derived from a simpler mind. Hand it over, and allow me to examine it. Perhaps it has secrets left untapped.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~I would not suggest that-~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Edwin",MoveToObject("C0Sirene"))
+ActionOverride("Edwin",DisplayStringHead("Edwin",~Yes, yes, whatever you say, tiefling, now give it here and- GAH!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1)
+SetGlobal("C02SireneEdwin2","MYAREA",50)
+RESPONSE #50
+ApplyDamagePercent("Edwin",1,FIRE)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Edwin",DisplayStringHead("Edwin",~The sword assaulted me! What is this trickery, tiefling?! Why did you not see fit to warn me?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~You did not allow me the chance to.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneEdwin2","MYAREA",80)
+RESPONSE #80
+ActionOverride("Edwin",DisplayStringHead("Edwin",~Grr... I shall remember this, mark my words. I've memorized your face, and that sword as well. (One day... one day...)~))
+SetGlobal("C02SireneEdwin","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneEdwin2","MYAREA",-1)
+END
+
+// Glint
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Glint")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneGlint","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneGlint","GLOBAL",1)
+SetGlobalTimer("C02SireneGlintTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Glint")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneGlint","GLOBAL",1)
+GlobalTimerExpired("C02SireneGlintTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneGlint1","MYAREA",-1)
+Switch("C02SireneGlint1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Glint",DisplayStringHead("Glint",~So, uh... Sirene. Are you a dog or a cat person?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Forgive me, Glint, but... what do you mean?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Glint",DisplayStringHead("Glint",~You know, dogs or cats? Which do you prefer?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~I... have never considered it. Dogs, I suppose, though I am not opposed to cats either.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Glint",DisplayStringHead("Glint",~Really? Never would have thought it. Your eyes reminded me of my dear old aunt's cat familiar. She was an illusionist, you see. My aunt, I mean, not the cat, although come to think of it-~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~*sigh* Excuse me, Glint, but is there a point to this?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",60)
+RESPONSE #60
+ActionOverride("Glint",DisplayStringHead("Glint",~Well, yes, I'm almost positive there was, but... well, I've forgotten.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~*sigh*~)
+SetGlobal("C02SireneGlint","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneGlintTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneGlint1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Glint")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneGlint","GLOBAL",2)
+GlobalTimerExpired("C02SireneGlintTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneGlint2","MYAREA",-1)
+Switch("C02SireneGlint2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Glint",DisplayStringHead("Glint",~I've been scouring my mind for what I was going to ask you, Sirene, really been going at it, but... Cloakshadow's shadow, I just can't remember.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~That is... a shame?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Glint",DisplayStringHead("Glint",~Oh well, can't have been that important anyway. So, why *do* you prefer dogs?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Do you disapprove?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Glint",DisplayStringHead("Glint",~No, not at all, I personally love them. Even the violent ones, though they certainly don't love me back. Anyways, why *do* you prefer dogs?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~There was a blind priest in my home village's temple, who used a hound to guide him. He was aged and forgetful, and often forgot to feed his companion. I did it in his stead.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Glint",DisplayStringHead("Glint",~My, that is a very kind thing to do, if I might say so myself. Please go on.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~There is little more to tell, unfortunately... I was fond of the beast, for he did not fear me as others did. He was perhaps my only true friend in my lonely childhood.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",80)
+RESPONSE #80
+ActionOverride("Glint",DisplayStringHead("Glint",~Well, I can certainly see how a friendship could form there. Do continue!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",90)
+RESPONSE #90
+DisplayStringHead("C0Sirene",~When the blind priest passed away, the hound remained at the temple, until 'twas adopted by a travelling caravan with a blind boy two years later.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",100)
+RESPONSE #100
+ActionOverride("Glint",DisplayStringHead("Glint",~That's very sad. So you never saw it again?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",110)
+RESPONSE #110
+DisplayStringHead("C0Sirene",~No, though I was satisfied that he had gone to the side of someone who truly needed him. Does that sate your curiosity, Glint?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneGlint2","MYAREA",120)
+RESPONSE #120
+ActionOverride("Glint",DisplayStringHead("Glint",~Oh yes, yes, it most certainly did. Next time I'll tell you about my aunt's cat, and how it- well, I'll not spoil it right now. Forward!~))
+SetGlobal("C02SireneGlint","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneGlint2","MYAREA",-1)
+END
+
+// Jaheira
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Jaheira")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneJaheira","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneJaheira","GLOBAL",1)
+SetGlobalTimer("C02SireneJaheiraTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Jaheira")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneJaheira","GLOBAL",1)
+GlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneJaheira1","MYAREA",-1)
+Switch("C02SireneJaheira1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Watch your step, Sirene. Your armor and cloak are bright enough for anyone in our sights to notice. You do not need to add noise on top of that.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Yes... you are right, Jaheira.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Have you considered a change of attire? We will be walking through hostile ground, and wearing such colors is a risk to us all.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~My apologies, but... there is little I can do. My armor is necessary, and the white cloak is a symbol of my faith.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~You can prove your faith in ways other than parading it around, child. Pack it away for the moment and I shall craft you something more practical.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~I suppose 'tis necessary. Very well then, Jaheira. Thank you.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira1","MYAREA",60)
+RESPONSE #60
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Good. Now, I just need to find some suitable leaves...~))
+SetGlobal("C02SireneJaheira","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneJaheiraTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneJaheira1","MYAREA",-1)
+END
+
+// leafen cloak
+
+IF
+	InParty("Jaheira")
+	InParty("C0Sirene")
+	GlobalGT("C02SireneJaheira","GLOBAL",1)
+	Global("C02SireneJaheiraCloak","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("C02SireneJaheiraCloak","GLOBAL",1)
+	SetGlobalTimer("C02SireneJaheiraCloakTimer","GLOBAL",EIGHT_HOURS)
+END
+
+IF
+	InParty("Jaheira")
+	InParty("C0Sirene")
+	GlobalTimerExpired("C02SireneJaheiraCloakTimer","GLOBAL")
+	Global("C02SireneJaheiraCloak","GLOBAL",1)
+THEN
+	RESPONSE #100
+	GiveItemCreate("c02sclck","c0sirene",0,0,0)
+	SetGlobal("C02SireneJaheiraCloak","GLOBAL",2)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Jaheira")
+InParty("C0Sirene")
+PartyHasItem("c0scloak")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneJaheira","GLOBAL",2)
+GlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneJaheira2","MYAREA",-1)
+Switch("C02SireneJaheira2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~How is the cloak, child? Is it the right size, and is it suitably warm during the evenings?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Aye, it is. I confess I am surprised... I had not thought a cloak made of leaves could provide such comfort.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Some druidic magic was used in its creation, but the comfort you feel is largely from its craftsmanship.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Yes, I can feel it. I had not expected you to have such a talent, Jaheira.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Some skills are developed through necessity. Silvanus knows Khalid wouldn't be able to take care of himself properly for even a day without me.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",50)
+RESPONSE #50
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~I made one for him as well, while we were alone together. Unfortunately, it seems he needed to burn it as firewood during the siege, or some such nonsense.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~Perhaps I should give this to him instead, then. He would deserve it more than I.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneJaheira2","MYAREA",70)
+RESPONSE #70
+ActionOverride("Jaheira",DisplayStringHead("Jaheira",~Nonsense, keep it. I'm sure you'd revert to that impractical white cloak of yours otherwise. I will make another for him once this is all over.~))
+SetGlobal("C02SireneJaheira","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneJaheira2","MYAREA",-1)
+END
+
+// Khalid
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Khalid")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneKhalid","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneKhalid","GLOBAL",1)
+SetGlobalTimer("C02SireneKhalidTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Khalid")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneKhalid","GLOBAL",1)
+GlobalTimerExpired("C02SireneKhalidTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneKhalid1","MYAREA",-1)
+Switch("C02SireneKhalid1","MYAREA")
+THEN
+RESPONSE #0
+DisplayStringHead("C0Sirene",~Khalid, have you need of anything?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",10)
+RESPONSE #10
+ActionOverride("Khalid",DisplayStringHead("Khalid",~N-no, my friend. I am w-well and good. Perhaps you could attend to <CHARNAME>, instead.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",20)
+RESPONSE #20
+DisplayStringHead("C0Sirene",~<CHARNAME> has all the support I can give <PRO_HIMHER>. I would rather ensure that you are well.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",30)
+RESPONSE #30
+ActionOverride("Khalid",DisplayStringHead("Khalid",~R-really, I'm fine. Why are you so concerned about m-me?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",40)
+RESPONSE #40
+DisplayStringHead("C0Sirene",~'Tis just that you were so devoted to the siege at Bridgefort... I had thought perhaps it had taken its toll on you. I hoped I could help in some way.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",50)
+RESPONSE #50
+ActionOverride("Khalid",DisplayStringHead("Khalid",~Oh, y-you don't need to worry. I'm s-stronger than I look.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~N-no, I did not mean to doubt that-~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",70)
+RESPONSE #70
+ActionOverride("Khalid",DisplayStringHead("Khalid",~It c-can often be hard to tell, I know. (nervously chuckles)~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid1","MYAREA",80)
+RESPONSE #80
+DisplayStringHead("C0Sirene",~You were teasing me, were you not? (laugh) I suppose that means you are truly well, then. I am glad.~)
+SetGlobal("C02SireneKhalid","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneKhalidTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneKhalid1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Khalid")
+!Dead("Jaheira")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneKhalid","GLOBAL",2)
+GlobalTimerExpired("C02SireneKhalidTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneKhalid2","MYAREA",-1)
+Switch("C02SireneKhalid2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Khalid",DisplayStringHead("Khalid",~I m-must say, having you on our side in battle h-helps my confidence.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~You... must be mistaken, Khalid. Some paladins are capable of purging fear in others, but I have no power to do so.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Khalid",DisplayStringHead("Khalid",~N-no, I don't mean in a m-magical sense. You are just so... f-fearless in battle, it is inspiring.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~That is incorrect, Khalid. I have fear just as anyone else. Especially in battle. The very thought of striking down a living man fills me with dread.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Khalid",DisplayStringHead("Khalid",~B-but I have never seen you flee from battle. Even though you hate the th-thought of killing another, you n-never shy away from it if any of us are endangered.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Aye, but that is because I have little to lose, should I sacrifice my life for a cause. You are not the same, Khalid. You have Jaheira, and <CHARNAME>.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Khalid",DisplayStringHead("Khalid",~T-that is true, but when you put it that way... I become c-concerned for you.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~Do not be. I have accepted long ago that my creed will lead to my death, Khalid.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneKhalid2","MYAREA",80)
+RESPONSE #80
+ActionOverride("Khalid",DisplayStringHead("Khalid",~B-but you are still so young. D-do not consider giving up your life so easily.~))
+SetGlobal("C02SireneKhalid","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneKhalid2","MYAREA",-1)
+END
+
+// M'khiin
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Mkhiin")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneMkhiin","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneMkhiin","GLOBAL",1)
+SetGlobalTimer("C02SireneMkhiinTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Mkhiin")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneMkhiin","GLOBAL",1)
+GlobalTimerExpired("C02SireneMkhiinTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneMkhiin1","MYAREA",-1)
+Switch("C02SireneMkhiin1","MYAREA")
+THEN
+RESPONSE #0
+DisplayStringHead("C0Sirene",~Do you follow a deity, M'khiin?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+SetGlobal("C02SireneMkhiin1","MYAREA",10)
+RESPONSE #10
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~Don't know. Believe they exist. Never cared much for 'em though. Greedy bastards, always demanding, never giving.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin1","MYAREA",20)
+RESPONSE #20
+DisplayStringHead("C0Sirene",~That is not the way of all gods... but I admit I have not shared your perspective. What was your clan's god?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin1","MYAREA",40)
+RESPONSE #30
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~Maglubiyet. Goblin war god. Never saw the point of worshipping a god that wants you to fight your whole life. Other goblins feared him. I didn't.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin1","MYAREA",50)
+RESPONSE #40
+DisplayStringHead("C0Sirene",~Truly? Then you are braver than many men that I have known. There are all too many that would follow an evil god out of fear.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin1","MYAREA",60)
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~Goblins are cowards. We follow whoever is the strongest, and beat up anyone we're not running from. Our gods are the same.~))
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Is that why you chose your path as a shaman?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin1","MYAREA",70)
+RESPONSE #60
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~Spirits are better. Spirits respond when I call, and never demand. They're worth listening to.~))
+SetGlobal("C02SireneMkhiin","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneMkhiinTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneMkhiin1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Mkhiin")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneMkhiin","GLOBAL",2)
+GlobalTimerExpired("C02SireneMkhiinTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneMkhiin2","MYAREA",-1)
+Switch("C02SireneMkhiin2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~You took a hit on purpose in our last fight. Stupid move. Could have avoided it.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~I had no choice. 'Twas either that or I allowed you to lose an arm.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~I'm tougher than I look. Not like you really care.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Is't so difficult to believe that I do?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMkhiin2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Mkhiin",DisplayStringHead("Mkhiin",~Can't say. Don't trust any of the long-legs, not after they all tried to kill me. Not sure about you, yet.~))
+SetGlobal("C02SireneMkhiin","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneMkhiin2","MYAREA",-1)
+END
+
+// Minsc
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Minsc")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneMinsc","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneMinsc","GLOBAL",1)
+SetGlobalTimer("C02SireneMinscTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Minsc")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneMinsc","GLOBAL",1)
+GlobalTimerExpired("C02SireneMinscTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneMinsc1","MYAREA",-1)
+Switch("C02SireneMinsc1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Minsc",DisplayStringHead("Minsc",~My friend Sirene, you wield a large sword for such a little lady! If you were any larger, you would be carrying a sword heavier than Minsc, ha!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Thank you, Minsc, but I am not as strong as you might believe. I have simply... learned how to use my strength appropriately.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Minsc",DisplayStringHead("Minsc",~Minsc's uncle once said the same thing. "A true warrior takes advent... vantage of every inch of their body," he told Minsc. So, Minsc learned how to use his head and feet as weapons for bashing the skulls of evil.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~'Tis true, you have great strength, Minsc, but... I think 'twas meant less literally than that.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Minsc",DisplayStringHead("Minsc",~Dynaheir also told me that. But she also said that so long as Minsc does his job, he can use whatever part of the body he pleases.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc1","MYAREA",50)
+RESPONSE #50
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Minsc! Thou shouldst choose thy words carefully, lest they be taken the wrong way by our friend.~))
+SetGlobal("C02SireneMinsc","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneMinscTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneMinsc1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Minsc")
+!Dead("Dynaheir")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneMinsc","GLOBAL",2)
+GlobalTimerExpired("C02SireneMinscTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneMinsc2","MYAREA",-1)
+Switch("C02SireneMinsc2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Minsc",DisplayStringHead("Minsc",~I am confused. Sirene is almost as elegant as Dynaheir in speech and manners, but she is also a warrior as mighty as Minsc!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~I am a defender of the people, Minsc. What else did you expect me to be?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Minsc",DisplayStringHead("Minsc",~Boo thought that perhaps you had the magic to conjure fire from your fingertips, like Dynaheir.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~You may not be entirely wrong, Minsc. Magic may very well be in my blood, but I have never attempted to unlock any secrets that could might hide within me.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Minsc",DisplayStringHead("Minsc",~Boo is very good at hiding. Perhaps he could be of assistance.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Ah... no, Minsc. That is not the sort of hiding that I speak of.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Minsc",DisplayStringHead("Minsc",~Aha! Then you must mean it in the... eh, metaphorical sense. That was Boo's word. He says Dynaheir is very knowledgable in such things. We will ask her.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneMinsc2","MYAREA",70)
+RESPONSE #70
+ActionOverride("Dynaheir",DisplayStringHead("Dynaheir",~Minsc... I think thou hast harassed our companion long enough.~))
+SetGlobal("C02SireneMinsc","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneMinsc2","MYAREA",-1)
+END
+
+// Neera
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Neera")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneNeera","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneNeera","GLOBAL",1)
+SetGlobalTimer("C02SireneNeeraTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Neera")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneNeera","GLOBAL",1)
+GlobalTimerExpired("C02SireneNeeraTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneNeera1","MYAREA",-1)
+GlobalLT("bd_neera_plot","global",5)
+Switch("C02SireneNeera1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Neera",DisplayStringHead("Neera",~ARGH! You're driving me insane! I swear if I knew where you were, Adoy, I'd go to you in an instant and WRING YOUR BLOODY NECK, SO TAKE A HINT AND-~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Er... Neera? Do you need assistance?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Neera",DisplayStringHead("Neera",~NO! Um, sorry. I mean, no. Appreciate it, but I doubt you can do any- by Mystra can you be quiet for ONE. SECOND?!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~Truly, if there is anything I can do to help, you only need to ask. I can tell 'tis distressing for you.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Neera",DisplayStringHead("Neera",~Distressing doesn't even begin to cover it. If you really want to help, Sirene, get a knife and- CUT HIS STLARNING HEAD OPEN, DAMN IT!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",50)
+RESPONSE #50
+ActionOverride("Neera",DisplayStringHead("Neera",~...er, I meant my head. Stupid voice distracted me. He's quieted down at last, thank the gods.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~Neera, you were not serious... were you?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",70)
+RESPONSE #70
+ActionOverride("Neera",DisplayStringHead("Neera",~Ugh, I meant it as a joke, okay? It was terrible, I know, but I needed to do *something* to help me forget he exists. I can't even think straight with the noise.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",80)
+RESPONSE #80
+ActionOverride("Neera",DisplayStringHead("Neera",~You wanna help? We can have some girl-to-girl talk. I had no one to talk to but this guy for several weeks and I felt like going crazy.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",90)
+RESPONSE #90
+DisplayStringHead("C0Sirene",~Um... of course, Neera. If it helps.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera1","MYAREA",100)
+RESPONSE #100
+ActionOverride("Neera",DisplayStringHead("Neera",~Thanks. Wait, nope, maybe later. Ohhh no, he's back. I'll just go over there so my screaming doesn't turn you deaf.~))
+SetGlobal("C02SireneNeera","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneNeeraTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneNeera1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Neera")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneNeera","GLOBAL",2)
+GlobalTimerExpired("C02SireneNeeraTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneNeera2","MYAREA",-1)
+Switch("C02SireneNeera2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Neera",DisplayStringHead("Neera",~Hey. Got a moment, Sirene?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Of course. What do you need, Neera?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Neera",DisplayStringHead("Neera",~I just wanted to say thanks. For keeping me company, and all. I hope I didn't hurt your ears with the talking. Or the shouting.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~You most certainly did not, Neera. I am always here to help.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Neera",DisplayStringHead("Neera",~I'm curious, though. How can you be so patient and understanding all the time? Most of the time people look at me like I'm crazy, or that I'll explode into a mass of spellfire. Not you, though.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",50)
+RESPONSE #50
+ActionOverride("Neera",DisplayStringHead("Neera",~Wait, don't tell me. It's the whole paladin thing, isn't it? You have to do it, even if you don't want to?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~Well, 'tis expected of me, true, but... I do enjoy speaking with you, Neera. And I do not blame you for your magic... few of us truly choose to become what we are.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneNeera2","MYAREA",70)
+RESPONSE #70
+ActionOverride("Neera",DisplayStringHead("Neera",~Well, this talk's made me all warm and fuzzy. I'm glad you're my friend, Sirene. Which will make me feel extra bad if I accidentally fry- never mind. Shouldn't kill the mood.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneNeera","GLOBAL",3)
+SetGlobal("C02SireneNeera2","MYAREA",-1)
+END
+
+// Rasaad
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("RASAAD")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneRasaad","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneRasaad","GLOBAL",1)
+SetGlobalTimer("C02SireneRasaadTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("RASAAD")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneRasaad","GLOBAL",1)
+GlobalTimerExpired("C02SireneRasaadTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneRasaad1","MYAREA",-1)
+Switch("C02SireneRasaad1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~We did not talk much while we were both assisting refugees at Baldur's Gate.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+SetGlobal("C02SireneRasaad1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~No, we did not. I noticed you, certainly, yet... you always seemed distracted, lost in thoughts. It seemed almost a sin to interrupt.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",20)
+RESPONSE #20
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~I was. Meditation has not come easily to me as of late.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~What troubles you so, Rasaad? You are among the most resilient people I have met.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",40)
+RESPONSE #40
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~I fear for my fellow Selunites. Even if I have neglected them as of late, they would not disappear without giving me a sign.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~So that is why... but, should you not be searching for them?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",60)
+RESPONSE #60
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~No. This is a more immediate and visible threat. If I discover any hint of my brothers' fates, I will seek them when appropriate. For now, I am needed here.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~Would that I could help you in any way, Rasaad. But regardless, I am glad to have one such as you in my company.~)
+SetGlobal("C02SireneRasaad","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneRasaadTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneRasaad1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("RASAAD")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneRasaad","GLOBAL",2)
+GlobalTimerExpired("C02SireneRasaadTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneRasaad2","MYAREA",-1)
+Switch("C02SireneRasaad2","MYAREA")
+THEN
+RESPONSE #0
+DisplayStringHead("C0Sirene",~In my scant few years knowing battle, I have never seen one fight such as you, Rasaad.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",10)
+RESPONSE #10
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~You honor me, friend, but 'tis truly nothing out of the ordinary. I have only the basic skill known by all Sun Soul monks.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",20)
+RESPONSE #20
+DisplayStringHead("C0Sirene",~Forgive me, but I find that difficult to believe. Your techniques seem so... complex.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",30)
+RESPONSE #30
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~It may seem so to the common observer, Sirene, but it is much easier in practice. Even you could reach the same level, if you had the years to spare on training.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",40)
+RESPONSE #40
+DisplayStringHead("C0Sirene",~Me? Truly?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",50)
+RESPONSE #50
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~Yes. Your fighting style is not unlike mine. Instead of brute force, your forte is agility and patience, waiting for the perfect time to strike.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~You have seen this much out of my style? Truly, you are a remarkable fighter, Rasaad.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",70)
+RESPONSE #70
+ActionOverride("RASAAD",DisplayStringHead("RASAAD",~Perhaps when we have the time, we should spar for an hour, and learn from each others' technique.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneRasaad2","MYAREA",80)
+RESPONSE #80
+DisplayStringHead("C0Sirene",~I would like that.~)
+SetGlobal("C02SireneRasaad","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneRasaad2","MYAREA",-1)
+END
+
+// Safana
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("SAFANA")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneSafana","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneSafana","GLOBAL",1)
+SetGlobalTimer("C02SireneSafanaTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("SAFANA")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneSafana","GLOBAL",1)
+GlobalTimerExpired("C02SireneSafanaTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneSafana1","MYAREA",-1)
+Switch("C02SireneSafana1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~Don't take it the wrong way, darling, but your armor is so terribly unfashionable. How could you ever hope to attract a man wearing such unflattering attire?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~I dress to protect, not expose myself as you do, Safana.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",20)
+RESPONSE #20
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~My, how rude. I give you a piece of heartfelt advice, girl-to-girl, and I receive such a barb in return!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~*sigh* No, I should apologize, but... I am uncertain of whether you are mocking me.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",40)
+RESPONSE #40
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~Oh, come now. I'm not that cruel. Besides, if I didn't really care, I'd keep my mouth shut so that the men would come to me instead. Don't you agree?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~I... suppose you are right. But my armor is practical, and I prefer it this way.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana1","MYAREA",60)
+RESPONSE #60
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~And here I was being uncharacteristically generous for a change. I even had ideas for how you could... customize your attire, too. Whatever floats your boat, honey.~))
+SetGlobal("C02SireneSafana","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneSafanaTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneSafana1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("SAFANA")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneSafana","GLOBAL",2)
+GlobalTimerExpired("C02SireneSafanaTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneSafana2","MYAREA",-1)
+Switch("C02SireneSafana2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~So, you have a thing for women too, hmm?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~What is it to you? I do not believe I have exhibited my preferences openly.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",20)
+RESPONSE #20
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~Oh, I have an eye for such things, Sirene. I caught your glances at me, for instance.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~I did no such thing.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",40)
+RESPONSE #40
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~Don't paladins have a rule against making bold faced lies? I'm not blind, darling, but all this sneak peeking gets tiresome after a while.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~It matters not. Regardless of how I might see you outwardly, I would not even consider entering any sort of affair with one as untrustworthy as you.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneSafana2","MYAREA",60)
+RESPONSE #60
+ActionOverride("SAFANA",DisplayStringHead("SAFANA",~No skin of my back, dear. You've got nothing I want.~))
+SetGlobal("C02SireneSafana","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneSafana2","MYAREA",-1)
+END
+
+// Viconia
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Viconia")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneViconia","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneViconia","GLOBAL",1)
+SetGlobalTimer("C02SireneViconiaTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Viconia")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneViconia","GLOBAL",1)
+GlobalTimerExpired("C02SireneViconiaTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneViconia1","MYAREA",-1)
+Switch("C02SireneViconia1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Viconia",DisplayStringHead("Viconia",~You do not seem as opposed to my presence as I expected.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+SetGlobal("C02SireneViconia1","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~What is your point, Sharran?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",20)
+RESPONSE #20
+ActionOverride("Viconia",DisplayStringHead("Viconia",~I have met many pious, brutish louts since coming to the surface. None of them would allow two words to be spoken before drawing their blade. You are a strange exception.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~I do not judge others for what they are, Viconia, only what they choose to be.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",40)
+RESPONSE #40
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Of course. You are a... 'de'rendalhar'. A spawn of fiendish union. Amongst the rivvil, you and I should be allies.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~We are allies, but only of convenience. I do not blame you for being drow, but I will not align myself with a follower of Shar.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",60)
+RESPONSE #60
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Amongst your surface gods, only the Nightsinger chose to accept me. Shar showed me the value of strength. Where were your 'benevolent' gods in my time of need?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia1","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~Perhaps 'twas your dark heart which kept them at bay. I will waste no more words with you.~)
+SetGlobal("C02SireneViconia","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneViconiaTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneViconia1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Viconia")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneViconia","GLOBAL",2)
+GlobalTimerExpired("C02SireneViconiaTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneViconia2","MYAREA",-1)
+Switch("C02SireneViconia2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Tell me, de'rendalhar, how many men have spat at you after you tended to them, upon realizing what you were?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+SetGlobal("C02SireneViconia2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Many, Sharran, but there are also others whose fears were eased once I healed them.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Not as many as those who raised as sword against you the moment they could, no doubt.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~If I had allowed my fear of rejection control me, I would never have met a friend such as <CHARNAME>.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+SetGlobal("C02SireneViconia2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Your naïve optimism sickens me. Were you in the Underdark, you would not survive for longer than a day.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",10)
+SetGlobal("C02SireneViconia2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~Perhaps you should look to yourself instead, Viconia, and remember that this is not the Underdark. Distrust will only cost you any friendship you might have.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Viconia",DisplayStringHead("Viconia",~Friends are nothing more than weapons to be used against you.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneViconia2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~Only if you do not give them the trust they deserve.~)
+SetGlobal("C02SireneViconia","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneViconia2","MYAREA",-1)
+END
+
+// Voghiln
+
+// talk 1
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Voghiln")
+InParty("C0Sirene")
+!ActuallyInCombat()
+Global("C02SireneVoghiln","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C02SireneVoghiln","GLOBAL",1)
+SetGlobalTimer("C02SireneVoghilnTalk","GLOBAL",ONE_DAY)
+END
+
+IF
+InMyArea(Player1)
+InParty("Voghiln")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneVoghiln","GLOBAL",1)
+GlobalTimerExpired("C02SireneVoghilnTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneVoghiln1","MYAREA",-1)
+Switch("C02SireneVoghiln1","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Ho there, my fair lady of war!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",10)
+RESPONSE #10
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~...er, my lady?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",20)
+RESPONSE #20
+DisplayStringHead("C0Sirene",~Oh! W-what is it, Voghiln? Do you require aid?~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",30)
+RESPONSE #30
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Ah, and finally the lady turns! No, I require nothing. I only wished to see your fair face, and ask that you smile, nothing more.~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",40)
+RESPONSE #40
+DisplayStringHead("C0Sirene",~Oh, I... I see.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",50)
+RESPONSE #50
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~But, truth be told, mistress Sirene, you are truly one of a kind. Voghiln has been showered with affection and arrows both from many a maiden, yet this is the first time Voghiln has received a response as cold as to be ignored entirely. You wound me, my lady!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",60)
+RESPONSE #60
+DisplayStringHead("C0Sirene",~I- If I have offended you with my manner, Voghiln, then I humbly ask your forgiveness.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln1","MYAREA",70)
+RESPONSE #70
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Ha! You are most clever to toy with Voghiln's affections so, my lady, but I swear to you, I will overcome your icy defense!~))
+SetGlobal("C02SireneVoghiln","GLOBAL",2)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobalTimer("C02SireneVoghilnTalk","GLOBAL",THREE_DAYS)
+SetGlobal("C02SireneVoghiln1","MYAREA",-1)
+END
+
+// talk 2
+
+IF
+InMyArea(Player1)
+InParty("Voghiln")
+InParty("C0Sirene")
+!ActuallyInCombat()
+!See([ENEMY])
+Global("C02SireneVoghiln","GLOBAL",2)
+GlobalTimerExpired("C02SireneVoghilnTalk","GLOBAL")
+!RealGlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!Global("C02SireneVoghiln2","MYAREA",-1)
+Switch("C02SireneVoghiln2","MYAREA")
+THEN
+RESPONSE #0
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Ah, fair lady Sirene! 'Tis a fine <DAYNIGHT>, ja?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",10)
+RESPONSE #10
+DisplayStringHead("C0Sirene",~Aye, that it is, Voghiln. You look well today.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",20)
+RESPONSE #20
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Aye, that I am, and why not? There is no greater joy than life, to drink and feast and woo the fairest of wenches!~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",30)
+RESPONSE #30
+DisplayStringHead("C0Sirene",~You have a carefree outlook on life, my friend. I admire that, in a sense.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",40)
+RESPONSE #40
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~But I shall dispense with the small talk, my lady. I ask you; what do you think of ol' Voghiln, eh?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",50)
+RESPONSE #50
+DisplayStringHead("C0Sirene",~What do I think of you, Voghiln? Well... I believe you are a good person. And your war songs are... well, inspiring in battle.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",60)
+RESPONSE #60
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Ho ho! So it is music that touches your heart! Then Voghiln shall recite a ditty for your amusement, ja?~))
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",70)
+RESPONSE #70
+DisplayStringHead("C0Sirene",~You are capable of other types of song, Voghiln? I would like to hear it.~)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+SetGlobal("C02SireneVoghiln2","MYAREA",80)
+RESPONSE #80
+ActionOverride("Voghiln",DisplayStringHead("Voghiln",~Listen well, my lady, and be enthralled by Voghiln's many talents!~))
+SetGlobal("C02SireneVoghiln","GLOBAL",3)
+RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1200)
+SetGlobal("C02SireneVoghiln2","MYAREA",-1)
+END

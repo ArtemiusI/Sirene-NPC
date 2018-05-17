@@ -1,7 +1,7 @@
-I_C_T BDSCHAEL 40 C0BDSCHAEL40
+INTERJECT BDSCHAEL 39 C0BDSCHAEL39
 == BDSCHAEL ~I've also heard that there was a paladin of Ilmater helping the wounded at the local temple of Helm... although with the amount of people flooding into the city as of late, she's more than likely at the Iron Throne building by now. I've been told that she makes an effort to hide her face under a white hood, if that sounds familiar to you.~
-DO ~SetGlobal("C0BDSCHAEL40","GLOBAL",0)~
-END
+DO ~SetGlobal("C0BDSCHAEL39","GLOBAL",0)~
+COPY_TRANS BDSCHAEL 39
 
 CHAIN IF WEIGHT #-1
 ~AreaCheck("BD0111")

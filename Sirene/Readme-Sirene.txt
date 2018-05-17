@@ -38,6 +38,7 @@ MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance
 
 Advantages:
 - Hit Die: d12
+- May use Lay on Hands three times per day.
 - May use the Sacrifice ability once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
 
 SACRIFICE: The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to <HIMHER>self up to a maximum of 1d6+20 at 10th level.
@@ -111,11 +112,19 @@ Soundset: Bioware - Icewind Dale
  Known Issues
 -----------------------
 
-The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious reasons.
-
 -----------------------
  Change Log
 -----------------------
+
+v2.4
+- Merged BG:EE and SoD components
+- Enabled Martyr kit for player characters
+- Added extra uses of Lay on Hands to Martyr kit
+- Fighter/Cleric alternate class removed
+- Added optional Divine Champion alternate kit (requires House Rules mod)
+- Added two alternate portraits
+- Added crossmod banters with Aura
+- SoD banter scripts made more reliable
 
 v2.2
 - Fixed bug in dream script that caused several talks not to fire
