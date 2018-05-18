@@ -272,7 +272,7 @@ PRINT ~Please choose one of the following:
 [4] Alternate Heavy Armor by Sirick/LavaDelVortel~
 
 ACTION_READLN ~portrait~
-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~%portrait%~ > 2) OR (~%portrait%~ < 1)) BEGIN
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~%portrait%~ > 4) OR (~%portrait%~ < 1)) BEGIN
   PRINT ~Please choose one of the following:
 [1] BG1 Default by sporeboy
 [2] BG2 Default by Isandir

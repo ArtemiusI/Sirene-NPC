@@ -9,6 +9,5 @@ THEN
     SetGlobal("bd_jail_visitors","bd0104",5)
     SetGlobalTimer("bd_jail_visitors2_timer","bd0104",TEN_ROUNDS)
     MoveGlobal("bd0104","C0Sirene",[720.620])
-	ActionOverride("C0Sirene",Polymorph(THIEF_FEMALE_ELF))
     ActionOverride("C0Sirene",ChangeAIScript("bdvisit",OVERRIDE))
 END
