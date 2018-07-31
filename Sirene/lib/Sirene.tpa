@@ -369,6 +369,7 @@ COMPILE	~%MOD_FOLDER%/Dialogue/dialog.d~
 	~%MOD_FOLDER%/Dialogue/C02SGlen.d~
 	
 	~%MOD_FOLDER%/Scripts/C02Siren.baf~
+	~%MOD_FOLDER%/Scripts/C02SBANT.baf~
 	~%MOD_FOLDER%/Scripts/C02DemKn.baf~
 
 EXTEND_TOP ~bd0103.bcs~ ~%MOD_FOLDER%/scripts/bd0103.baf~
