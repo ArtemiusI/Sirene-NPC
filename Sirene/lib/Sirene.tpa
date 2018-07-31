@@ -34,7 +34,7 @@ ADD_KIT ~C0ILM~
  ~C0ILM                 	0       0       0       0       0	0~
 
  // appended to ALIGNMNT.2da
- ~C0ILM                  	1       1       1       0       0	0       0       0       0~
+ ~C0ILM                  	1       0       0       0       0	0       0       0       0~
 
  // appended to DUALCLAS.2da
  ~C0ILM                  	0       0       0       0       0       0~
@@ -90,7 +90,7 @@ LAF fl#add_kit_ee
     numwslot = 3
 END
 
-COPY ~%MOD_FOLDER%/spells/c0ilmin1.spl~ ~override~
+COPY ~%MOD_FOLDER%/spells/c0ilms1.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       check_globals = 1
@@ -98,6 +98,12 @@ COPY ~%MOD_FOLDER%/spells/c0ilmin1.spl~ ~override~
       match_opcode = 206 // display string
 	  parameter1 = RESOLVE_STR_REF (~Sacrifice may not be used on the caster.~)
   END
+SAY NAME1 ~Sacrifice~
+SAY NAME2 ~Sacrifice~
+SAY UNIDENTIFIED_DESC ~Sacrifice
+The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to herself up to a maximum of 1d6+20 at 10th level.~
+
+COPY ~%MOD_FOLDER%/spells/C0ilms2.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       check_globals = 1
@@ -105,14 +111,6 @@ COPY ~%MOD_FOLDER%/spells/c0ilmin1.spl~ ~override~
       match_opcode = 206 // display string
 	  parameter1 = RESOLVE_STR_REF (~Martyrdom may not be used on the caster.~)
   END
-
-COPY ~%MOD_FOLDER%/spells/c0ilms1.spl~ ~override~
-SAY NAME1 ~Sacrifice~
-SAY NAME2 ~Sacrifice~
-SAY UNIDENTIFIED_DESC ~Sacrifice
-The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to herself up to a maximum of 1d6+20 at 10th level.~
-
-COPY ~%MOD_FOLDER%/spells/C0ilms2.spl~ ~override~
 SAY NAME1 ~Martyrdom~
 SAY NAME2 ~Martyrdom~
 SAY UNIDENTIFIED_DESC ~Martyrdom
@@ -220,11 +218,11 @@ This weapon can only be wielded by tieflings.
 STATISTICS:
 
 Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
 
 Equipped abilities:
- -1 Constitution
- 20% resistance to fire damage
+– -1 Constitution
+– 20% resistance to fire damage
 
 THAC0: +1
 Damage: 1d10+1, 1 fire damage (slashing)
@@ -409,9 +407,9 @@ SAY DESC ~This coin-sized silver disc has the holy symbol of Ilmater crudely pri
 STATISTICS:
 
 Equipped abilities:
-- Armor Class: +2 (Paladins), +1 (others)
-- Hit Points: +10 (Paladins)
-- Protection from Evil
+– Armor Class: +2 (Paladins), +1 (others)
+– Hit Points: +10 (Paladins)
+– Protection from Evil
 
 Weight: 1~
 
@@ -424,9 +422,9 @@ SAY DESC ~This absurdly heavy suit of full plate is forged out of some extraplan
 STATISTICS:
 
 Equipped abilities:
-- Dexterity: -1
-- 20% fire resistance
-- 20% cold resistance
+– Dexterity: -1
+– 20% fire resistance
+– 20% cold resistance
 
 Armor Class: -1 (-5 vs. slashing, -4 vs. piercing and missile)
 Requires:
@@ -440,9 +438,9 @@ SAY NAME2 ~Leafen Cloak~
 SAY DESC ~This cloak, made entirely of large leaves and spider silk, was hand-crafted by Jaheira to replace Sirene's usual cloak, which was deemed 'too visible for practical wear'. Despite looking as though it could tear at the slightest bit of force, it is remarkably sturdy.
 
 Equipped abilities:
-- Armor Class: +1
-- Saving Throws: +1
-- Hide in Shadows: +15%
+– Armor Class: +1
+– Saving Throws: +1
+– Hide in Shadows: +15%
 
 Weight: 1~
 

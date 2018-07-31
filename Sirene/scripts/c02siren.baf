@@ -625,7 +625,7 @@ OR(2)
 Global("C02SireneBaeloth","GLOBAL",1)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Corwin
@@ -659,7 +659,7 @@ Global("C02SireneCorwin","GLOBAL",1)
 Global("C02SireneCorwin","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Dorn
@@ -693,7 +693,7 @@ Global("C02SireneDorn","GLOBAL",1)
 Global("C02SireneDorn","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Dynaheir
@@ -727,7 +727,7 @@ Global("C02SireneDynaheir","GLOBAL",1)
 Global("C02SireneDynaheir","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Edwin
@@ -761,7 +761,7 @@ Global("C02SireneEdwin","GLOBAL",1)
 Global("C02SireneEdwin","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Glint
@@ -795,7 +795,7 @@ Global("C02SireneGlint","GLOBAL",1)
 Global("C02SireneGlint","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Jaheira
@@ -829,7 +829,7 @@ Global("C02SireneJaheira","GLOBAL",1)
 Global("C02SireneJaheira","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Khalid
@@ -863,7 +863,7 @@ Global("C02SireneKhalid","GLOBAL",1)
 Global("C02SireneKhalid","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // M'khiin
@@ -897,7 +897,7 @@ Global("C02SireneMkhiin","GLOBAL",1)
 Global("C02SireneMkhiin","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Minsc
@@ -931,7 +931,7 @@ Global("C02SireneMinsc","GLOBAL",1)
 Global("C02SireneMinsc","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Neera
@@ -965,7 +965,7 @@ Global("C02SireneNeera","GLOBAL",1)
 Global("C02SireneNeera","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Rasaad
@@ -999,7 +999,7 @@ Global("C02SireneRasaad","GLOBAL",1)
 Global("C02SireneRasaad","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Safana
@@ -1033,7 +1033,7 @@ Global("C02SireneSafana","GLOBAL",1)
 Global("C02SireneSafana","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Viconia
@@ -1067,7 +1067,7 @@ Global("C02SireneViconia","GLOBAL",1)
 Global("C02SireneViconia","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // Voghiln
@@ -1101,7 +1101,7 @@ Global("C02SireneVoghiln","GLOBAL",1)
 Global("C02SireneVoghiln","GLOBAL",2)
 THEN
 RESPONSE #100
-SetAreaScript("c02dbant",GENERAL)
+SetAreaScript("c02sbant",GENERAL)
 END
 
 // low rep
