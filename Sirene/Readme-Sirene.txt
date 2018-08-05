@@ -116,10 +116,8 @@ Soundset: Bioware - Icewind Dale
  Change Log
 -----------------------
 
-v2.4.1
-- Martyr can no longer be Lawful Neutral or Lawful Evil (BUGFIX)
-- Martyrs are no longer immune to casts of Sacrifice and Martyrdom from other Martyrs (BUGFIX)
-- Fixed stutter bug caused by banters in SoD (BUGFIX)
+v2.5
+- Updated SoD banter script to hopefully eliminate cases of stuttering
 
 v2.4
 - Merged BG:EE and SoD components
