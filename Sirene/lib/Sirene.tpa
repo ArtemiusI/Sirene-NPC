@@ -127,10 +127,6 @@ EXTEND_TOP ~AR3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
   UNLESS ~CD_STATE_NOTVALID~
-  
-COPY ~%MOD_FOLDER%/Portraits/SireneL.bmp~ ~override/SireneL.bmp~
-COPY ~%MOD_FOLDER%/Portraits/SireneM.bmp~ ~override/SireneM.bmp~
-COPY ~%MOD_FOLDER%/Portraits/SireneS.bmp~ ~override/SireneS.bmp~
 
 COPY ~%MOD_FOLDER%/creatures/C0Sirene.cre~ ~override/C0Sirene.cre~
   SAY NAME1 ~Sirene~
@@ -267,38 +263,45 @@ PRINT ~Please choose one of the following:
 [1] BG1 Default by sporeboy
 [2] BG2 Default by Isandir
 [3] Alternate Light Armor by Sirick
-[4] Alternate Heavy Armor by Sirick/LavaDelVortel~
+[4] Alternate Heavy Armor by Sirick/LavaDelVortel
+[5] Alternate Portrait by Kyllian Guillart (https://www.deviantart.com/lodaligae)~
 
 ACTION_READLN ~portrait~
-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~%portrait%~ > 4) OR (~%portrait%~ < 1)) BEGIN
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~%portrait%~ > 5) OR (~%portrait%~ < 1)) BEGIN
   PRINT ~Please choose one of the following:
 [1] BG1 Default by sporeboy
 [2] BG2 Default by Isandir
 [3] Alternate Light Armor by Sirick
-[4] Alternate Heavy Armor by Sirick/LavaDelVortel~ // repeat prompt until valid answer
+[4] Alternate Heavy Armor by Sirick/LavaDelVortel
+[5] Alternate Portrait by Kyllian Guillart (https://www.deviantart.com/lodaligae)~ // repeat prompt until valid answer
   ACTION_READLN ~portrait~
 END
 
 ACTION_IF (~%portrait%~ = 1) THEN BEGIN
   PRINT ~Installing Portrait: BG1 Default by sporeboy~
-		COPY ~%MOD_FOLDER%/portraits/SireneL.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/SireneM.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/SireneS.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
 END ELSE ACTION_IF (~%portrait%~ = 2) THEN BEGIN
   PRINT ~Installing Portrait: BG2 Default by Isandir~
-		COPY ~%MOD_FOLDER%/portraits/Sirene2L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene2M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene2S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneS.bmp~
 END ELSE ACTION_IF (~%portrait%~ = 3) THEN BEGIN
   PRINT ~Installing Portrait: Alternate Light Armor by Sirick~
-		COPY ~%MOD_FOLDER%/portraits/Sirene3L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene3M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene3S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneS.bmp~
 END ELSE ACTION_IF (~%portrait%~ = 4) THEN BEGIN
   PRINT ~Installing Portrait: Alternate Heavy Armor by Sirick/LavaDelVortel~
-		COPY ~%MOD_FOLDER%/portraits/Sirene4L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene4M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/Sirene4S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneS.bmp~
+END ELSE ACTION_IF (~%portrait%~ = 5) THEN BEGIN
+  PRINT ~Installing Portrait: Alternate Heavy Armor by Sirick/LavaDelVortel~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneS.bmp~
 END
 
 ////////////////////////////////////// Siege of Dragonspear

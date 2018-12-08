@@ -853,8 +853,24 @@ Global("bd_battle","global",0)
 RealGlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
 !GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
 !RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-OR(2)
 Global("C02SireneJaheira","GLOBAL",1)
+THEN
+RESPONSE #100
+SetAreaScript("c02sbant",GENERAL)
+END
+
+IF
+!AreaCheck("bd0120")
+!AreaCheck("bd0130")
+InMyArea(Player1)
+InParty("Jaheira")
+InParty(Myself)
+!ActuallyInCombat()
+HasItemEquiped("c02sclck",Myself)
+Global("bd_battle","global",0)
+RealGlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
+!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
 Global("C02SireneJaheira","GLOBAL",2)
 THEN
 RESPONSE #100
