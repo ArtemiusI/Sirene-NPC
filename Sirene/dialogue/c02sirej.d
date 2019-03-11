@@ -1158,7 +1158,7 @@ IF ~ReputationGT(Player1,17)~ DO ~SetGlobal("C02SireneTest","GLOBAL",1) FadeFrom
 CHAIN BDDOSIA C02SireneTestEnd
 ~...and thus, my lessons are complete. Remember them, and may they serve you well in the future. Good luck to you, sister.~
 == C02SIREJ ~Thank you, sister Dosia.~
-DO ~PlaySound("GAM_11") ReallyForceSpellRES("c02wis",Myself)~
+DO ~PlaySound("GAM_11") ChangeStat(Myself,WIS,1,ADD)~
 == BDDOSIA ~You are most welcome, sister Sirene. Now I must return to my duties.~
 END
 IF ~~ DO ~SetGlobal("bd_dosia_story","global",1)

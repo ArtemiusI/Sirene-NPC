@@ -19,19 +19,19 @@ Switch("C02SireneBaeloth1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Baeloth",~Most fascinating! A fiend-blooded fighter following a faith for flatulent fools! What I wouldn't have given up to have you fighting in my Black Pits.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Your inane babbling makes no sense to me, drow. Speak plainly, or not at all.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Baeloth",~A pity I no longer have ownership of that esteemed establishment. Your value as a gladiator would have topped the charts!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~I doubt you can even hear me. Ilmater only knows why I am even listening to this.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Baeloth",~Perhaps I could start anew. Yes... now where could I find a nabassu for a bargain...~)
@@ -58,31 +58,31 @@ Switch("C02SireneCorwin1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("CORWIN",~I'm surprised that you can devote yourself entirely to this life, my lady. Do you have no family?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~None that I know of. I was abandoned not long after I was born.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("CORWIN",~I see. I suppose it'd be out of the question to understand what your duty's like.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Is't truly so difficult, Corwin? Your duty to the Fist is not unlike mine. We are both protectors, though those we choose to protect may be different.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneCorwin1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("CORWIN",~It's not the same. I have a responsibility towards my daughter, even more than to the Fist. Everything I've done since Rohma's birth was to give her a brighter future.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneCorwin1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Do you believe that is any less noble a duty than mine? 'Tis not, Corwin.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("CORWIN",~I didn't mean it like that. I-~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneCorwin1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("CORWIN",~*sigh* Forget it. This isn't worth talking about. I'm sorry for wasting your time.~)
@@ -108,31 +108,31 @@ Switch("C02SireneCorwin2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("CORWIN",~I'm sorry that I cut off our talk so abruptly before. It was rude of me.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~I took no offense, Corwin, but I had no idea your duty troubled you so.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("CORWIN",~It didn't, until Rohma came into the picture. Now I have to live every day fearing I might have to choose between my love for my home and love for my daughter.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Forgive me, Corwin. I was ignorant in thinking that we were so alike. There is clearly still much I do not understand.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("CORWIN",~No, it's fine. A younger me would have wanted to be someone like you - putting your life on the line for the sake of duty. But I can't die. Not when I have Rohma.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("CORWIN",~Damn it all. Sometimes I wonder if I was being selfish when I refused to give her up to someone who could better care for her. Not that I regret it... I never have.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~I understand, my friend. 'Tis an unworthy parent who would not love their child above all else. You are not in the wrong.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneCorwin2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("CORWIN",~I wish I could believe that as much as you did.~)
@@ -158,31 +158,31 @@ Switch("C02SireneDornWounded1","MYAREA")
 THEN
 RESPONSE #0
 MoveToObject("DORN")
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",2)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneDornWounded1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("DORN",~Remove your hands from me, woman. I require no healing.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("C0Sirene",~If you would rather bleed to death, blackguard, then I will gladly allow you to do so.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("DORN",~It would take a weakling like yourself to bleed out from such pitiful injuries. I am no weakling.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("C0Sirene",~Your arrogance will be the death of you, fiend. I can only hope the day comes soon.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("DORN",~You are the truly arrogant one, wench, to believe you may take on the wounds of everyone around you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("DORN",~Your pain will crush you, until your frail form can no longer bear the weight, and you will suffer the pain of countless wounds upon your body. You will-~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDornWounded1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Enough! I will waste no more effort on you. I have allies to tend to.~)
@@ -210,35 +210,35 @@ Switch("C02SireneDorn1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Dorn",~Tell me, paladin. What is there to be gained to serve a deity who offers nothing, yet demands that you endure suffering for the sake of weaklings?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Only one such as you could see faith as a nothing more than a matter of exchange, blackguard.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Dorn",~It is an interesting fantasy, believing that your pain should be endured for some greater cause. Pain is a weakness - accepting it, more so.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Tell me then, Dorn. What do you truly desire, besides power? What does your demon offer you that is worth such inhumanity?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Dorn",~Do not think that my servitude is one of comfort and ease, woman. In that manner, we are quite similar.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~What? Have you gone completely mad?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Dorn",~You are just as I am - a pawn to some greater power. We both serve as dogs to a master, through blood and slaughter.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~We are *nothing* alike. Do not even dare to insinuate it.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",80)
 RESPONSE #70
 	DisplayStringHead("Dorn",~True. I am far stronger than you can ever hope to become. That is difference enough.~)
@@ -266,23 +266,23 @@ Switch("C02SireneDorn2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Dorn",~What power you have is squandered by your restraint, fiendling. Do not reject your blood - embrace it! If you do, perhaps you could even match my prowess.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneDorn2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Do not think to tempt me with your poisonous words. I have heard them before, and I can only respond with the edge of my blade.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Dorn",~Such a waste of potential. You are a disgrace to your blood, woman.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~No more than the disgrace to whatever humanity is within you, Dorn. I would urge you to seek the light, if I could not see you too drunk in the darkness to find it.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Dorn",~Light? Foolish woman, have you forgotten that the light is our enemy? That is the only thing keeping us allies.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Aye, that it is. But once the light has faded, I will see that you no longer live to wreak suffering upon another.~)
@@ -311,31 +311,31 @@ Switch("C02SireneDynaheir1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Dynaheir",~Thy skill with a blade is remarkable, Sirene. Thou mayst lack Minsc's strength at arms, but there is a certain... elegance, to thy style.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Thank you for your praise, m'lady Dynaheir. Though if 'tis elegance you speak of, I could not think of matching you outside of battle.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Dynaheir",~I only ever speak the truth as I see it. Yet... 'twas not all. I may be uneducated in the ways of combat, yet I can clearly see a... reluctance in thy attack.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Ah... well, that is...~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Dynaheir",~Art thou fearful of killing, Sirene? I wouldst think 'twould be unworthy for a champion of faith.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~*sigh* Yes. I am ashamed to say it, but I am, despite my many years of training.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Dynaheir",~I see 'tis discomforting for thee to speak of. I shall question thee no longer.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~...thank you, my lady.~)
@@ -363,35 +363,35 @@ Switch("C02SireneDynaheir2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Dynaheir",~When we last conversed, we spoke of thy reluctance to kill. If thou dost not mind, might we return to this subject?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Aye, I suppose we may, lady Dynaheir. Ask me what you will.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Dynaheir",~Then I ask thee - if thou dost not wisheth to slay another living being, then why dost thou take the path of a paladin?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Are... are you saying that you doubt me, my lady?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Dynaheir",~Nay, I do not mean it as such. But thy talents in healing are remarkable. Thou couldst have become a priestess of thy faith, and avoided battle altogether.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~*sigh* I have considered it myself, many times...~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Dynaheir",~Then why dost thou remain on this path that thou despiseth?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~I do not know. Perhaps 'tis in my blood to revel in bloodshed, as much as it repulses me. Or perhaps this is the way I wish to protect others from suffering.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Dynaheir",~Perhaps 'tis both. I sense thy mind is confused. I ask that thou consider the reason for thy desire to remain in the battlefield, and whether 'tis truly what thou shouldst become.~)
@@ -420,23 +420,23 @@ Switch("C02SireneEdwin1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Edwin",~Tell me why 'tis necessary to drag this self-righteous tiefling with us wherever we go, <CHARNAME>.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~What have I done to provoke your ire, mage?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Edwin",~What have you done?! Everything you do provokes me, fiendling! You throw yourself at our foes like a mad beast! How do you expect me to aim my fireballs with you darting about like an irksome fly?!~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneEdwin1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~My position in combat has not stopped you from casting recklessly before.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Edwin",~Such an indignity! You have no shame for inhibiting my power, and therefore my worth to this war! I must hold back my magic because of you!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Use your full power if you must, mage. Perhaps I will feel the difference, but better that I suffer the consequences of your company than our allies.~)
@@ -466,19 +466,19 @@ Switch("C02SireneEdwin2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Edwin",~Tiefling, that sword that you carry has a... most interesting result from my magical appraisal.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~This blade? I have carried it for two years. 'Tis enchanted, true... but no more so than any other weapon we have.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Edwin",~That is the conclusion derived from a simpler mind. Hand it over, and allow me to examine it. Perhaps it has secrets left untapped.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~I would not suggest that-~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",40)
 RESPONSE #40
 	MoveToObject("C0Sirene")
@@ -487,15 +487,15 @@ RESPONSE #40
 	SetGlobal("C02SireneEdwin2","MYAREA",50)
 RESPONSE #50
 	ApplyDamagePercent("Edwin",1,FIRE)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Edwin",~The sword assaulted me! What is this trickery, tiefling?! Why did you not see fit to warn me?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~You did not allow me the chance to.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Edwin",~Grr... I shall remember this, mark my words. I've memorized your face, and that sword as well. (One day... one day...)~)
@@ -524,31 +524,31 @@ Switch("C02SireneGlint1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Glint",~So, uh... Sirene. Are you a dog or a cat person?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Forgive me, Glint, but... what do you mean?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Glint",~You know, dogs or cats? Which do you prefer?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~I... have never considered it. Dogs, I suppose, though I am not opposed to cats either.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Glint",~Really? Never would have thought it. Your eyes reminded me of my dear old aunt's cat familiar. She was an illusionist, you see. My aunt, I mean, not the cat, although come to think of it-~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~*sigh* Excuse me, Glint, but is there a point to this?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Glint",~Well, yes, I'm almost positive there was, but... well, I've forgotten.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~*sigh*~)
@@ -576,51 +576,51 @@ Switch("C02SireneGlint2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Glint",~I've been scouring my mind for what I was going to ask you, Sirene, really been going at it, but... Cloakshadow's shadow, I just can't remember.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~That is... a shame?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Glint",~Oh well, can't have been that important anyway. So, why *do* you prefer dogs?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Do you disapprove?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Glint",~No, not at all, I personally love them. Even the violent ones, though they certainly don't love me back. Anyways, why *do* you prefer dogs?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~There was a blind priest in my home village's temple, who used a hound to guide him. He was aged and forgetful, and often forgot to feed his companion. I did it in his stead.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Glint",~My, that is a very kind thing to do, if I might say so myself. Please go on.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~There is little more to tell, unfortunately... I was fond of the beast, for he did not fear me as others did. He was perhaps my only true friend in my lonely childhood.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Glint",~Well, I can certainly see how a friendship could form there. Do continue!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",90)
 RESPONSE #90
 	DisplayStringHead("C0Sirene",~When the blind priest passed away, the hound remained at the temple, until 'twas adopted by a travelling caravan with a blind boy two years later.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",100)
 RESPONSE #100
 	DisplayStringHead("Glint",~That's very sad. So you never saw it again?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",110)
 RESPONSE #110
 	DisplayStringHead("C0Sirene",~No, though I was satisfied that he had gone to the side of someone who truly needed him. Does that sate your curiosity, Glint?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",120)
 RESPONSE #120
 	DisplayStringHead("Glint",~Oh yes, yes, it most certainly did. Next time I'll tell you about my aunt's cat, and how it- well, I'll not spoil it right now. Forward!~)
@@ -649,27 +649,27 @@ Switch("C02SireneJaheira1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Jaheira",~Watch your step, Sirene. Your armor and cloak are bright enough for anyone in our sights to notice. You do not need to add noise on top of that.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Yes... you are right, Jaheira.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Jaheira",~Have you considered a change of attire? We will be walking through hostile ground, and wearing such colors is a risk to us all.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~My apologies, but... there is little I can do. My armor is necessary, and the white cloak is a symbol of my faith.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Jaheira",~You can prove your faith in ways other than parading it around, child. Pack it away for the moment and I shall craft you something more practical.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~I suppose 'tis necessary. Very well then, Jaheira. Thank you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Jaheira",~Good. Now, I just need to find some suitable leaves...~)
@@ -698,31 +698,31 @@ Switch("C02SireneJaheira2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Jaheira",~How is the cloak, child? Is it the right size, and is it suitably warm during the evenings?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Aye, it is. I confess I am surprised... I had not thought a cloak made of leaves could provide such comfort.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Jaheira",~Some druidic magic was used in its creation, but the comfort you feel is largely from its craftsmanship.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Yes, I can feel it. I had not expected you to have such a talent, Jaheira.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Jaheira",~Some skills are developed through necessity. Silvanus knows Khalid wouldn't be able to take care of himself properly for even a day without me.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Jaheira",~I made one for him as well, while we were alone together. Unfortunately, it seems he needed to burn it as firewood during the siege, or some such nonsense.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~Perhaps I should give this to him instead, then. He would deserve it more than I.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Jaheira",~Nonsense, keep it. I'm sure you'd revert to that impractical white cloak of yours otherwise. I will make another for him once this is all over.~)
@@ -751,35 +751,35 @@ Switch("C02SireneKhalid1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("C0Sirene",~Khalid, have you need of anything?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("Khalid",~N-no, my friend. I am w-well and good. Perhaps you could attend to <CHARNAME>, instead.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("C0Sirene",~<CHARNAME> has all the support I can give <PRO_HIMHER>. I would rather ensure that you are well.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("Khalid",~R-really, I'm fine. Why are you so concerned about m-me?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("C0Sirene",~'Tis just that you were so devoted to the siege at Bridgefort... I had thought perhaps it had taken its toll on you. I hoped I could help in some way.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Khalid",~Oh, y-you don't need to worry. I'm s-stronger than I look.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~N-no, I did not mean to doubt that-~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Khalid",~It c-can often be hard to tell, I know. (nervously chuckles)~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("C0Sirene",~You were teasing me, were you not? (laugh) I suppose that means you are truly well, then. I am glad.~)
@@ -808,35 +808,35 @@ Switch("C02SireneKhalid2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Khalid",~I m-must say, having you on our side in battle h-helps my confidence.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~You... must be mistaken, Khalid. Some paladins are capable of purging fear in others, but I have no power to do so.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Khalid",~N-no, I don't mean in a m-magical sense. You are just so... f-fearless in battle, it is inspiring.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~That is incorrect, Khalid. I have fear just as anyone else. Especially in battle. The very thought of striking down a living man fills me with dread.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Khalid",~B-but I have never seen you flee from battle. Even though you hate the th-thought of killing another, you n-never shy away from it if any of us are endangered.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Aye, but that is because I have little to lose, should I sacrifice my life for a cause. You are not the same, Khalid. You have Jaheira, and <CHARNAME>.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Khalid",~T-that is true, but when you put it that way... I become c-concerned for you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Do not be. I have accepted long ago that my creed will lead to my death, Khalid.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Khalid",~B-but you are still so young. D-do not consider giving up your life so easily.~)
@@ -865,28 +865,28 @@ Switch("C02SireneMkhiin1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("C0Sirene",~Do you follow a deity, M'khiin?~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneMkhiin1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("Mkhiin",~Don't know. Believe they exist. Never cared much for 'em though. Greedy bastards, always demanding, never giving.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("C0Sirene",~That is not the way of all gods... but I admit I have not shared your perspective. What was your clan's god?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",40)
 RESPONSE #30
 	DisplayStringHead("Mkhiin",~Maglubiyet. Goblin war god. Never saw the point of worshipping a god that wants you to fight your whole life. Other goblins feared him. I didn't.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",50)
 RESPONSE #40
 	DisplayStringHead("C0Sirene",~Truly? Then you are braver than many men that I have known. There are all too many that would follow an evil god out of fear.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",60)
 	DisplayStringHead("Mkhiin",~Goblins are cowards. We follow whoever is the strongest, and beat up anyone we're not running from. Our gods are the same.~)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Is that why you chose your path as a shaman?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",70)
 RESPONSE #60
 	DisplayStringHead("Mkhiin",~Spirits are better. Spirits respond when I call, and never demand. They're worth listening to.~)
@@ -914,19 +914,19 @@ Switch("C02SireneMkhiin2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Mkhiin",~You took a hit on purpose in our last fight. Stupid move. Could have avoided it.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~I had no choice. 'Twas either that or I allowed you to lose an arm.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Mkhiin",~I'm tougher than I look. Not like you really care.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Is't so difficult to believe that I do?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Mkhiin",~Can't say. Don't trust any of the long-legs, not after they all tried to kill me. Not sure about you, yet.~)
@@ -955,23 +955,23 @@ Switch("C02SireneMinsc1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Minsc",~My friend Sirene, you wield a large sword for such a little lady! If you were any larger, you would be carrying a sword heavier than Minsc, ha!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Thank you, Minsc, but I am not as strong as you might believe. I have simply... learned how to use my strength appropriately.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Minsc",~Minsc's uncle once said the same thing. "A true warrior takes advent... vantage of every inch of their body," he told Minsc. So, Minsc learned how to use his head and feet as weapons for bashing the skulls of evil.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~'Tis true, you have great strength, Minsc, but... I think 'twas meant less literally than that.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Minsc",~Dynaheir also told me that. But she also said that so long as Minsc does his job, he can use whatever part of the body he pleases.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Dynaheir",~Minsc! Thou shouldst choose thy words carefully, lest they be taken the wrong way by our friend.~)
@@ -1000,31 +1000,31 @@ Switch("C02SireneMinsc2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Minsc",~I am confused. Sirene is almost as elegant as Dynaheir in speech and manners, but she is also a warrior as mighty as Minsc!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~I am a defender of the people, Minsc. What else did you expect me to be?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Minsc",~Boo thought that perhaps you had the magic to conjure fire from your fingertips, like Dynaheir.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~You may not be entirely wrong, Minsc. Magic may very well be in my blood, but I have never attempted to unlock any secrets that could might hide within me.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Minsc",~Boo is very good at hiding. Perhaps he could be of assistance.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Ah... no, Minsc. That is not the sort of hiding that I speak of.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Minsc",~Aha! Then you must mean it in the... eh, metaphorical sense. That was Boo's word. He says Dynaheir is very knowledgable in such things. We will ask her.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Dynaheir",~Minsc... I think thou hast harassed our companion long enough.~)
@@ -1054,43 +1054,43 @@ Switch("C02SireneNeera1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Neera",~ARGH! You're driving me insane! I swear if I knew where you were, Adoy, I'd go to you in an instant and WRING YOUR BLOODY NECK, SO TAKE A HINT AND-~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Er... Neera? Do you need assistance?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Neera",~NO! Um, sorry. I mean, no. Appreciate it, but I doubt you can do any- by Mystra can you be quiet for ONE. SECOND?!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Truly, if there is anything I can do to help, you only need to ask. I can tell 'tis distressing for you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Neera",~Distressing doesn't even begin to cover it. If you really want to help, Sirene, get a knife and- CUT HIS STLARNING HEAD OPEN, DAMN IT!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Neera",~...er, I meant my head. Stupid voice distracted me. He's quieted down at last, thank the gods.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~Neera, you were not serious... were you?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Neera",~Ugh, I meant it as a joke, okay? It was terrible, I know, but I needed to do *something* to help me forget he exists. I can't even think straight with the noise.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Neera",~You wanna help? We can have some girl-to-girl talk. I had no one to talk to but this guy for several weeks and I felt like going crazy.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",90)
 RESPONSE #90
 	DisplayStringHead("C0Sirene",~Um... of course, Neera. If it helps.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",100)
 RESPONSE #100
 	DisplayStringHead("Neera",~Thanks. Wait, nope, maybe later. Ohhh no, he's back. I'll just go over there so my screaming doesn't turn you deaf.~)
@@ -1118,31 +1118,31 @@ Switch("C02SireneNeera2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Neera",~Hey. Got a moment, Sirene?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Of course. What do you need, Neera?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Neera",~I just wanted to say thanks. For keeping me company, and all. I hope I didn't hurt your ears with the talking. Or the shouting.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~You most certainly did not, Neera. I am always here to help.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Neera",~I'm curious, though. How can you be so patient and understanding all the time? Most of the time people look at me like I'm crazy, or that I'll explode into a mass of spellfire. Not you, though.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Neera",~Wait, don't tell me. It's the whole paladin thing, isn't it? You have to do it, even if you don't want to?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~Well, 'tis expected of me, true, but... I do enjoy speaking with you, Neera. And I do not blame you for your magic... few of us truly choose to become what we are.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Neera",~Well, this talk's made me all warm and fuzzy. I'm glad you're my friend, Sirene. Which will make me feel extra bad if I accidentally fry- never mind. Shouldn't kill the mood.~)
@@ -1171,31 +1171,31 @@ Switch("C02SireneRasaad1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("RASAAD",~We did not talk much while we were both assisting refugees at Baldur's Gate.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneRasaad1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~No, we did not. I noticed you, certainly, yet... you always seemed distracted, lost in thoughts. It seemed almost a sin to interrupt.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("RASAAD",~I was. Meditation has not come easily to me as of late.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~What troubles you so, Rasaad? You are among the most resilient people I have met.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("RASAAD",~I fear for my fellow Selunites. Even if I have neglected them as of late, they would not disappear without giving me a sign.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~So that is why... but, should you not be searching for them?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("RASAAD",~No. This is a more immediate and visible threat. If I discover any hint of my brothers' fates, I will seek them when appropriate. For now, I am needed here.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Would that I could help you in any way, Rasaad. But regardless, I am glad to have one such as you in my company.~)
@@ -1223,35 +1223,35 @@ Switch("C02SireneRasaad2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("C0Sirene",~In my scant few years knowing battle, I have never seen one fight such as you, Rasaad.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("RASAAD",~You honor me, friend, but 'tis truly nothing out of the ordinary. I have only the basic skill known by all Sun Soul monks.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("C0Sirene",~Forgive me, but I find that difficult to believe. Your techniques seem so... complex.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("RASAAD",~It may seem so to the common observer, Sirene, but it is much easier in practice. Even you could reach the same level, if you had the years to spare on training.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("C0Sirene",~Me? Truly?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("RASAAD",~Yes. Your fighting style is not unlike mine. Instead of brute force, your forte is agility and patience, waiting for the perfect time to strike.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~You have seen this much out of my style? Truly, you are a remarkable fighter, Rasaad.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("RASAAD",~Perhaps when we have the time, we should spar for an hour, and learn from each others' technique.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("C0Sirene",~I would like that.~)
@@ -1280,27 +1280,27 @@ Switch("C02SireneSafana1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("SAFANA",~Don't take it the wrong way, darling, but your armor is so terribly unfashionable. How could you ever hope to attract a man wearing such unflattering attire?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~I dress to protect, not expose myself as you do, Safana.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("SAFANA",~My, how rude. I give you a piece of heartfelt advice, girl-to-girl, and I receive such a barb in return!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~*sigh* No, I should apologize, but... I am uncertain of whether you are mocking me.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("SAFANA",~Oh, come now. I'm not that cruel. Besides, if I didn't really care, I'd keep my mouth shut so that the men would come to me instead. Don't you agree?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~I... suppose you are right. But my armor is practical, and I prefer it this way.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("SAFANA",~And here I was being uncharacteristically generous for a change. I even had ideas for how you could... customize your attire, too. Whatever floats your boat, honey.~)
@@ -1328,27 +1328,27 @@ Switch("C02SireneSafana2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("SAFANA",~So, you have a thing for women too, hmm?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~What is it to you? I do not believe I have exhibited my preferences openly.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("SAFANA",~Oh, I have an eye for such things, Sirene. I caught your glances at me, for instance.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~I did no such thing.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("SAFANA",~Don't paladins have a rule against making bold faced lies? I'm not blind, darling, but all this sneak peeking gets tiresome after a while.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~It matters not. Regardless of how I might see you outwardly, I would not even consider entering any sort of affair with one as untrustworthy as you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("SAFANA",~No skin of my back, dear. You've got nothing I want.~)
@@ -1377,31 +1377,31 @@ Switch("C02SireneViconia1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Viconia",~You do not seem as opposed to my presence as I expected.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneViconia1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~What is your point, Sharran?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Viconia",~I have met many pious, brutish louts since coming to the surface. None of them would allow two words to be spoken before drawing their blade. You are a strange exception.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~I do not judge others for what they are, Viconia, only what they choose to be.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Viconia",~Of course. You are a... 'de'rendalhar'. A spawn of fiendish union. Amongst the rivvil, you and I should be allies.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~We are allies, but only of convenience. I do not blame you for being drow, but I will not align myself with a follower of Shar.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Viconia",~Amongst your surface gods, only the Nightsinger chose to accept me. Shar showed me the value of strength. Where were your 'benevolent' gods in my time of need?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Perhaps 'twas your dark heart which kept them at bay. I will waste no more words with you.~)
@@ -1429,19 +1429,19 @@ Switch("C02SireneViconia2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Viconia",~Tell me, de'rendalhar, how many men have spat at you after you tended to them, upon realizing what you were?~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneViconia2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Many, Sharran, but there are also others whose fears were eased once I healed them.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Viconia",~Not as many as those who raised as sword against you the moment they could, no doubt.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~If I had allowed my fear of rejection control me, I would never have met a friend such as <CHARNAME>.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
 	SetGlobal("C02SireneViconia2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Viconia",~Your naïve optimism sickens me. Were you in the Underdark, you would not survive for longer than a day.~)
@@ -1449,11 +1449,11 @@ RESPONSE #40
 	SetGlobal("C02SireneViconia2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Perhaps you should look to yourself instead, Viconia, and remember that this is not the Underdark. Distrust will only cost you any friendship you might have.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Viconia",~Friends are nothing more than weapons to be used against you.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Only if you do not give them the trust they deserve.~)
@@ -1482,31 +1482,31 @@ Switch("C02SireneVoghiln1","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Voghiln",~Ho there, my fair lady of war!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("Voghiln",~...er, my lady?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("C0Sirene",~Oh! W-what is it, Voghiln? Do you require aid?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("Voghiln",~Ah, and finally the lady turns! No, I require nothing. I only wished to see your fair face, and ask that you smile, nothing more.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("C0Sirene",~Oh, I... I see.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Voghiln",~But, truth be told, mistress Sirene, you are truly one of a kind. Voghiln has been showered with affection and arrows both from many a maiden, yet this is the first time Voghiln has received a response as cold as to be ignored entirely. You wound me, my lady!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~I- If I have offended you with my manner, Voghiln, then I humbly ask your forgiveness.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Voghiln",~Ha! You are most clever to toy with Voghiln's affections so, my lady, but I swear to you, I will overcome your icy defense!~)
@@ -1534,35 +1534,35 @@ Switch("C02SireneVoghiln2","MYAREA")
 THEN
 RESPONSE #0
 	DisplayStringHead("Voghiln",~Ah, fair lady Sirene! 'Tis a fine <DAYNIGHT>, ja?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Aye, that it is, Voghiln. You look well today.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Voghiln",~Aye, that I am, and why not? There is no greater joy than life, to drink and feast and woo the fairest of wenches!~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~You have a carefree outlook on life, my friend. I admire that, in a sense.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Voghiln",~But I shall dispense with the small talk, my lady. I ask you; what do you think of ol' Voghiln, eh?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~What do I think of you, Voghiln? Well... I believe you are a good person. And your war songs are... well, inspiring in battle.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Voghiln",~Ho ho! So it is music that touches your heart! Then Voghiln shall recite a ditty for your amusement, ja?~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~You are capable of other types of song, Voghiln? I would like to hear it.~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Voghiln",~Listen well, my lady, and be enthralled by Voghiln's many talents!~)

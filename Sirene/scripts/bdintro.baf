@@ -1,0 +1,9 @@
+IF
+	Global("SOD_fromimport","global",1)
+	InMyArea("C0Sirene")
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride("C0Sirene",SetDialog("C02SIREJ"))
+		ActionOverride("C0Sirene",ChangeAIScript("C02SIREN",OVERRIDE))
+END
