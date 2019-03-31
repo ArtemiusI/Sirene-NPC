@@ -8,6 +8,28 @@ END
 
 IF
   Global("C0SireneMoveCamp","BD7100",0)
+  !BeenInParty("C0Sirene")
+  !Dead("C0Sirene")
+  !InPartyAllowDead("C0Sirene")
+  !Alignment(Player1,MASK_EVIL)
+THEN
+  RESPONSE #100
+    SetGlobal("C0SireneMoveCamp","BD7100",1)
+    CreateCreature("C02Siren",[569.3606],NW)
+    ReallyForceSpellDeadRES("BDREJUVE","C0Sirene")
+    ChangeEnemyAlly("C0Sirene",NEUTRAL)
+    ChangeSpecifics("C0Sirene",ALLIES)
+    ActionOverride("C0Sirene",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("C0Sirene",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("C0Sirene",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("C0Sirene",ChangeAIScript("C02Siren",OVERRIDE))
+    ActionOverride("C0Sirene",ChangeAIScript("BDCLER01",GENERAL))
+    Continue()
+END
+
+IF
+  Global("C0SireneMoveCamp","BD7100",0)
+  BeenInParty("C0Sirene")
   !Dead("C0Sirene")
   !InPartyAllowDead("C0Sirene")
   !Alignment(Player1,MASK_EVIL)

@@ -5,19 +5,13 @@
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Baeloth")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneBaeloth","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneBaelothTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneBaeloth1","MYAREA",-1)
-Switch("C02SireneBaeloth1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneBaeloth1","MYAREA",0)
+	Switch("C02SireneBaeloth1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Baeloth",~Most fascinating! A fiend-blooded fighter following a faith for flatulent fools! What I wouldn't have given up to have you fighting in my Black Pits.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",10)
@@ -35,28 +29,20 @@ RESPONSE #30
 	SetGlobal("C02SireneBaeloth1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Baeloth",~Perhaps I could start anew. Yes... now where could I find a nabassu for a bargain...~)
-	SetGlobal("C02SireneBaeloth","GLOBAL",2)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneBaeloth1","MYAREA",-1)
 END
 
 // Corwin
 
 IF
-InMyArea(Player1)
-InParty("CORWIN")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneCorwin","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneCorwinTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneCorwin1","MYAREA",-1)
-Switch("C02SireneCorwin1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneCorwin1","MYAREA",0)
+	Switch("C02SireneCorwin1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("CORWIN",~I'm surprised that you can devote yourself entirely to this life, my lady. Do you have no family?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin1","MYAREA",10)
@@ -70,11 +56,11 @@ RESPONSE #20
 	SetGlobal("C02SireneCorwin1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~Is't truly so difficult, Corwin? Your duty to the Fist is not unlike mine. We are both protectors, though those we choose to protect may be different.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneCorwin1","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("CORWIN",~It's not the same. I have a responsibility towards my daughter, even more than to the Fist. Everything I've done since Rohma's birth was to give her a brighter future.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneCorwin1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Do you believe that is any less noble a duty than mine? 'Tis not, Corwin.~)
@@ -82,31 +68,22 @@ RESPONSE #50
 	SetGlobal("C02SireneCorwin1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("CORWIN",~I didn't mean it like that. I-~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneCorwin1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("CORWIN",~*sigh* Forget it. This isn't worth talking about. I'm sorry for wasting your time.~)
-	SetGlobal("C02SireneCorwin","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneCorwinTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneCorwin1","MYAREA",-1)
 END
 
 IF
-InMyArea(Player1)
-InParty("CORWIN")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneCorwin","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneCorwinTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneCorwin2","MYAREA",-1)
-Switch("C02SireneCorwin2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneCorwin2","MYAREA",0)
+	Switch("C02SireneCorwin2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("CORWIN",~I'm sorry that I cut off our talk so abruptly before. It was rude of me.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",10)
@@ -132,33 +109,26 @@ RESPONSE #50
 	SetGlobal("C02SireneCorwin2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("C0Sirene",~I understand, my friend. 'Tis an unworthy parent who would not love their child above all else. You are not in the wrong.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneCorwin2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("CORWIN",~I wish I could believe that as much as you did.~)
-	SetGlobal("C02SireneCorwin","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneCorwin2","MYAREA",-1)
 END
 
 // Dorn
 
 IF
-InMyArea(Player1)
-InParty("DORN")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneDornWounded","GLOBAL",1)
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneDornWounded1","MYAREA",-1)
-Switch("C02SireneDornWounded1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneDornWounded1","MYAREA",0)
+	Switch("C02SireneDornWounded1","MYAREA")
 THEN
-RESPONSE #0
-MoveToObject("DORN")
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+RESPONSE #1
+	MoveToObject("DORN")
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneDornWounded1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("DORN",~Remove your hands from me, woman. I require no healing.~)
@@ -186,29 +156,21 @@ RESPONSE #60
 	SetGlobal("C02SireneDornWounded1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Enough! I will waste no more effort on you. I have allies to tend to.~)
-	ForceSpell("DORN",PALADIN_LAY_ON_HANDS)
-	SetGlobal("C02SireneDornWounded","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	ActionOverride("C0Sirene",ForceSpell("DORN",PALADIN_LAY_ON_HANDS))
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02SireneDornWounded1","MYAREA",-1)
 END
 
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Dorn")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneDorn","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneDornTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneDorn1","MYAREA",-1)
-Switch("C02SireneDorn1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneDorn1","MYAREA",0)
+	Switch("C02SireneDorn1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Dorn",~Tell me, paladin. What is there to be gained to serve a deity who offers nothing, yet demands that you endure suffering for the sake of weaklings?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",10)
@@ -242,31 +204,22 @@ RESPONSE #70
 	SetGlobal("C02SireneDorn1","MYAREA",80)
 RESPONSE #70
 	DisplayStringHead("Dorn",~True. I am far stronger than you can ever hope to become. That is difference enough.~)
-	SetGlobal("C02SireneDorn","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02SireneDornTalk","GLOBAL",ONE_DAY)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Dorn")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneDorn","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneDornTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneDorn2","MYAREA",-1)
-Switch("C02SireneDorn2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneDorn2","MYAREA",0)
+	Switch("C02SireneDorn2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Dorn",~What power you have is squandered by your restraint, fiendling. Do not reject your blood - embrace it! If you do, perhaps you could even match my prowess.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneDorn2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Do not think to tempt me with your poisonous words. I have heard them before, and I can only respond with the edge of my blade.~)
@@ -286,9 +239,7 @@ RESPONSE #40
 	SetGlobal("C02SireneDorn2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Aye, that it is. But once the light has faded, I will see that you no longer live to wreak suffering upon another.~)
-	SetGlobal("C02SireneDorn","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDorn2","MYAREA",-1)
 END
 
@@ -297,19 +248,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Dynaheir")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneDynaheir","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneDynaheirTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneDynaheir1","MYAREA",-1)
-Switch("C02SireneDynaheir1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneDynaheir1","MYAREA",0)
+	Switch("C02SireneDynaheir1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Dynaheir",~Thy skill with a blade is remarkable, Sirene. Thou mayst lack Minsc's strength at arms, but there is a certain... elegance, to thy style.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",10)
@@ -339,29 +284,20 @@ RESPONSE #60
 	SetGlobal("C02SireneDynaheir1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~...thank you, my lady.~)
-	SetGlobal("C02SireneDynaheir","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneDynaheirTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Dynaheir")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneDynaheir","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneDynaheirTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneDynaheir2","MYAREA",-1)
-Switch("C02SireneDynaheir2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneDynaheir2","MYAREA",0)
+	Switch("C02SireneDynaheir2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Dynaheir",~When we last conversed, we spoke of thy reluctance to kill. If thou dost not mind, might we return to this subject?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",10)
@@ -395,9 +331,7 @@ RESPONSE #70
 	SetGlobal("C02SireneDynaheir2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Dynaheir",~Perhaps 'tis both. I sense thy mind is confused. I ask that thou consider the reason for thy desire to remain in the battlefield, and whether 'tis truly what thou shouldst become.~)
-	SetGlobal("C02SireneDynaheir","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneDynaheir2","MYAREA",-1)
 END
 
@@ -406,19 +340,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Edwin")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneEdwin","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneEdwinTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneEdwin1","MYAREA",-1)
-Switch("C02SireneEdwin1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneEdwin1","MYAREA",0)
+	Switch("C02SireneEdwin1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Edwin",~Tell me why 'tis necessary to drag this self-righteous tiefling with us wherever we go, <CHARNAME>.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",10)
@@ -428,7 +356,7 @@ RESPONSE #10
 	SetGlobal("C02SireneEdwin1","MYAREA",20)
 RESPONSE #20
 	DisplayStringHead("Edwin",~What have you done?! Everything you do provokes me, fiendling! You throw yourself at our foes like a mad beast! How do you expect me to aim my fireballs with you darting about like an irksome fly?!~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 	SetGlobal("C02SireneEdwin1","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~My position in combat has not stopped you from casting recklessly before.~)
@@ -440,31 +368,20 @@ RESPONSE #40
 	SetGlobal("C02SireneEdwin1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Use your full power if you must, mage. Perhaps I will feel the difference, but better that I suffer the consequences of your company than our allies.~)
-	SetGlobal("C02SireneEdwin","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneEdwinTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Edwin")
-InParty("C0Sirene")
-PartyHasItem("c0sw2h")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneEdwin","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneEdwinTalk","GLOBAL")
-HPPercentGT("Edwin",25)
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneEdwin2","MYAREA",-1)
-Switch("C02SireneEdwin2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneEdwin2","MYAREA",0)
+	Switch("C02SireneEdwin2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Edwin",~Tiefling, that sword that you carry has a... most interesting result from my magical appraisal.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",10)
@@ -483,7 +400,7 @@ RESPONSE #30
 RESPONSE #40
 	MoveToObject("C0Sirene")
 	DisplayStringHead("Edwin",~Yes, yes, whatever you say, tiefling, now give it here and- GAH!~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",1)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",1)
 	SetGlobal("C02SireneEdwin2","MYAREA",50)
 RESPONSE #50
 	ApplyDamagePercent("Edwin",1,FIRE)
@@ -499,9 +416,7 @@ RESPONSE #70
 	SetGlobal("C02SireneEdwin2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Edwin",~Grr... I shall remember this, mark my words. I've memorized your face, and that sword as well. (One day... one day...)~)
-	SetGlobal("C02SireneEdwin","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneEdwin2","MYAREA",-1)
 END
 
@@ -510,19 +425,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Glint")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneGlint","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneGlintTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneGlint1","MYAREA",-1)
-Switch("C02SireneGlint1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneGlint1","MYAREA",0)
+	Switch("C02SireneGlint1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Glint",~So, uh... Sirene. Are you a dog or a cat person?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",10)
@@ -552,29 +461,20 @@ RESPONSE #60
 	SetGlobal("C02SireneGlint1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~*sigh*~)
-	SetGlobal("C02SireneGlint","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneGlintTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Glint")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneGlint","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneGlintTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneGlint2","MYAREA",-1)
-Switch("C02SireneGlint2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneGlint2","MYAREA",0)
+	Switch("C02SireneGlint2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Glint",~I've been scouring my mind for what I was going to ask you, Sirene, really been going at it, but... Cloakshadow's shadow, I just can't remember.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",10)
@@ -624,9 +524,7 @@ RESPONSE #110
 	SetGlobal("C02SireneGlint2","MYAREA",120)
 RESPONSE #120
 	DisplayStringHead("Glint",~Oh yes, yes, it most certainly did. Next time I'll tell you about my aunt's cat, and how it- well, I'll not spoil it right now. Forward!~)
-	SetGlobal("C02SireneGlint","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneGlint2","MYAREA",-1)
 END
 
@@ -635,19 +533,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Jaheira")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneJaheira","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneJaheira1","MYAREA",-1)
-Switch("C02SireneJaheira1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneJaheira1","MYAREA",0)
+	Switch("C02SireneJaheira1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Jaheira",~Watch your step, Sirene. Your armor and cloak are bright enough for anyone in our sights to notice. You do not need to add noise on top of that.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",10)
@@ -673,30 +565,20 @@ RESPONSE #50
 	SetGlobal("C02SireneJaheira1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("Jaheira",~Good. Now, I just need to find some suitable leaves...~)
-	SetGlobal("C02SireneJaheira","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneJaheiraTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Jaheira")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-HasItemEquiped("c02sclck","C0Sirene")
-Global("C02SireneJaheira","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneJaheiraTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneJaheira2","MYAREA",-1)
-Switch("C02SireneJaheira2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneJaheira2","MYAREA",0)
+	Switch("C02SireneJaheira2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Jaheira",~How is the cloak, child? Is it the right size, and is it suitably warm during the evenings?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",10)
@@ -726,9 +608,7 @@ RESPONSE #60
 	SetGlobal("C02SireneJaheira2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Jaheira",~Nonsense, keep it. I'm sure you'd revert to that impractical white cloak of yours otherwise. I will make another for him once this is all over.~)
-	SetGlobal("C02SireneJaheira","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneJaheira2","MYAREA",-1)
 END
 
@@ -737,19 +617,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Khalid")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneKhalid","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneKhalidTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneKhalid1","MYAREA",-1)
-Switch("C02SireneKhalid1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneKhalid1","MYAREA",0)
+	Switch("C02SireneKhalid1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("C0Sirene",~Khalid, have you need of anything?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",10)
@@ -783,30 +657,20 @@ RESPONSE #70
 	SetGlobal("C02SireneKhalid1","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("C0Sirene",~You were teasing me, were you not? (laugh) I suppose that means you are truly well, then. I am glad.~)
-	SetGlobal("C02SireneKhalid","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneKhalidTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Khalid")
-!Dead("Jaheira")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneKhalid","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneKhalidTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneKhalid2","MYAREA",-1)
-Switch("C02SireneKhalid2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneKhalid2","MYAREA",0)
+	Switch("C02SireneKhalid2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Khalid",~I m-must say, having you on our side in battle h-helps my confidence.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",10)
@@ -840,9 +704,7 @@ RESPONSE #70
 	SetGlobal("C02SireneKhalid2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Khalid",~B-but you are still so young. D-do not consider giving up your life so easily.~)
-	SetGlobal("C02SireneKhalid","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneKhalid2","MYAREA",-1)
 END
 
@@ -851,21 +713,15 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Mkhiin")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneMkhiin","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneMkhiinTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneMkhiin1","MYAREA",-1)
-Switch("C02SireneMkhiin1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneMkhiin1","MYAREA",0)
+	Switch("C02SireneMkhiin1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("C0Sirene",~Do you follow a deity, M'khiin?~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneMkhiin1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("Mkhiin",~Don't know. Believe they exist. Never cared much for 'em though. Greedy bastards, always demanding, never giving.~)
@@ -890,29 +746,20 @@ RESPONSE #50
 	SetGlobal("C02SireneMkhiin1","MYAREA",70)
 RESPONSE #60
 	DisplayStringHead("Mkhiin",~Spirits are better. Spirits respond when I call, and never demand. They're worth listening to.~)
-	SetGlobal("C02SireneMkhiin","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneMkhiinTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Mkhiin")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneMkhiin","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneMkhiinTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneMkhiin2","MYAREA",-1)
-Switch("C02SireneMkhiin2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneMkhiin2","MYAREA",0)
+	Switch("C02SireneMkhiin2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Mkhiin",~You took a hit on purpose in our last fight. Stupid move. Could have avoided it.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",10)
@@ -930,9 +777,7 @@ RESPONSE #30
 	SetGlobal("C02SireneMkhiin2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Mkhiin",~Can't say. Don't trust any of the long-legs, not after they all tried to kill me. Not sure about you, yet.~)
-	SetGlobal("C02SireneMkhiin","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMkhiin2","MYAREA",-1)
 END
 
@@ -941,19 +786,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Minsc")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneMinsc","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneMinscTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneMinsc1","MYAREA",-1)
-Switch("C02SireneMinsc1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneMinsc1","MYAREA",0)
+	Switch("C02SireneMinsc1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Minsc",~My friend Sirene, you wield a large sword for such a little lady! If you were any larger, you would be carrying a sword heavier than Minsc, ha!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",10)
@@ -975,30 +814,20 @@ RESPONSE #40
 	SetGlobal("C02SireneMinsc1","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("Dynaheir",~Minsc! Thou shouldst choose thy words carefully, lest they be taken the wrong way by our friend.~)
-	SetGlobal("C02SireneMinsc","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneMinscTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Minsc")
-!Dead("Dynaheir")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneMinsc","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneMinscTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneMinsc2","MYAREA",-1)
-Switch("C02SireneMinsc2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneMinsc2","MYAREA",0)
+	Switch("C02SireneMinsc2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Minsc",~I am confused. Sirene is almost as elegant as Dynaheir in speech and manners, but she is also a warrior as mighty as Minsc!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",10)
@@ -1028,9 +857,7 @@ RESPONSE #60
 	SetGlobal("C02SireneMinsc2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Dynaheir",~Minsc... I think thou hast harassed our companion long enough.~)
-	SetGlobal("C02SireneMinsc","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneMinsc2","MYAREA",-1)
 END
 
@@ -1039,20 +866,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Neera")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneNeera","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneNeeraTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneNeera1","MYAREA",-1)
-GlobalLT("bd_neera_plot","global",5)
-Switch("C02SireneNeera1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneNeera1","MYAREA",0)
+	Switch("C02SireneNeera1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Neera",~ARGH! You're driving me insane! I swear if I knew where you were, Adoy, I'd go to you in an instant and WRING YOUR BLOODY NECK, SO TAKE A HINT AND-~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",10)
@@ -1094,29 +914,20 @@ RESPONSE #90
 	SetGlobal("C02SireneNeera1","MYAREA",100)
 RESPONSE #100
 	DisplayStringHead("Neera",~Thanks. Wait, nope, maybe later. Ohhh no, he's back. I'll just go over there so my screaming doesn't turn you deaf.~)
-	SetGlobal("C02SireneNeera","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneNeeraTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Neera")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneNeera","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneNeeraTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneNeera2","MYAREA",-1)
-Switch("C02SireneNeera2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneNeera2","MYAREA",0)
+	Switch("C02SireneNeera2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Neera",~Hey. Got a moment, Sirene?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",10)
@@ -1146,9 +957,7 @@ RESPONSE #60
 	SetGlobal("C02SireneNeera2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Neera",~Well, this talk's made me all warm and fuzzy. I'm glad you're my friend, Sirene. Which will make me feel extra bad if I accidentally fry- never mind. Shouldn't kill the mood.~)
-	SetGlobal("C02SireneNeera","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneNeera2","MYAREA",-1)
 END
 
@@ -1157,21 +966,15 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("RASAAD")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneRasaad","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneRasaadTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneRasaad1","MYAREA",-1)
-Switch("C02SireneRasaad1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneRasaad1","MYAREA",0)
+	Switch("C02SireneRasaad1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("RASAAD",~We did not talk much while we were both assisting refugees at Baldur's Gate.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneRasaad1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~No, we did not. I noticed you, certainly, yet... you always seemed distracted, lost in thoughts. It seemed almost a sin to interrupt.~)
@@ -1199,29 +1002,20 @@ RESPONSE #60
 	SetGlobal("C02SireneRasaad1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Would that I could help you in any way, Rasaad. But regardless, I am glad to have one such as you in my company.~)
-	SetGlobal("C02SireneRasaad","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneRasaadTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("RASAAD")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneRasaad","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneRasaadTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneRasaad2","MYAREA",-1)
-Switch("C02SireneRasaad2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneRasaad2","MYAREA",0)
+	Switch("C02SireneRasaad2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("C0Sirene",~In my scant few years knowing battle, I have never seen one fight such as you, Rasaad.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",10)
@@ -1255,9 +1049,7 @@ RESPONSE #70
 	SetGlobal("C02SireneRasaad2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("C0Sirene",~I would like that.~)
-	SetGlobal("C02SireneRasaad","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneRasaad2","MYAREA",-1)
 END
 
@@ -1266,19 +1058,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("SAFANA")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneSafana","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneSafanaTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneSafana1","MYAREA",-1)
-Switch("C02SireneSafana1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneSafana1","MYAREA",0)
+	Switch("C02SireneSafana1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("SAFANA",~Don't take it the wrong way, darling, but your armor is so terribly unfashionable. How could you ever hope to attract a man wearing such unflattering attire?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",10)
@@ -1304,29 +1090,20 @@ RESPONSE #50
 	SetGlobal("C02SireneSafana1","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("SAFANA",~And here I was being uncharacteristically generous for a change. I even had ideas for how you could... customize your attire, too. Whatever floats your boat, honey.~)
-	SetGlobal("C02SireneSafana","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneSafanaTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("SAFANA")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneSafana","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneSafanaTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneSafana2","MYAREA",-1)
-Switch("C02SireneSafana2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneSafana2","MYAREA",0)
+	Switch("C02SireneSafana2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("SAFANA",~So, you have a thing for women too, hmm?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",10)
@@ -1352,9 +1129,7 @@ RESPONSE #50
 	SetGlobal("C02SireneSafana2","MYAREA",60)
 RESPONSE #60
 	DisplayStringHead("SAFANA",~No skin of my back, dear. You've got nothing I want.~)
-	SetGlobal("C02SireneSafana","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneSafana2","MYAREA",-1)
 END
 
@@ -1363,21 +1138,15 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Viconia")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneViconia","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneViconiaTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneViconia1","MYAREA",-1)
-Switch("C02SireneViconia1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneViconia1","MYAREA",0)
+	Switch("C02SireneViconia1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Viconia",~You do not seem as opposed to my presence as I expected.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneViconia1","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~What is your point, Sharran?~)
@@ -1405,31 +1174,22 @@ RESPONSE #60
 	SetGlobal("C02SireneViconia1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Perhaps 'twas your dark heart which kept them at bay. I will waste no more words with you.~)
-	SetGlobal("C02SireneViconia","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneViconiaTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Viconia")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneViconia","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneViconiaTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneViconia2","MYAREA",-1)
-Switch("C02SireneViconia2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneViconia2","MYAREA",0)
+	Switch("C02SireneViconia2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Viconia",~Tell me, de'rendalhar, how many men have spat at you after you tended to them, upon realizing what you were?~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("C02SireneViconia2","MYAREA",10)
 RESPONSE #10
 	DisplayStringHead("C0Sirene",~Many, Sharran, but there are also others whose fears were eased once I healed them.~)
@@ -1441,11 +1201,11 @@ RESPONSE #20
 	SetGlobal("C02SireneViconia2","MYAREA",30)
 RESPONSE #30
 	DisplayStringHead("C0Sirene",~If I had allowed my fear of rejection control me, I would never have met a friend such as <CHARNAME>.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",5)
 	SetGlobal("C02SireneViconia2","MYAREA",40)
 RESPONSE #40
 	DisplayStringHead("Viconia",~Your naïve optimism sickens me. Were you in the Underdark, you would not survive for longer than a day.~)
-	RealSetGlobalTimer("BD_BANTER_DELAY","MYAREA",10)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",50)
 RESPONSE #50
 	DisplayStringHead("C0Sirene",~Perhaps you should look to yourself instead, Viconia, and remember that this is not the Underdark. Distrust will only cost you any friendship you might have.~)
@@ -1457,9 +1217,7 @@ RESPONSE #60
 	SetGlobal("C02SireneViconia2","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("C0Sirene",~Only if you do not give them the trust they deserve.~)
-	SetGlobal("C02SireneViconia","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneViconia2","MYAREA",-1)
 END
 
@@ -1468,19 +1226,13 @@ END
 // talk 1
 
 IF
-InMyArea(Player1)
-InParty("Voghiln")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneVoghiln","GLOBAL",1)
-RealGlobalTimerExpired("C02SireneVoghilnTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneVoghiln1","MYAREA",-1)
-Switch("C02SireneVoghiln1","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneVoghiln1","MYAREA",0)
+	Switch("C02SireneVoghiln1","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Voghiln",~Ho there, my fair lady of war!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",10)
@@ -1510,29 +1262,20 @@ RESPONSE #60
 	SetGlobal("C02SireneVoghiln1","MYAREA",70)
 RESPONSE #70
 	DisplayStringHead("Voghiln",~Ha! You are most clever to toy with Voghiln's affections so, my lady, but I swear to you, I will overcome your icy defense!~)
-	SetGlobal("C02SireneVoghiln","GLOBAL",2)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02SireneVoghilnTalk","GLOBAL",THIRTY_MINUTES)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln1","MYAREA",-1)
 END
 
 // talk 2
 
 IF
-InMyArea(Player1)
-InParty("Voghiln")
-InParty("C0Sirene")
-!ActuallyInCombat()
-!See([ENEMY])
-Global("C02SireneVoghiln","GLOBAL",2)
-RealGlobalTimerExpired("C02SireneVoghilnTalk","GLOBAL")
-!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-!RealGlobalTimerNotExpired("C02_BANTER_DELAY","GLOBAL")
-!Global("C02SireneVoghiln2","MYAREA",-1)
-Switch("C02SireneVoghiln2","MYAREA")
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02SireneVoghiln2","MYAREA",0)
+	Switch("C02SireneVoghiln2","MYAREA")
 THEN
-RESPONSE #0
+RESPONSE #1
 	DisplayStringHead("Voghiln",~Ah, fair lady Sirene! 'Tis a fine <DAYNIGHT>, ja?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",10)
@@ -1566,9 +1309,7 @@ RESPONSE #70
 	SetGlobal("C02SireneVoghiln2","MYAREA",80)
 RESPONSE #80
 	DisplayStringHead("Voghiln",~Listen well, my lady, and be enthralled by Voghiln's many talents!~)
-	SetGlobal("C02SireneVoghiln","GLOBAL",3)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",ONE_MINUTE)
-	RealSetGlobalTimer("C02_BANTER_DELAY","GLOBAL",THIRTY_MINUTES)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("C02SireneVoghiln2","MYAREA",-1)
 END
 

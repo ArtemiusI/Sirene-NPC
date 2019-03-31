@@ -82,7 +82,6 @@ EXTEND_TOP ~bdsdd304.bcs~ ~%MOD_FOLDER%/scripts/bdsdd304.baf~
 EXTEND_TOP ~bd4601.bcs~ ~%MOD_FOLDER%/scripts/bd4601.baf~
 EXTEND_TOP ~bd0104.bcs~ ~%MOD_FOLDER%/scripts/bd0104.baf~
 EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/bdcut58.baf~
-EXTEND_TOP ~BDBALDUR.bcs~ ~%MOD_FOLDER%/scripts/BDBALDUR.baf~
 
 APPEND ~pdialog.2da~ ~C0Sirene C02SireP C02SireJ~
   UNLESS ~C0Sirene~
