@@ -60,26 +60,32 @@ ADD_KIT ~C0ILM~
   SAY ~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
 
 Advantages:
-- Hit Die: d12
-- May use Lay on Hands three times per day.
-- May use the Sacrifice ability once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
+– May use Lay on Hands three times per day.
+– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
+– May use the Sacrifice ability once per day. Gains an additional use at 5th level and every 5 levels thereafter.
 
-SACRIFICE: The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to <HIMHER>self up to a maximum of 1d6+20 at 10th level.
+SACRIFICE: The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.
 
-- May use the Martyrdom ability once per day starting at level 5. Gains an additional use every 7 levels thereafter.
+– May use the Martyrdom ability once per day starting at level 5. Gains an additional use at 10th level and every 10 levels thereafter.
 
-MARTYRDOM: The target gains a +4 bonus to armor class and 50% resistance to physical damage while the martyr loses the same amount for 5 rounds + 1 round for every 3 levels gained.
+MARTYRDOM: The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr exudes an aura which grants all allies within 15-ft. a +3 bonus to Armor Class and 15% resistance to physical damage while they gain twice the amount. Allies who leave the range of the martyr's aura retain the benefits for 2 rounds. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.
 
-- 12th level: Gains 10% resistance to physical damage. An additional 5% is gained at levels 16 and 20.
-- 15th level: May use the Ilmater's Grace ability once per day.
+– 9th level: Gains the Inspirational Martyr passive ability.
 
-ILMATER'S GRACE: The martyr regenerates for 3 hit points per second for 1 turn.
+INSPIRATIONAL MARTYR: The martyr's dauntless heroism and endurance keeps their allies motivated and safe, even in death. When the martyr's maximum hit points falls below 50%, all allies (except the martyr) within sight range gain a +1 bonus to hit, damage and saving throws. If the martyr is slain, all allies are healed for 50% of their maximum hit points and gain +4 to hit, damage and saving throws for two turns.
+
+– 12th level: The martyr becomes immune to fatigue.
+– 15th level: May use the Ilmater's Grace ability once per day.
+
+ILMATER'S GRACE: The martyr may call upon a second wind in battle, fully restoring and doubling their maximum hit points for one turn.
+
+– Hit Die: d12
 
 Disadvantages:
-- -1 penalty to THAC0 every 5 levels (starting at level 1).
-- May not cast Protection from Evil.
-- May not Turn Undead.
-- May not use ranged weapons.~
+– Incurs a -1 penalty to damage.
+– May not cast Protection from Evil.
+– May not Turn Undead.
+– May not use ranged weapons.~
 
 LAF fl#add_kit_ee
   STR_VAR
@@ -90,37 +96,68 @@ LAF fl#add_kit_ee
     numwslot = 3
 END
 
-COPY ~%MOD_FOLDER%/spells/c0ilms1.spl~ ~override~
+DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+  BEGIN
+
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
+
+END
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Martyrdom~) STR_VAR bam_file = c0ilms2i RET c0ilms2i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Heroic Inspiration~) STR_VAR bam_file = c0ilms4i RET c0ilms4i = icon END
+
+COPY ~%MOD_FOLDER%/spells/C0ilmi2.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
-      check_globals = 1
-      check_headers = 1
-      match_opcode = 206 // display string
-	  parameter1 = RESOLVE_STR_REF (~Sacrifice may not be used on the caster.~)
-  END
+      match_opcode = 139
+	  parameter1 = RESOLVE_STR_REF (~Gained Passive Ability: Inspirational Martyr~)
+END
+
+COPY ~%MOD_FOLDER%/spells/c0ilms1.spl~ ~override~
 SAY NAME1 ~Sacrifice~
 SAY NAME2 ~Sacrifice~
 SAY UNIDENTIFIED_DESC ~Sacrifice
-The martyr heals the target for 1d6+2 hit points per level and deals 1d6+2 non-lethal damage per level to herself up to a maximum of 1d6+20 at 10th level.~
+The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.~
 
 COPY ~%MOD_FOLDER%/spells/C0ilms2.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
-      check_globals = 1
-      check_headers = 1
-      match_opcode = 206 // display string
-	  parameter1 = RESOLVE_STR_REF (~Martyrdom may not be used on the caster.~)
-  END
+      match_opcode = 142
+	  parameter2 = c0ilms2i
+END
 SAY NAME1 ~Martyrdom~
 SAY NAME2 ~Martyrdom~
 SAY UNIDENTIFIED_DESC ~Martyrdom
-The target gains a +4 bonus to armor class and 50% resistance to physical damage while the martyr loses the same amount for 5 rounds + 1 round for every 3 levels gained.~
+The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr exudes an aura which grants all allies within 15-ft. a +3 bonus to Armor Class and 15% resistance to physical damage while they gain twice the amount. Allies who leave the range of the martyr's aura retain the benefits for 2 rounds. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.~
 
 COPY ~%MOD_FOLDER%/spells/C0ilms3.spl~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 139
+	  parameter1 = RESOLVE_STR_REF (~Maximum Hit Points Doubled~)
+END
 SAY NAME1 ~Ilmater's Grace~
 SAY NAME2 ~Ilmater's Grace~
 SAY UNIDENTIFIED_DESC ~Ilmater's Grace
-The martyr regenerates for 3 hit points per second for 1 turn.~
+The martyr may call upon a second wind in battle, fully restoring and doubling their maximum hit points for one turn.~
+
+COPY ~%MOD_FOLDER%/spells/C0ilms4.spl~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 142
+	  parameter2 = c0ilms4i
+END
+
+COPY ~%MOD_FOLDER%/spells/C0ilms5.spl~ ~override~
+SAY NAME1 ~Inspirational Martyr~
 
 EXTEND_TOP ~AR3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
 
@@ -305,7 +342,7 @@ END ELSE ACTION_IF (~%portrait%~ = 5) THEN BEGIN
 END
 
 ////////////////////////////////////// Siege of Dragonspear
-ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~
+ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN
   PRINT ~Installing content for Siege of Dragonspear...~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene_sod.tpa~
