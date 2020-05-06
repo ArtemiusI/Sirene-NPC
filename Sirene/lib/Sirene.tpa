@@ -152,6 +152,11 @@ The martyr may call upon a second wind in battle, fully restoring and doubling t
 COPY ~%MOD_FOLDER%/spells/C0ilms4.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
+      match_opcode = 139
+	  parameter1 = RESOLVE_STR_REF (~Heroic Inspiration~)
+END
+  LPF ALTER_EFFECT
+    INT_VAR
       match_opcode = 142
 	  parameter2 = c0ilms4i
 END
