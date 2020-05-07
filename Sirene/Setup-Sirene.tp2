@@ -1,6 +1,5 @@
 BACKUP ~Sirene/backup~
 AUTHOR ~Artemius_I~
-VERSION ~v2.5~
 
 AUTO_TRA ~Sirene/translations/%s~
 ALWAYS
