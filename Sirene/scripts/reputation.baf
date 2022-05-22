@@ -1,0 +1,17 @@
+  IF
+    InPartyAllowDead("C0Sirene")
+    Global("C0SireneReputation","GLOBAL",0)
+  THEN
+    RESPONSE #100
+      ReputationInc(-2)
+      SetGlobal("C0SireneReputation","GLOBAL",1)
+  END
+  
+  IF
+    !InPartyAllowDead("C0Sirene")
+    Global("C0SireneReputation","GLOBAL",1)
+  THEN
+    RESPONSE #100
+      ReputationInc(2)
+      SetGlobal("C0SireneReputation","GLOBAL",0)
+  END

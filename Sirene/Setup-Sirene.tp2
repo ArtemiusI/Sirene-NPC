@@ -1,6 +1,5 @@
 BACKUP ~Sirene/backup~
 AUTHOR ~Artemius_I~
-
 AUTO_TRA ~Sirene/translations/%s~
 ALWAYS
 INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
@@ -12,6 +11,34 @@ LANGUAGE ~English~
 BEGIN ~Sirene NPC for Baldur's Gate: Enhanced Edition~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene.tpa~
 
+BEGIN ~BG2 Default (Isandir)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 1 (Sirick, Light Armor)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 1 (Sirick/Lava, Heavy Armor)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 2 (Lodaligae)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneS.bmp~
+		
 // Alternate Classes
 
 BEGIN ~True Paladin~
@@ -56,169 +83,4 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~
 THEN BEGIN
 COPY_EXISTING ~c02siren.cre~ ~override~
 WRITE_SHORT 0x246 0x4006
-END
-/*
-BEGIN ~Fighter/Cleric~
-SUBCOMPONENT ~Choose an alternate class for Sirene?~
-REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
-COPY ~%MOD_FOLDER%/creatures/C0SireFC.cre~ ~override/C0Sirene.cre~
-  SAY NAME1 ~Sirene~
-  SAY NAME2 ~Sirene~
-  WRITE_ASCII 0x248 ~C02Siren~ #8  //override script
-  WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
-  WRITE_ASCII 0x2cc ~C02Siren~ #8   //pre-joining dialogue file
-  WRITE_ASCII 0X34 ~SireneM~ #8   //small portrait
-  WRITE_ASCII 0x3c ~SireneL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
-  SAY MORALE ~I'll not die this day!~ [C0SIR001]
-  SAY HAPPY ~You are... an inspiration to me.~
-  SAY UNHAPPY_ANNOYED ~I do not approve of the path you're taking us.~
-  SAY UNHAPPY_SERIOUS ~My mercy and patience are running thin.~
-  SAY UNHAPPY_BREAKING_POINT ~I'll not be a martyr to your evil cause.~
-  SAY LEADER ~I shall lead by example.~ [C0SIR002]
-  SAY TIRED ~I am exhausted.~ [C0SIR003]
-  SAY BORED ~Are we waiting for something?~ [C0SIR004]
-  SAY BATTLE_CRY1 ~Attack!~ [C0SIR005]
-  SAY BATTLE_CRY2 ~Make peace with your gods!~ [C0SIR006]
-  SAY BATTLE_CRY3 ~To battle!~ [C0SIR007]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~
-  SAY BATTLE_CRY5 ~For the Crying God!~
-  SAY DAMAGE ~Ah!~ [C0SIR008]
-  SAY DYING ~No... uh...~ [C0SIR009]
-  SAY HURT ~Ugh, my wounds need tending!~ [C0SIR010]
-  SAY AREA_FOREST ~The forest is so beautiful, and I truly appreciate the calm.~
-  SAY AREA_CITY ~The city is a haven of suffering...~
-  SAY AREA_DUNGEON ~There is evil amongst the darkness, my friend. Stay alert.~
-  SAY AREA_DAY ~It's a beautiful day.~
-  SAY AREA_NIGHT ~The dark will not hide our enemies.~
-  SAY SELECT_COMMON1 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON2 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON3 ~Yes?~ [C0SIR013]
-  SAY SELECT_COMMON4 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON5 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON6 ~Yes?~ [C0SIR013]
-  SAY SELECT_ACTION1 ~Certainly.~ [C0SIR014]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SIR015]
-  SAY SELECT_ACTION3 ~As you wish.~ [C0SIR016]
-  SAY SELECT_ACTION4 ~How can I help?~ [C0SIR017]
-  SAY SELECT_ACTION5 ~Ready and willing.~ [C0SIR018]
-  SAY SELECT_ACTION6 ~Tell me your needs.~ [C0SIR019]
-  SAY SELECT_ACTION7 ~I am here.~ [C0SIR020]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SIR021]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SIR022]
-  SAY TARGET_IMMUNE ~What? That can't be!~
-  SAY INVENTORY_FULL ~I dropped that, 'twas too much of a burden.~
-  SAY SPELL_DISRUPTED ~Ilmater forgive me...~
-  SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~~ []
-  SAY PICKED_POCKET ~~ []
-  
-COPY ~%MOD_FOLDER%/items/c0mace.BAM~ ~override~
-COPY ~%MOD_FOLDER%/Items/c0mace.itm~ ~override/c0sw2h.itm~
-SAY NAME1 ~Mace~
-SAY NAME2 ~Brimstone +1~
-SAY DESC ~This mace is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which disorients foes and makes it more difficult to retaliate.
-
-This weapon can only be wielded by tieflings.
-
-STATISTICS:
-
-Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
-
-Equipped abilities:
- -1 Constitution
- 20% resistance to fire damage
-
-THAC0: +1
-Damage: 1d6+2, 1 fire damage (crushing)
-Speed Factor: 7
-Proficiency Type: Mace
-Type: One-handed
-Requires:
- 10 Strength
-
-Weight: 10~
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~
-THEN BEGIN
-COPY ~%MOD_FOLDER%/creatures/C02SirFC.cre~ ~override/C02Siren.cre~
-  SAY NAME1 ~Sirene~
-  SAY NAME2 ~Sirene~
-  WRITE_ASCII 0x248 ~C0Sirene~ #8  //override script
-  WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
-  WRITE_ASCII 0x2cc ~C0Sirene~ #8   //pre-joining dialogue file
-  WRITE_ASCII 0X34 ~SireneM~ #8   //small portrait
-  WRITE_ASCII 0x3c ~SireneL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.
-  
-Sirene returned at Baldur's Gate after the fall of the Iron Throne to tend to the injured and those seeking refuge from of the crusade, and has joined your band in hope of taking a more direct approach to ending the Shining Lady's threat. Although she is showing signs of uncertainty towards fighting against the good men swayed by the crusade, she has assured you that she is fully committed to your cause so long as your hold good intentions.~
-  SAY MORALE ~I'll not die this day!~ [C0SIR001]
-  SAY HAPPY ~You are... an inspiration to me.~
-  SAY UNHAPPY_ANNOYED ~I do not approve of the path you're taking us.~
-  SAY UNHAPPY_SERIOUS ~My mercy and patience are running thin.~
-  SAY UNHAPPY_BREAKING_POINT ~I'll not be a martyr to your evil cause.~
-  SAY LEADER ~I shall lead by example.~ [C0SIR002]
-  SAY TIRED ~I am exhausted.~ [C0SIR003]
-  SAY BORED ~Are we waiting for something?~ [C0SIR004]
-  SAY BATTLE_CRY1 ~Attack!~ [C0SIR005]
-  SAY BATTLE_CRY2 ~Make peace with your gods!~ [C0SIR006]
-  SAY BATTLE_CRY3 ~To battle!~ [C0SIR007]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~
-  SAY BATTLE_CRY5 ~For the Crying God!~
-  SAY DAMAGE ~Ah!~ [C0SIR008]
-  SAY DYING ~No... uh...~ [C0SIR009]
-  SAY HURT ~Ugh, my wounds need tending!~ [C0SIR010]
-  SAY AREA_FOREST ~The forest is so beautiful, and I truly appreciate the calm.~
-  SAY AREA_CITY ~The city is a haven of suffering...~
-  SAY AREA_DUNGEON ~There is evil amongst the darkness, my friend. Stay alert.~
-  SAY AREA_DAY ~It's a beautiful day.~
-  SAY AREA_NIGHT ~The dark will not hide our enemies.~
-  SAY SELECT_COMMON1 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON2 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON3 ~Yes?~ [C0SIR013]
-  SAY SELECT_COMMON4 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON5 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON6 ~Yes?~ [C0SIR013]
-  SAY SELECT_ACTION1 ~Certainly.~ [C0SIR014]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SIR015]
-  SAY SELECT_ACTION3 ~As you wish.~ [C0SIR016]
-  SAY SELECT_ACTION4 ~How can I help?~ [C0SIR017]
-  SAY SELECT_ACTION5 ~Ready and willing.~ [C0SIR018]
-  SAY SELECT_ACTION6 ~Tell me your needs.~ [C0SIR019]
-  SAY SELECT_ACTION7 ~I am here.~ [C0SIR020]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SIR021]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SIR022]
-  SAY TARGET_IMMUNE ~What? That can't be!~
-  SAY INVENTORY_FULL ~I dropped that, 'twas too much of a burden.~
-  SAY SPELL_DISRUPTED ~Ilmater forgive me...~
-  SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~~ []
-  SAY PICKED_POCKET ~~ []
-
-COPY ~%MOD_FOLDER%/Items/c02amul2.itm~ ~override/c02amul.itm~
-SAY NAME1 ~Silver Necklace~
-SAY NAME2 ~Painbearer's Amulet~
-SAY DESC ~This coin-sized silver disc has the holy symbol of Ilmater crudely printed on top. While its craftsmanship leaves much to be desired, wearing it provides the bearer with an aura of protection, even more so if the wearer is faithful to the Crying God.
-
-STATISTICS:
-
-Equipped abilities:
-- Armor Class: +2 (Clerics), +1 (others)
-- Hit Points: +10 (Clerics)
-- Protection from Evil
-
-Weight: 1~
-END */
-
-BEGIN ~Divine Champion~
-SUBCOMPONENT ~Choose an alternate class for Sirene?~
-REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
-REQUIRE_COMPONENT ~Setup-HouseTweaks.tp2~ ~2~ ~This component requires the Divine Champion Kit to be installed~
-COPY_EXISTING ~c0sirene.cre~ ~override~
-WRITE_SHORT 0x246 0x4000 + ~%C0DC%~
-ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~
-THEN BEGIN
-COPY_EXISTING ~c02siren.cre~ ~override~
-WRITE_SHORT 0x246 0x4000 + ~%C0DC%~
 END

@@ -11,45 +11,40 @@ COPY ~%MOD_FOLDER%/creatures/C02Siren.cre~ ~override/C02Siren.cre~
   SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.
   
 Sirene returned at Baldur's Gate after the fall of the Iron Throne to tend to the injured and those seeking refuge from of the crusade, and has joined your band in hope of taking a more direct approach to ending the Shining Lady's threat. Although she is showing signs of uncertainty towards fighting against the good men swayed by the crusade, she has assured you that she is fully committed to your cause so long as your hold good intentions.~
-  SAY MORALE ~I'll not die this day!~ [C0SIR001]
-  SAY HAPPY ~You are... an inspiration to me.~
-  SAY UNHAPPY_ANNOYED ~I do not approve of the path you're taking us.~
-  SAY UNHAPPY_SERIOUS ~My mercy and patience are running thin.~
-  SAY UNHAPPY_BREAKING_POINT ~I'll not be a martyr to your evil cause.~
-  SAY LEADER ~I shall lead by example.~ [C0SIR002]
-  SAY TIRED ~I am exhausted.~ [C0SIR003]
-  SAY BORED ~Are we waiting for something?~ [C0SIR004]
-  SAY BATTLE_CRY1 ~Attack!~ [C0SIR005]
-  SAY BATTLE_CRY2 ~Make peace with your gods!~ [C0SIR006]
-  SAY BATTLE_CRY3 ~To battle!~ [C0SIR007]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~
-  SAY BATTLE_CRY5 ~For the Crying God!~
-  SAY DAMAGE ~Ah!~ [C0SIR008]
-  SAY DYING ~No... uh...~ [C0SIR009]
-  SAY HURT ~Ugh, my wounds need tending!~ [C0SIR010]
-  SAY AREA_FOREST ~The forest is so beautiful, and I truly appreciate the calm.~
-  SAY AREA_CITY ~The city is a haven of suffering...~
-  SAY AREA_DUNGEON ~There is evil amongst the darkness, my friend. Stay alert.~
-  SAY AREA_DAY ~It's a beautiful day.~
-  SAY AREA_NIGHT ~The dark will not hide our enemies.~
-  SAY SELECT_COMMON1 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON2 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON3 ~Yes?~ [C0SIR013]
-  SAY SELECT_COMMON4 ~You have need of me?~ [C0SIR011]
-  SAY SELECT_COMMON5 ~I am by your side.~ [C0SIR012]
-  SAY SELECT_COMMON6 ~Yes?~ [C0SIR013]
-  SAY SELECT_ACTION1 ~Certainly.~ [C0SIR014]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SIR015]
-  SAY SELECT_ACTION3 ~As you wish.~ [C0SIR016]
-  SAY SELECT_ACTION4 ~How can I help?~ [C0SIR017]
-  SAY SELECT_ACTION5 ~Ready and willing.~ [C0SIR018]
-  SAY SELECT_ACTION6 ~Tell me your needs.~ [C0SIR019]
-  SAY SELECT_ACTION7 ~I am here.~ [C0SIR020]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SIR021]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SIR022]
-  SAY TARGET_IMMUNE ~What? That can't be!~
-  SAY INVENTORY_FULL ~I dropped that, 'twas too much of a burden.~
-  SAY SPELL_DISRUPTED ~Ilmater forgive me...~
+  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
+  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
+  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
+  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
+  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
+  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
+  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
+  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
+  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
+  SAY DAMAGE ~Ngh!~ [C0SR013]
+  SAY DYING ~Ilmater, take me...~ [C0SR014a]
+  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
+  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
+  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
+  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
+  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
+  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
+  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
+  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
+  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
+  SAY SELECT_COMMON4 ~What is it?~ [C0SR024]
+  SAY SELECT_COMMON5 ~I am at your side.~ [C0SR025]
+  SAY SELECT_COMMON6 ~Whatever you require.~ [C0SR026]
+  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
+  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
+  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
+  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
+  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
+  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
+  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
+  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
@@ -62,6 +57,7 @@ COMPILE	~%MOD_FOLDER%/Dialogue/dialog.d~
 	~%MOD_FOLDER%/Dialogue/C02SirB.d~
 	~%MOD_FOLDER%/Dialogue/C02SGlen.d~
 	
+	~%MOD_FOLDER%/Scripts/C02Reset.baf~ 
 	~%MOD_FOLDER%/Scripts/C02Siren.baf~
 	~%MOD_FOLDER%/Scripts/C02SBANT.baf~
 	~%MOD_FOLDER%/Scripts/C02DemKn.baf~

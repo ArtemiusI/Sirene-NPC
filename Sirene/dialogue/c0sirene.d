@@ -49,24 +49,30 @@ END
 
 IF ~~ j7
  SAY ~Aye, it is, my <PRO_LADYLORD>, but I ask you not to bring it up again. I have long gone past the point of being angered by your words, but I do not care to hear it repeated.~
-IF ~~ + j10
+IF ~~ + j13
 END
 
 IF ~~ j8
  SAY ~Only what anyone else could tell you. They say the iron coming from the Nashkel mines is poisoned to the point of being useless, and some say that it is the work of demons.~
  = ~I attempted to look into the issue personally, but my appearance caused... problems. I was turned away, and not peacefully.~
-IF ~~ + j10
+IF ~~ + j13
 END
 
 IF ~~ j9
  SAY ~An interesting proposal...~
-IF ~~ + j10
+IF ~ReputationGT(Player1,9)~ + j10a
+IF ~!ReputationGT(Player1,9)~ + j10b
 END
 
-IF ~~ j10
+IF ~~ j10a
  SAY ~Hmm... there is little for me to accomplish alone. You do not have an aura of evil about you, so I believe you can be trusted. If you would have me, I would join your side.~
 	++ ~Certainly, I'm sure you will make a valuable friend. My name's <CHARNAME>, by the way.~ + j11
 	++ ~Perhaps another time.~ + j12
+END
+
+IF ~~ j10b
+ SAY ~I... no, forgive me. I do not wish to be discourteous, but... I am uncertain if your path is one of virtue. Perhaps... in the future, if you see fit to make a change... I would be willing to travel by your side.~
+IF ~~ EXIT
 END
 
 IF ~~ j11
@@ -77,6 +83,14 @@ END
 IF ~~ j12
  SAY ~As you wish.~
 IF ~~ EXIT
+END
+
+IF ~~ j13
+ SAY ~Is there something else you wish to know?~
+	++ ~You look like you've been beaten pretty badly. What happened?~ + j3
+	++ ~Who are you again?~ + j4
+	++ ~Pardon my words, but you look a little strange.~ + j5
+	++ ~Sorry, I don't have time to talk right now.~ + j6
 END
 
 // Talked to again, not in party

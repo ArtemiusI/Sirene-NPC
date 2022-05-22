@@ -4,5 +4,6 @@ THEN
 RESPONSE #100
 	SetGlobal("C0SireneSpawns","GLOBAL",1)
 	CreateCreature("C0Sirene",[1255.1150],2)
+	ActionOverride("C0Sirene",MakeGlobal())
 	Continue()
 END

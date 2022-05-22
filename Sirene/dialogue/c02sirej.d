@@ -2343,7 +2343,7 @@ IF ~~ stringfix
 SAY ~Perhaps... (coughs)~ 
 IF ~~ THEN DO ~ClearAllActions() 
       StartCutSceneMode() 
-      StartCutScene("C0RESET")~ EXIT 
+      StartCutScene("C02RESET")~ EXIT 
 END
 
 // QUESTIONS

@@ -1,3 +1,12 @@
+// BLOCKING UNAPPROVED "CROSSMOD"
+
+IF
+!Global("SanC0SirB","Global",999) 
+THEN
+RESPONSE #100
+SetGlobal("SanC0SirB","Global",999)
+END
+
 // EXPERIENCE
 
 IF

@@ -315,6 +315,7 @@ IF
     !See([ENEMY])
     ReputationGT(Player1,9)
 	GlobalGT("Chapter","GLOBAL",9)
+	AreaCheck("bd4300")
     !Global("C02SirenePauseTalks","GLOBAL",1)
 	Global("C02SireneRomanceActive","GLOBAL",2)
 	Global("C02SireneLT","GLOBAL",11)
