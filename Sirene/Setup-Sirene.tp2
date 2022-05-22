@@ -13,28 +13,28 @@ INCLUDE ~%MOD_FOLDER%/lib/Sirene.tpa~
 
 BEGIN ~BG2 Default (Isandir)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
-  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+  REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
 		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 1 (Sirick, Light Armor)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
-  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+  REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
 		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene3.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 1 (Sirick/Lava, Heavy Armor)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
-  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+  REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
 		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene4.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 2 (Lodaligae)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
-  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+  REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
 		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneS.bmp~
