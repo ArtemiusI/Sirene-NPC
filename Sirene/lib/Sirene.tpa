@@ -1,3 +1,4 @@
+COPY ~%MOD_FOLDER%/portraits~ ~override~
 //AUDIO
 
 LAF HANDLE_AUDIO END
