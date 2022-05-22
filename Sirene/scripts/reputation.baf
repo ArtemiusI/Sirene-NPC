@@ -3,7 +3,7 @@
     Global("C0SireneReputation","GLOBAL",0)
   THEN
     RESPONSE #100
-      ReputationInc(-2)
+      ReputationInc(-1)
       SetGlobal("C0SireneReputation","GLOBAL",1)
   END
   
@@ -12,6 +12,6 @@
     Global("C0SireneReputation","GLOBAL",1)
   THEN
     RESPONSE #100
-      ReputationInc(2)
+      ReputationInc(1)
       SetGlobal("C0SireneReputation","GLOBAL",0)
   END
