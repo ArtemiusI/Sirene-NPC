@@ -1,4 +1,6 @@
-COPY ~%MOD_FOLDER%/portraits~ ~override~
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneL.bmp~
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneM.bmp~
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
 //AUDIO
 
 LAF HANDLE_AUDIO END
