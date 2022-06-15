@@ -1,5 +1,5 @@
-COPY ~%MOD_FOLDER%/Martyr/2DA~ ~OVERRIDE~
-COPY ~%MOD_FOLDER%/Martyr/spells~ ~OVERRIDE~
+COPY ~%MOD_FOLDER%/Paladin/Martyr/2DA~ ~OVERRIDE~
+COPY ~%MOD_FOLDER%/Paladin/Martyr/spells~ ~OVERRIDE~
 
 // Martyr
 
@@ -41,7 +41,7 @@ ADD_KIT ~C0ILM~
  ~C0ILM                  	0       0       0       0       0       0~
 
  // path to your CLAB-style 2da file 
- ~%MOD_FOLDER%/Martyr/2da/C0ILMCL.2da~
+ ~%MOD_FOLDER%/Paladin/Martyr/2da/C0ILMCL.2da~
 
  // PC races and classes allowed to use this kit, from KITTABLE.2da
  ~K_P_H K_P_E K_P_HE K_P_HL K_P_G K_P_D K_P_HO~
@@ -146,7 +146,13 @@ The martyr transfers 10 hit points plus 2 per level to the target, up to a maxim
 COPY_EXISTING ~c0ilms1a.spl~ ~override~
 	
 COPY_EXISTING ~c0ilmi2.spl~ ~override~
-  LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = c0ilmi2i END
+      LPF ADD_SPELL_EFFECT
+      INT_VAR
+	    opcode = 142
+	    target = 2
+		timing = 9
+        parameter2 = c0ilmi2i
+      END
 	
 COPY_EXISTING ~C0ilms2.spl~ ~override~
   LPF ALTER_EFFECT

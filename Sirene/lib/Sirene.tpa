@@ -152,6 +152,27 @@ THEN BEGIN
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/aura.d~
 END
 
+// Sirene-Kale
+ACTION_IF FILE_EXISTS_IN_GAME ~x3kaleb.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Kale~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/kale.d~
+END
+
+// Sirene-Kale
+ACTION_IF FILE_EXISTS_IN_GAME ~x3helgab.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Helga~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/helga.d~
+END
+
+// Sirene-Vienxay
+ACTION_IF FILE_EXISTS_IN_GAME ~x3vienb.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Vienxay~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/vienxay.d~
+END
+
 ////////////////////////////////////// Siege of Dragonspear
 ACTION_IF GAME_INCLUDES ~sod~
 THEN BEGIN

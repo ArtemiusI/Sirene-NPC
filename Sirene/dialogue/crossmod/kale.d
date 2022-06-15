@@ -4,7 +4,7 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-Global("C0SireneX3Kale1","GLOBAL",0)~ THEN X3KaleB SireneKale1
+Global("C0SireneX3Kale1","GLOBAL",0)~ THEN IF_FILE_EXISTS X3KaleB SireneKale1
 ~Y'know, Sirene, maybe you should try shouting sometimes.~
 DO ~SetGlobal("C0SireneX3Kale1","GLOBAL",1)~
 == BC0Siren ~I—I beg your pardon?~
