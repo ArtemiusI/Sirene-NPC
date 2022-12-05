@@ -18,6 +18,13 @@ SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
 		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/portraits/Sirene2.bmp~ ~override/SireneS.bmp~
 		
+BEGIN ~Original BG1 Default (sporeboy)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene-old.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene-old.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene-old.bmp~ ~override/SireneS.bmp~
+		
 BEGIN ~Alternate 1 (Sirick, Light Armor)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
   REQUIRE_COMPONENT ~Setup-Sirene.tp2~ ~0~ ~The main component must be installed.~
