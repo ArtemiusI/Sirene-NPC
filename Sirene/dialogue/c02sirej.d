@@ -2350,7 +2350,7 @@ END
 
 IF ~~ questions
 SAY ~Of course. Ask what you will.~
-+ ~Global("C02SirenePID1","GLOBAL",0)~ + ~Since you're a tiefling, shouldn't you have some sort of inherent powers?~ DO ~SetGlobal("C02SirenePID1","GLOBAL",1)~ + powers
+// + ~Global("C02SirenePID1","GLOBAL",0)~ + ~Since you're a tiefling, shouldn't you have some sort of inherent powers?~ DO ~SetGlobal("C02SirenePID1","GLOBAL",1)~ + powers
 + ~Global("C02SirenePID2","GLOBAL",0)~ + ~If you don't mind me asking, how old are you, exactly?~ DO ~SetGlobal("C02SirenePID2","GLOBAL",1)~ + age
 + ~Global("C02SirenePID3","GLOBAL",0)~ + ~You mentioned that you were an orphan. Where were you raised?~ DO ~SetGlobal("C02SirenePID3","GLOBAL",1)~ + orphan
 + ~Global("C02SireneKnowsLady","GLOBAL",1)~ + ~You said you've seen the Shining Lady before. Will you tell me about it?~ DO ~SetGlobal("C02SireneKnowsLady","GLOBAL",2)~ + shininglady

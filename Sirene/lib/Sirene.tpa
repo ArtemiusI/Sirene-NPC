@@ -117,6 +117,20 @@ Requires:
 
 Weight: 10~
 
+COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
+SAY NAME1 ~Darkness, 15' Radius~
+SAY DESC ~Darkness, 15' Radius
+(Alteration)
+
+Level: 2
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: 8-ft. radius
+Saving Throw: None
+
+This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+
 // Sirene-Glam
 ACTION_IF MOD_IS_INSTALLED ~SETUP-GLAMNPCPACK.TP2~ ~0~
 THEN BEGIN
