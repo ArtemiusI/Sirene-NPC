@@ -3,6 +3,24 @@ COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneM.bmp~
 COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
 //AUDIO
 
+ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_ghost_knight" KNIGHT
+OUTER_SPRINT "bg1_eet_theodon" WILLIA
+OUTER_SPRINT "bg1_eet_dornj" DORNJ
+OUTER_SPRINT "bg1_eet_dornp" DORNP
+OUTER_SPRINT "bg1_eet_bneera" BNEERA
+OUTER_SPRINT "bg1_eet_brasaad" BRASAAD
+END
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_ghost_knight" KNIGHT_
+OUTER_SPRINT "bg1_eet_theodon" WILLIA_
+OUTER_SPRINT "bg1_eet_dornj" DORNJ_
+OUTER_SPRINT "bg1_eet_dornp" DORNP_
+OUTER_SPRINT "bg1_eet_bneera" BNEERA_
+OUTER_SPRINT "bg1_eet_brasaad" BRASAAD_
+END
+
 LAF HANDLE_AUDIO END
 
 ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
@@ -60,16 +78,13 @@ COPY ~%MOD_FOLDER%/creatures/C0Sirene.cre~ ~override/C0Sirene.cre~
   SAY PICKED_POCKET ~~ []
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
 
-COMPILE	~%MOD_FOLDER%/Dialogue/BC0Siren.d~ 
-	~%MOD_FOLDER%/Dialogue/C0Sirene.d~ 
-	~%MOD_FOLDER%/Dialogue/C0SirenEE.d~ 
-	~%MOD_FOLDER%/Dialogue/C0SirenJ.d~
-	~%MOD_FOLDER%/Dialogue/C0SirenP.d~
+ACTION_FOR_EACH sirene_dlg IN BC0Siren C0Sirene C0SirenJ C0SirenP C0SirenEE BEGIN
+COMPILE EVALUATE_BUFFER	~%MOD_FOLDER%/Dialogue/%sirene_dlg%.d~ 
+END
 
-	~%MOD_FOLDER%/Scripts/C0DornF.baf~ 
-	~%MOD_FOLDER%/Scripts/C0Sirene.baf~
-	~%MOD_FOLDER%/Scripts/C0SirenD.baf~
-	~%MOD_FOLDER%/Scripts/C0reset.baf~
+ACTION_FOR_EACH sirene_bcs IN C0DornF C0Sirene C0SirenD C0reset BEGIN
+COMPILE EVALUATE_BUFFER	~%MOD_FOLDER%/Scripts/%sirene_bcs%.baf~ 
+END
 
 EXTEND_BOTTOM ~Dorn.bcs~ ~%MOD_FOLDER%/scripts/c0dornf.baf~
 
@@ -185,11 +200,4 @@ ACTION_IF FILE_EXISTS_IN_GAME ~x3vienb.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banters between Sirene and Skitia's Vienxay~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/vienxay.d~
-END
-
-////////////////////////////////////// Siege of Dragonspear
-ACTION_IF GAME_INCLUDES ~sod~
-THEN BEGIN
-  PRINT ~Installing content for Siege of Dragonspear...~
-INCLUDE ~%MOD_FOLDER%/lib/Sirene_sod.tpa~
 END

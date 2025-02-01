@@ -1,4 +1,4 @@
-BACKUP ~Sirene/backup~
+BACKUP ~weidu_external/backup/Sirene_BG1~
 AUTHOR ~Artemius_I~
 AUTO_TRA ~Sirene/translations/%s~
 ALWAYS
@@ -9,7 +9,23 @@ LANGUAGE ~English~
          ~%MOD_FOLDER%/translations/english/sirene.tra~
 
 BEGIN ~Sirene NPC for Baldur's Gate: Enhanced Edition~
+  REQUIRE_PREDICATE (GAME_IS ~bgee eet~) ~This component must be installed on BG:EE or EET.~
+
+ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" AR
+END
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" BG
+END
+
 INCLUDE ~%MOD_FOLDER%/lib/Sirene.tpa~
+
+ACTION_IF GAME_INCLUDES ~sod~
+THEN BEGIN
+  PRINT ~Installing content for Siege of Dragonspear...~
+INCLUDE ~%MOD_FOLDER%/lib/sirene_sod.tpa~
+END
 
 BEGIN ~BG2 Default (Isandir)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~

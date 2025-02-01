@@ -8,7 +8,7 @@ END
  
 IF ~~ p2
  SAY ~As you wish. I will return to the Song of the Morning temple for now. You'll find me there.~
-IF ~~ DO ~SetGlobal("C0SireneJoined","LOCALS",0) EscapeAreaMove("AR3400",1255,1150,2)~ EXIT
+IF ~~ DO ~SetGlobal("C0SireneJoined","LOCALS",0) EscapeAreaMove("%bg1_eet_symbol%3400",1255,1150,2)~ EXIT
 END
 
 IF ~~ p3

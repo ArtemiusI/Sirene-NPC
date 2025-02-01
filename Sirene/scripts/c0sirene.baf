@@ -283,7 +283,7 @@ END
 
 IF
     InParty(Myself)
-	AreaCheck("AR0800")
+	AreaCheck("%bg1_eet_symbol%0800")
     ReputationGT(Player1,9)
     Global("C0SireneTalksBG1BaldursGate","GLOBAL",0)
 THEN
@@ -326,7 +326,7 @@ END
 
 IF
     InParty(Myself)
-	AreaCheck("AR2608")
+	AreaCheck("%bg1_eet_symbol%2608")
     ReputationGT(Player1,9)
     Global("C0SireneTalksBG1Candlekeep","GLOBAL",0)
 THEN
@@ -395,15 +395,15 @@ IF
     Global("C0SireneTalksBG1","GLOBAL",15)
     Global("Chapter","GLOBAL",7)
     OR(9)
-    	AreaCheck("AR0100")
-    	AreaCheck("AR0200")
-    	AreaCheck("AR0300")
-    	AreaCheck("AR0600")
-    	AreaCheck("AR0700")
-    	AreaCheck("AR0800")
-    	AreaCheck("AR1100")
-    	AreaCheck("AR1200")
-    	AreaCheck("AR1300")  
+    	AreaCheck("%bg1_eet_symbol%0100")
+    	AreaCheck("%bg1_eet_symbol%0200")
+    	AreaCheck("%bg1_eet_symbol%0300")
+    	AreaCheck("%bg1_eet_symbol%0600")
+    	AreaCheck("%bg1_eet_symbol%0700")
+    	AreaCheck("%bg1_eet_symbol%0800")
+    	AreaCheck("%bg1_eet_symbol%1100")
+    	AreaCheck("%bg1_eet_symbol%1200")
+    	AreaCheck("%bg1_eet_symbol%1300")  
 THEN
   RESPONSE #100
 	IncrementGlobal("C0SireneTalksBG1","GLOBAL",1)
@@ -418,7 +418,7 @@ IF
     !StateCheck(Player1,CD_STATE_NOTVALID)
     CombatCounter(0)
     !See([ENEMY])
-	AreaCheck("AR0123")
+	AreaCheck("%bg1_eet_symbol%0123")
     ReputationGT(Player1,9)
     !Global("C0SireneTalksBG1Stopped","GLOBAL",1)
 	Global("C0SireneTalksBG1Undercity","GLOBAL",0)
@@ -437,7 +437,7 @@ IF
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	!StateCheck(Player1,CD_STATE_NOTVALID)
-	AreaCheck("AR0112")
+	AreaCheck("%bg1_eet_symbol%0112")
 	Global("C0SireneUndercellar","GLOBAL",0)
 	CombatCounter(0)
 	!See([ENEMY])
@@ -454,7 +454,7 @@ IF
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	!StateCheck(Player1,CD_STATE_NOTVALID)
-	AreaCheck("AR0112")
+	AreaCheck("%bg1_eet_symbol%0112")
 	Global("C0SireneKrystinSlythe","GLOBAL",0)
 	CombatCounter(0)
 	!See([ENEMY])
@@ -474,7 +474,7 @@ IF
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	!StateCheck(Player1,CD_STATE_NOTVALID)
-    AreaCheck("AR2000")
+    AreaCheck("%bg1_eet_symbol%2000")
 	Global("C0SireneShipwreck","GLOBAL",0)
 	CombatCounter(0)
 	!See([ENEMY])

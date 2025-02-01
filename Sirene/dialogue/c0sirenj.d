@@ -1735,7 +1735,7 @@ END
 
 // Firewine Bridge
 
-I_C_T KNIGHT 1 C0SireneKNIGHT1
+I_C_T %bg1_eet_ghost_knight% 1 C0SireneKNIGHT1
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
 ~Rest easy, tormented spirits.~
 == KNIGHT ~Aye... at last...~
@@ -2038,10 +2038,10 @@ EXIT
 
 // Candlekeep
 
-I_C_T2 WILLIA 10 C0SireneWILLIA10
+I_C_T2 %bg1_eet_theodon% 10 C0SireneWILLIA10
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN 
 ~(giggle) I would have never expected such a thing from you, my friend. Now I shall have to remember to keep my cloak close at hand, just in case.~
-== WILLIA ~(chuckles and walks away)~
+== %bg1_eet_theodon% ~(chuckles and walks away)~
 END
 
 I_C_T2 RIELTA 0 C0SireneRIELTA0

@@ -263,7 +263,7 @@ BEGIN
 END
 
 
-// Add "array" content horizontally to given table or clone given alternate entry
+// Add "%bg1_eet_symbol%ray" content horizontally to given table or clone given alternate entry
 DEFINE_ACTION_FUNCTION a7#add_kit_ex#add_row
 STR_VAR
   kit_name = ~~
@@ -360,7 +360,7 @@ BEGIN
 END
 
 
-// Add "array" content vertically to given table or clone given alternate entry
+// Add "%bg1_eet_symbol%ray" content vertically to given table or clone given alternate entry
 DEFINE_ACTION_FUNCTION a7#add_kit_ex#add_column
 STR_VAR
   kit_name = ~~
