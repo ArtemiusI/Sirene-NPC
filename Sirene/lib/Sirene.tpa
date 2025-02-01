@@ -27,7 +27,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
 INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
 END
 
-EXTEND_TOP ~AR3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
+EXTEND_TOP EVALUATE_BUFFER ~%bg1_eet_symbol%3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
 
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
