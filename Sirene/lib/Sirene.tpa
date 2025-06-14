@@ -3,7 +3,7 @@ COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneM.bmp~
 COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
 //AUDIO
 
-ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+ACTION_IF NOT GAME_IS ~EET~ THEN BEGIN
 OUTER_SPRINT "bg1_eet_ghost_knight" KNIGHT
 OUTER_SPRINT "bg1_eet_theodon" WILLIA
 OUTER_SPRINT "bg1_eet_dornj" DORNJ
