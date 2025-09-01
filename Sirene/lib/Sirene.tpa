@@ -4,21 +4,13 @@ COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
 //AUDIO
 
 ACTION_IF NOT GAME_IS ~EET~ THEN BEGIN
-OUTER_SPRINT "bg1_eet_ghost_knight" KNIGHT
-OUTER_SPRINT "bg1_eet_theodon" WILLIA
-OUTER_SPRINT "bg1_eet_dornj" DORNJ
-OUTER_SPRINT "bg1_eet_dornp" DORNP
-OUTER_SPRINT "bg1_eet_bneera" BNEERA
-OUTER_SPRINT "bg1_eet_brasaad" BRASAAD
+OUTER_SPRINT "BG1_EET_" ""
+OUTER_SPRINT "BG1_EET_IMOEN" ""
 END
 
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
-OUTER_SPRINT "bg1_eet_ghost_knight" KNIGHT_
-OUTER_SPRINT "bg1_eet_theodon" WILLIA_
-OUTER_SPRINT "bg1_eet_dornj" DORNJ_
-OUTER_SPRINT "bg1_eet_dornp" DORNP_
-OUTER_SPRINT "bg1_eet_bneera" BNEERA_
-OUTER_SPRINT "bg1_eet_brasaad" BRASAAD_
+OUTER_SPRINT "BG1_EET_" "_"
+OUTER_SPRINT "BG1_EET_IMOEN" "2"
 END
 
 LAF HANDLE_AUDIO END
@@ -27,13 +19,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
 INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
 END
 
-ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
-EXTEND_TOP ~AR3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
-END
-
-ACTION_IF GAME_IS ~EET~ THEN BEGIN
-EXTEND_TOP ~BG3400.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
-END
+EXTEND_TOP ~%Temple%.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
 
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
@@ -92,7 +78,7 @@ ACTION_FOR_EACH sirene_bcs IN C0DornF C0Sirene C0SirenD C0reset BEGIN
 COMPILE EVALUATE_BUFFER	~%MOD_FOLDER%/Scripts/%sirene_bcs%.baf~ 
 END
 
-EXTEND_BOTTOM ~Dorn.bcs~ ~%MOD_FOLDER%/scripts/c0dornf.baf~
+EXTEND_BOTTOM ~DORN_.bcs~ ~%MOD_FOLDER%/scripts/c0dornf.baf~
 
 ACTION_FOR_EACH baldur_script IN baldur bdbaldur baldur25 BEGIN
 ACTION_IF FILE_EXISTS_IN_GAME ~%baldur_script%.bcs~ BEGIN

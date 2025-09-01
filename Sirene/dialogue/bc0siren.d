@@ -244,11 +244,11 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 AreaType([FOREST])
-Global("C0SireneEdwin1_BG1","GLOBAL",0)~ THEN BEDWIN C0SireneEdwin1
+Global("C0SireneEdwin1_BG1","GLOBAL",0)~ THEN BEDWIN%BG1_EET_% C0SireneEdwin1
 ~Tell me, fiendling, is it true that those of your kin have the innate capacity for magic?~
 DO ~SetGlobal("C0SireneEdwin1_BG1","GLOBAL",1)~
 == BC0SIREN ~Perhaps. I do not know. I have never met another of my kind, nor have I pursued magic myself.~
-== BEDWIN ~A waste of potential talent. To discard what was gifted to you by blood to pursue the role of a pious, obsequious fanatic swinging an oversized hunk of steel. (This one is the most idiotic of them all, without a doubt.)~
+== BEDWIN%BG1_EET_% ~A waste of potential talent. To discard what was gifted to you by blood to pursue the role of a pious, obsequious fanatic swinging an oversized hunk of steel. (This one is the most idiotic of them all, without a doubt.)~
 == BC0SIREN ~I look upon you, Edwin, and I thank the gods that I never ended up as a mage.~
 EXIT
 
@@ -353,11 +353,11 @@ EXIT
 
 // Imoen
 
-CHAIN IF ~InParty("Imoen")
-See("Imoen")
+CHAIN IF ~InParty("IMOEN2")
+See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
-!StateCheck("Imoen",CD_STATE_NOTVALID)
+!StateCheck("IMOEN2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
@@ -373,11 +373,11 @@ DO ~SetGlobal("C0SireneImoen1_BG1","GLOBAL",1)~
 = ~D'ya know how much it hurts to get caught by one of 'em? Yowch. (shudder)~
 EXIT
 
-CHAIN IF ~InParty("Imoen")
-See("Imoen")
+CHAIN IF ~InParty("IMOEN2")
+See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
-!StateCheck("Imoen",CD_STATE_NOTVALID)
+!StateCheck("IMOEN2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
@@ -390,15 +390,15 @@ DO ~SetGlobal("C0SireneImoen2_BG1","GLOBAL",1)~
 == BC0SIREN ~I suppose you are right about that. In that case, keep it up.~
 EXIT
 
-CHAIN IF ~InParty("Imoen")
-See("Imoen")
+CHAIN IF ~InParty("IMOEN2")
+See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
-!StateCheck("Imoen",CD_STATE_NOTVALID)
+!StateCheck("IMOEN2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-Class("imoen",MAGE_ALL)
+Class("IMOEN2",MAGE_ALL)
 Global("C0SireneImoen3_BG1","GLOBAL",0)~ THEN BC0SIREN C0SireneImoen3
 ~A mage-in-training, are you now? I must admit, 'tis an improvement, though I cannot say by how much.~
 DO ~SetGlobal("C0SireneImoen3_BG1","GLOBAL",1)~
@@ -630,15 +630,15 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-Global("C0SireneMinsc1_BG1","GLOBAL",0)~ THEN BMINSC C0SireneMinsc1
+Global("C0SireneMinsc1_BG1","GLOBAL",0)~ THEN BMINSC%BG1_EET_% C0SireneMinsc1
 ~Eh, little lady Sirene, Boo has a question for you...~
 DO ~SetGlobal("C0SireneMinsc1_BG1","GLOBAL",1)~
 == BC0SIREN ~Your hamster wishes to ask me something? Minsc, if you've got something to say, say it.~
-== BMINSC ~No, Minsc has nothing to ask of the strange lady with horns! Well, maybe he does, but Boo thought of the question first! Minsc is simply the messenger.~
+== BMINSC%BG1_EET_% ~No, Minsc has nothing to ask of the strange lady with horns! Well, maybe he does, but Boo thought of the question first! Minsc is simply the messenger.~
 == BC0SIREN ~You are a strange person, Minsc. Speak up.~
-== BMINSC ~Boo asked Minsc this question, but Minsc had no answer. How does the little lady wield a sword big enough for Minsc? Minsc tells Boo that perhaps our friend is stronger than she looks, but surely she can not be stronger than Minsc!~
+== BMINSC%BG1_EET_% ~Boo asked Minsc this question, but Minsc had no answer. How does the little lady wield a sword big enough for Minsc? Minsc tells Boo that perhaps our friend is stronger than she looks, but surely she can not be stronger than Minsc!~
 == BC0SIREN ~It's not in the weight of the sword, Minsc, but in the way you use it.~
-== BMINSC ~Aha! Wise advice, my friend. Minsc and Boo will think hard on your words and focus on the way in which we swing our sword towards the heads of evil!~
+== BMINSC%BG1_EET_% ~Aha! Wise advice, my friend. Minsc and Boo will think hard on your words and focus on the way in which we swing our sword towards the heads of evil!~
 EXIT
 
 CHAIN IF ~InParty("Minsc")
@@ -649,20 +649,20 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-Global("C0SireneMinsc2_BG1","GLOBAL",0)~ THEN BMINSC C0SireneMinsc2
+Global("C0SireneMinsc2_BG1","GLOBAL",0)~ THEN BMINSC%BG1_EET_% C0SireneMinsc2
 ~Sirene, Boo tells Minsc that you are a pal... pala... pally-din. Is that right?~
 DO ~SetGlobal("C0SireneMinsc2_BG1","GLOBAL",1)~
 == BC0SIREN ~A paladin, Minsc. Yes, I am. Is that strange to you?~
-== BMINSC ~No, not at all! Minsc thinks that it is a good thing for others to live their life putting their boots to the backside of evil, whether they be men of all shapes and sizes or ladies with horns and funny eyes.~
+== BMINSC%BG1_EET_% ~No, not at all! Minsc thinks that it is a good thing for others to live their life putting their boots to the backside of evil, whether they be men of all shapes and sizes or ladies with horns and funny eyes.~
 = ~Minsc has just had a thought in his head that he has been thinking over for many hours now, but believes only a paladin can answer.~
 == BC0SIREN ~Well, what is it?~
-== BMINSC ~Minsc's question is: "What is justice?"~
+== BMINSC%BG1_EET_% ~Minsc's question is: "What is justice?"~
 == BC0SIREN ~Justice? Minsc, you have brought up the word many times in the past. How can it be that you do not know what it means?~
-== BMINSC ~This is Minsc's trouble, my friend! Long have Minsc and Boo upheld justice, yet not once have we stopped to consider what it means.~
+== BMINSC%BG1_EET_% ~This is Minsc's trouble, my friend! Long have Minsc and Boo upheld justice, yet not once have we stopped to consider what it means.~
 == BC0SIREN ~I don't think I can give you the right answer for that, Minsc. It's something you have to find out for yourself.~
-== BMINSC ~Dynaheir has told Minsc the same words. Dynaheir is wise, but she is no paladin. Sirene is wise too, and Minsc believed that she had advice for us.~
+== BMINSC%BG1_EET_% ~Dynaheir has told Minsc the same words. Dynaheir is wise, but she is no paladin. Sirene is wise too, and Minsc believed that she had advice for us.~
 == BC0SIREN ~I'm not wise, Minsc. Justice is... something I'm not sure of myself. I'm no Tyrran, but I've lived my life giving others the treatment they deserve. Where there is wrongs committed, I attempt to turn things right with what power I have. Perhaps that is justice?~
-== BMINSC ~Then it is what Minsc and Boo have worked together to do for many years already! Thank you, my friend. Minsc is satisfied.~
+== BMINSC%BG1_EET_% ~Then it is what Minsc and Boo have worked together to do for many years already! Thank you, my friend. Minsc is satisfied.~
 EXIT
 
 // Montaron

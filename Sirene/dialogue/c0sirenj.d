@@ -219,7 +219,7 @@ END
 IF ~~ t3.6
  SAY ~Then we are two of a kind in that respect... though at least you had a figure that you could call father. I was not so fortunate.~
  = ~What about friends? There were many fellow wards at my temple. Were there other children within Candlekeep?~
-    + ~InParty("Imoen")~ + ~There's Imoen.~ + t3.7
+    + ~InParty("IMOEN%BG1_EET_IMOEN%")~ + ~There's Imoen.~ + t3.7
 	++ ~I had a few childhood friends in Candlekeep.~ + t3.7
 	++ ~I was always more fond of the adults than the other kids.~ + t3.7
 	++ ~There were, but we were not close. I was something of a loner.~ + t3.7
@@ -1673,10 +1673,10 @@ END
 
 // Joseph's wife
 
-I_C_T FTOWN2 8 C0SireneFTOWN2
+I_C_T FTOWN2%BG1_EET_% 8 C0SireneFTOWN2
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN 
 ~I am sorry we could not do more. May Ilmater bless his soul in the afterlife, and yours as well.~
-== FTOWN2 ~Aye, we will need his blessing indeed...~
+== FTOWN2%BG1_EET_% ~Aye, we will need his blessing indeed...~
 END
 
 // Brage
@@ -1735,10 +1735,10 @@ END
 
 // Firewine Bridge
 
-I_C_T %bg1_eet_ghost_knight% 1 C0SireneKNIGHT1
+I_C_T KNIGHT%BG1_EET_% 1 C0SireneKNIGHT1
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
 ~Rest easy, tormented spirits.~
-== KNIGHT ~Aye... at last...~
+== KNIGHT%BG1_EET_% ~Aye... at last...~
 END
 
 I_C_T OGRMA3 0 C0SireneOGRMA3
@@ -2038,10 +2038,10 @@ EXIT
 
 // Candlekeep
 
-I_C_T2 %bg1_eet_theodon% 10 C0SireneWILLIA10
+I_C_T2 WILLIA%BG1_EET_% 10 C0SireneWILLIA10
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN 
 ~(giggle) I would have never expected such a thing from you, my friend. Now I shall have to remember to keep my cloak close at hand, just in case.~
-== %bg1_eet_theodon% ~(chuckles and walks away)~
+== WILLIA%BG1_EET_% ~(chuckles and walks away)~
 END
 
 I_C_T2 RIELTA 0 C0SireneRIELTA0
@@ -2076,7 +2076,7 @@ END
 
 // Neb
 
-I_C_T NEB 2 C0SireneNeb
+I_C_T NEB%BG1_EET_% 2 C0SireneNeb
 == C0SIRENJ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN 
 ~A child-killer... were it not a breach of protocol, I would bring this foul creature to judgment right now.~
 END

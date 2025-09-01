@@ -12,10 +12,12 @@ BEGIN ~Sirene NPC for Baldur's Gate: Enhanced Edition~
   REQUIRE_PREDICATE (GAME_IS ~bgee eet~) ~This component must be installed on BG:EE or EET.~
 
 ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+INCLUDE ~%MOD_FOLDER%/lib/liam_bgee_vars.tpa~
 OUTER_SPRINT "bg1_eet_symbol" AR
 END
 
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
+INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 OUTER_SPRINT "bg1_eet_symbol" BG
 END
 
