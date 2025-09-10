@@ -1,6 +1,7 @@
 // PC talk 6
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     !StateCheck(Myself,CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)

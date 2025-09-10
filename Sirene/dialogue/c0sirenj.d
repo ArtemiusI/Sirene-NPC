@@ -2237,7 +2237,7 @@ END
 
 APPEND C0SIRENJ
 
-IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])~ THEN BEGIN pid
+IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) %BGT_VAR%~ THEN BEGIN pid
  SAY ~You have need of me?~ [C0SIR011]
 	+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~(Flirt)~ + flirtmenu
 	+ ~HPPercentGT(Myself,74) RandomNum(4,1)~ + ~How are you?~ + a1

@@ -1,7 +1,9 @@
 BEGIN BC0SIREN
 
 // Ajantis
-CHAIN IF ~InParty("Ajantis")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Ajantis")
 See("Ajantis")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -22,7 +24,9 @@ DO ~SetGlobal("C0SireneAjantis1","GLOBAL",1)~
 = ~Aye, perhaps that will resolve this conflict within my mind. Let us speak no more of this for now, then, and move on.~
 EXIT
 
-CHAIN IF ~InParty("Ajantis")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Ajantis")
 See("Ajantis")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -49,7 +53,9 @@ DO ~SetGlobal("C0SireneAjantis2","GLOBAL",1)~
 == BC0SIREN ~I know. (sigh) 'Tis one thing to be turned away by the common man, another to be given the same treatment by a brother-in-arms. 'Tis the suffering I am forced to endure.~
 EXIT
 
-CHAIN IF ~InParty("Ajantis")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Ajantis")
 See("Ajantis")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -70,7 +76,9 @@ EXIT
 
 // Alora
 
-CHAIN IF ~InParty("Alora")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Alora")
 See("Alora")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -92,7 +100,9 @@ DO ~SetGlobal("C0SireneAlora1","GLOBAL",1)~
 == BC0SIREN ~You are so sweet, dear.~
 EXIT
 
-CHAIN IF ~InParty("Alora")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Alora")
 See("Alora")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -115,7 +125,9 @@ EXIT
 
 // Branwen
 
-CHAIN IF ~InParty("Branwen")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Branwen")
 See("Branwen")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -138,7 +150,9 @@ EXIT
 
 // Coran
 
-CHAIN IF ~InParty("Coran")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Coran")
 See("Coran")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -162,7 +176,9 @@ DO ~SetGlobal("C0SireneCoran1","GLOBAL",1)~
 == BC0SIREN ~(laughs) No, really, stop. You're a bad influence on me.~
 EXIT
 
-CHAIN IF ~InParty("Coran")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Coran")
 See("Coran")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -191,7 +207,9 @@ EXIT
 
 // Dynaheir
 
-CHAIN IF ~InParty("Dynaheir")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Dynaheir")
 See("Dynaheir")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -210,7 +228,9 @@ DO ~SetGlobal("C0SireneDynaheir1","GLOBAL",1)~
 == BC0SIREN ~You are too kind and modest, milady. I dare not think of myself as you do.~
 EXIT
 
-CHAIN IF ~InParty("Dynaheir")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Dynaheir")
 See("Dynaheir")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -235,7 +255,9 @@ EXIT
 
 // Edwin
 
-CHAIN IF ~InParty("Edwin")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Edwin")
 See("Edwin")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -254,7 +276,9 @@ EXIT
 
 // Eldoth
 
-CHAIN IF ~InParty("Eldoth")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Eldoth")
 !InParty("Skie")
 See("Eldoth")
 InParty("C0Sirene")
@@ -279,7 +303,9 @@ EXIT
 
 // Faldorn
 
-CHAIN IF ~InParty("Faldorn")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Faldorn")
 See("Faldorn")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -303,7 +329,9 @@ EXIT
 
 // Garrick
 
-CHAIN IF ~InParty("Garrick")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Garrick")
 See("Garrick")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -327,7 +355,9 @@ DO ~SetGlobal("C0SireneGarrick1","GLOBAL",1)~
 = ~As long as you don't call me 'lady' in your song.~
 EXIT
 
-CHAIN IF ~InParty("Garrick")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Garrick")
 See("Garrick")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -353,7 +383,9 @@ EXIT
 
 // Imoen
 
-CHAIN IF ~InParty("IMOEN2")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("IMOEN2")
 See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -373,7 +405,9 @@ DO ~SetGlobal("C0SireneImoen1_BG1","GLOBAL",1)~
 = ~D'ya know how much it hurts to get caught by one of 'em? Yowch. (shudder)~
 EXIT
 
-CHAIN IF ~InParty("IMOEN2")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("IMOEN2")
 See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -390,7 +424,9 @@ DO ~SetGlobal("C0SireneImoen2_BG1","GLOBAL",1)~
 == BC0SIREN ~I suppose you are right about that. In that case, keep it up.~
 EXIT
 
-CHAIN IF ~InParty("IMOEN2")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("IMOEN2")
 See("IMOEN2")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -404,20 +440,36 @@ Global("C0SireneImoen3_BG1","GLOBAL",0)~ THEN BC0SIREN C0SireneImoen3
 DO ~SetGlobal("C0SireneImoen3_BG1","GLOBAL",1)~
 == BIMOEN ~Yup. I'll miss the thievin', but this is even more fun!~
 == BC0SIREN ~Be careful, though. You are not getting formal training, are you?~
-== BIMOEN IF ~Class(Player1,MAGE_ALL)~ THEN ~Well, <CHARNAME> taught me some things that Gorion taught <PRO_HIMHER> in Candlekeep. It's not that hard, ya know.~
-== BIMOEN IF ~InParty("Dynaheir") !Class(Player1,MAGE_ALL)~ THEN ~Well, Dynaheir taught me a few things, but she's so strict, so I decided to carry on by myself.~
-== BIMOEN IF ~InParty("Xan") !InParty("Dynaheir")~ THEN ~Well, I tried bugging Xan for some, but he just gave me one of his funny looks and walked away. Jerk.~
-== BIMOEN IF ~InParty("Neera") !InParty("Dynaheir") !InParty("Xan")~ THEN ~I'd ask Neera, but I dunno if she knows any more about how magic works than I do. You know, with the wild magic and all.~
-== BIMOEN IF ~InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~Well, I tried bugging Edwin for some, but, well, he's Edwin.~
-== BIMOEN IF ~InParty("Xzar") !InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~I'd ask Xzar, but he's, well, you know...~
-== BIMOEN IF ~!Class(Player1,MAGE_ALL) !InParty("Xzar") !InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~Well, no, but what damage can a novice mage like myself cause, anyway?~
+== BIMOEN IF ~
+  %BGT_VAR%
+Class(Player1,MAGE_ALL)~ THEN ~Well, <CHARNAME> taught me some things that Gorion taught <PRO_HIMHER> in Candlekeep. It's not that hard, ya know.~
+== BIMOEN IF ~
+  %BGT_VAR%
+InParty("Dynaheir") !Class(Player1,MAGE_ALL)~ THEN ~Well, Dynaheir taught me a few things, but she's so strict, so I decided to carry on by myself.~
+== BIMOEN IF ~
+  %BGT_VAR%
+InParty("Xan") !InParty("Dynaheir")~ THEN ~Well, I tried bugging Xan for some, but he just gave me one of his funny looks and walked away. Jerk.~
+== BIMOEN IF ~
+  %BGT_VAR%
+InParty("Neera") !InParty("Dynaheir") !InParty("Xan")~ THEN ~I'd ask Neera, but I dunno if she knows any more about how magic works than I do. You know, with the wild magic and all.~
+== BIMOEN IF ~
+  %BGT_VAR%
+InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~Well, I tried bugging Edwin for some, but, well, he's Edwin.~
+== BIMOEN IF ~
+  %BGT_VAR%
+InParty("Xzar") !InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~I'd ask Xzar, but he's, well, you know...~
+== BIMOEN IF ~
+  %BGT_VAR%
+!Class(Player1,MAGE_ALL) !InParty("Xzar") !InParty("Edwin") !InParty("Dynaheir") !InParty("Neera") !InParty("Xan")~ THEN ~Well, no, but what damage can a novice mage like myself cause, anyway?~
 == BC0SIREN ~Hmm. Well, take care regardless, Imoen. I trust you will be at least somewhat more responsible with magic than you are with lockpicks, though I should know better.~
 == BIMOEN ~Hey!~
 EXIT
 
 // Jaheira
 
-CHAIN IF ~InParty("Jaheira")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Jaheira")
 See("Jaheira")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -436,7 +488,9 @@ DO ~SetGlobal("C0SIRENEJaheira1_BG1","GLOBAL",1)~
 == BJAHEI ~Hmph. As you wish, but if you come to me later complaining that the ache has gotten worse, I shall remind you of this conversation.~
 EXIT
 
-CHAIN IF ~InParty("Jaheira")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Jaheira")
 See("Jaheira")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -457,7 +511,9 @@ DO ~SetGlobal("C0SIRENEJaheira2_BG1","GLOBAL",1)~
 == BC0SIREN ~That is a good point... I shall remember that.~
 EXIT
 
-CHAIN IF ~InParty("Jaheira")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Jaheira")
 See("Jaheira")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -486,7 +542,9 @@ EXIT
 
 // Kagain
 
-CHAIN IF ~InParty("Kagain")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Kagain")
 See("Kagain")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -507,7 +565,9 @@ EXIT
 
 // Khalid
 
-CHAIN IF ~InParty("Khalid")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Khalid")
 See("Khalid")
 InParty("Jaheira")
 InParty("C0Sirene")
@@ -531,7 +591,9 @@ DO ~SetGlobal("C0SireneKhalid1","GLOBAL",1)~
 == BC0SIREN ~Then... you are a lucky man, Khalid.~
 EXIT
 
-CHAIN IF ~InParty("Khalid")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Khalid")
 See("Khalid")
 InParty("Jaheira")
 InParty("C0Sirene")
@@ -554,7 +616,9 @@ EXIT
 
 // Kivan
 
-CHAIN IF ~InParty("Kivan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Kivan")
 See("Kivan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -574,7 +638,9 @@ DO ~SetGlobal("C0SireneKivan1","GLOBAL",1)~
 == BKIVAN ~It is not a matter of what I allow, but nothing can help soothe the ache in my heart save death.~
 EXIT
 
-CHAIN IF ~InParty("Kivan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Kivan")
 See("Kivan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -593,7 +659,9 @@ DO ~SetGlobal("C0SireneKivan1","GLOBAL",2)~
 == BKIVAN ~Very well... later, when we make camp.~
 EXIT
 
-CHAIN IF ~InParty("Kivan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Kivan")
 See("Kivan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -605,7 +673,9 @@ HPPercentLT("Kivan",25)
 Global("C0SireneKivan3","GLOBAL",0)~ THEN BKIVAN C0SireneKivan3
 ~(groan) Is my time about to come to an end? Deheriana, my love, I will see you soon...~
 DO ~SetGlobal("C0SireneKivan3","GLOBAL",1)~
-= IF ~Dead("Tazok")~ THEN ~No! I am not worthy of seeing you once more, Deheriana, until Tazok is dead at my feet!~
+= IF ~
+  %BGT_VAR%
+Dead("Tazok")~ THEN ~No! I am not worthy of seeing you once more, Deheriana, until Tazok is dead at my feet!~
 == BC0SIREN ~Remain still, my friend. You will not fall, not if I have anything to say.~
 == BKIVAN ~(cough)~
 == BC0SIREN ~There. Tell me if you can feel your limbs.~
@@ -622,7 +692,9 @@ EXIT
 
 // Minsc
 
-CHAIN IF ~InParty("Minsc")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Minsc")
 See("Minsc")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -641,7 +713,9 @@ DO ~SetGlobal("C0SireneMinsc1_BG1","GLOBAL",1)~
 == BMINSC%BG1_EET_% ~Aha! Wise advice, my friend. Minsc and Boo will think hard on your words and focus on the way in which we swing our sword towards the heads of evil!~
 EXIT
 
-CHAIN IF ~InParty("Minsc")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Minsc")
 See("Minsc")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -667,7 +741,9 @@ EXIT
 
 // Montaron
 
-CHAIN IF ~InParty("Montaron")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Montaron")
 See("Montaron")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -683,7 +759,9 @@ DO ~SetGlobal("C0SireneMontaron1","GLOBAL",1)~
 == BMONTA ~Nae, I ne'er think o' the future, exceptin' fer when I plan me next victim, heh heh.~
 EXIT
 
-CHAIN IF ~InParty("Montaron")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Montaron")
 See("Montaron")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -703,7 +781,9 @@ EXIT
 
 // Quayle
 
-CHAIN IF ~InParty("Quayle")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Quayle")
 See("Quayle")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -725,7 +805,9 @@ EXIT
 
 // Safana
 
-CHAIN IF ~InParty("Safana")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Safana")
 See("Safana")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -748,7 +830,9 @@ EXIT
 
 // Shar-Teel
 
-CHAIN IF ~InParty("Sharteel")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Sharteel")
 See("Sharteel")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -768,7 +852,9 @@ EXIT
 
 // Skie
 
-CHAIN IF ~InParty("Skie")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Skie")
 See("Skie")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -788,7 +874,9 @@ DO ~SetGlobal("C0SireneSkie1","GLOBAL",1)~
 == BC0SIREN ~I will know it when I see it, Skie. Do not try and overcompensate, either.~
 EXIT
 
-CHAIN IF ~InParty("Skie")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Skie")
 InParty("Eldoth")
 See("Skie")
 InParty("C0Sirene")
@@ -817,7 +905,9 @@ EXIT
 
 // Tiax
 
-CHAIN IF ~InParty("Tiax")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Tiax")
 See("Tiax")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -839,7 +929,9 @@ EXIT
 
 // Viconia
 
-CHAIN IF ~InParty("Viconia")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Viconia")
 See("Viconia")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -857,7 +949,9 @@ DO ~SetGlobal("C0SireneViconia1BG1","GLOBAL",1)~
 == BC0SIREN ~Do not think me incapable. I have mercy and patience both, but you are running them thin.~
 EXIT
 
-CHAIN IF ~InParty("Viconia")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Viconia")
 See("Viconia")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -879,7 +973,9 @@ EXIT
 
 // Xan
 
-CHAIN IF ~InParty("Xan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Xan")
 See("Xan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -901,7 +997,9 @@ DO ~SetGlobal("C0SireneXan1","GLOBAL",1)~
 == BXANNN ~(sigh) As you wish, I will not force the issue.~
 EXIT
 
-CHAIN IF ~InParty("Xan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Xan")
 See("Xan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -922,7 +1020,9 @@ DO ~SetGlobal("C0SireneXan1","GLOBAL",2)~
 == BXANNN ~(sigh)~
 EXIT
 
-CHAIN IF ~InParty("Xan")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Xan")
 See("Xan")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -945,7 +1045,9 @@ EXIT
 
 // Xzar 
 
-CHAIN IF ~InParty("Xzar")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("Xzar")
 See("Xzar")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -965,7 +1067,9 @@ EXIT
 
 // Yeslick
 
-CHAIN IF ~InParty("C0Sirene")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("C0Sirene")
 See("C0Sirene")
 InParty("C0Sirene")
 See("C0Sirene")
@@ -982,7 +1086,9 @@ DO ~SetGlobal("C0SireneYeslick1","GLOBAL",1)~
 == BYESLI ~Fair enough, but I've got me eye on ye.~
 EXIT
 
-CHAIN IF ~InParty("C0Sirene")
+CHAIN IF ~
+  %BGT_VAR%
+InParty("C0Sirene")
 See("C0Sirene")
 InParty("C0Sirene")
 See("C0Sirene")

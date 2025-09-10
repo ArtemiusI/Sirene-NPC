@@ -1,6 +1,7 @@
 // BLOCKING UNAPPROVED "CROSSMOD"
 
 IF
+  %BGT_VAR%
 !Global("SanC0SirB","Global",999) 
 THEN
 RESPONSE #100
@@ -10,6 +11,7 @@ END
 // EXPERIENCE
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPGT(Player1,31999)
@@ -23,6 +25,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPGT(Player1,15999)
@@ -36,6 +39,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPGT(Player1,7999)
@@ -49,6 +53,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPGT(Player1,3999)
@@ -62,6 +67,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPGT(Player1,1999)
@@ -75,6 +81,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
   XPLT(Player1,1000)
@@ -88,6 +95,7 @@ END
 // FRIENDSHIP
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     Dead("mulahey")
     ReputationGT(Player1,9)
@@ -100,6 +108,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	CheckStatGT(Player1,11,CHR)
 	Global("C0SireneMatch","GLOBAL",0)
@@ -109,6 +118,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     !ReputationGT(Player1,9)
 	Global("C0SireneMatch","GLOBAL",1)
@@ -118,6 +128,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     ReputationGT(Player1,9)
 	Global("C0SireneMatch","GLOBAL",2)
@@ -127,6 +138,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -149,6 +161,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -173,6 +186,7 @@ END
 // Talk 5, must be wounded
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -192,6 +206,7 @@ END
 // Chapter 4
 
 IF
+  %BGT_VAR%
     InParty(Myself)
 	GlobalGT("Chapter","GLOBAL",3)
     AreaType([OUTDOOR])
@@ -206,6 +221,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -221,6 +237,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -237,6 +254,7 @@ END
 // Chapter 5
 
 IF
+  %BGT_VAR%
     InParty(Myself)
 	GlobalGT("Chapter","GLOBAL",4)
     AreaType([OUTDOOR])
@@ -250,6 +268,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -265,6 +284,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -282,6 +302,7 @@ END
 // 10. Baldur's Gate
 
 IF
+  %BGT_VAR%
     InParty(Myself)
 	AreaCheck("%bg1_eet_symbol%0800")
     ReputationGT(Player1,9)
@@ -293,6 +314,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -308,6 +330,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -325,6 +348,7 @@ END
 // 11. Entering Candlekeep
 
 IF
+  %BGT_VAR%
     InParty(Myself)
 	AreaCheck("%bg1_eet_symbol%2608")
     ReputationGT(Player1,9)
@@ -336,6 +360,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -354,6 +379,7 @@ END
 // 12. Gorion's Letter
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     PartyHasItem("SCRL2J")
 	ReputationGT(Player1,9)
@@ -365,6 +391,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -383,6 +410,7 @@ END
 // 13. Post Candlekeep
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -412,6 +440,7 @@ END
 // 14. Undercity
 
 IF
+  %BGT_VAR%
     InParty(Myself)
     See(Player1)
     !StateCheck(Myself,CD_STATE_NOTVALID)
@@ -433,6 +462,7 @@ END
 // Undercellar
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -450,6 +480,7 @@ END
 // Krystin & Slythe
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -470,6 +501,7 @@ END
 // Balduran's isle
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -488,6 +520,7 @@ END
 // Delainy/Durlyle
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -507,6 +540,7 @@ END
 // Killed Death Knight
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -526,6 +560,7 @@ END
 // Killed Aec'letec
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
 	InMyArea(Player1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
@@ -545,6 +580,7 @@ END
 // low rep
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     !ReputationGT(Player1,9)
 	Global("C0SireneLowRep","GLOBAL",0)
@@ -554,6 +590,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     !ReputationGT(Player1,5)
 	Global("C0SireneRepBreak","GLOBAL",0)
@@ -563,6 +600,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     !ReputationGT(Player1,9)
 	Global("C0SireneLowRep","GLOBAL",1)
@@ -572,6 +610,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	InParty(Myself)
     !ReputationGT(Player1,5)
 	Global("C0SireneRepBreak","GLOBAL",1)
@@ -583,6 +622,7 @@ END
 // Dorn conflict
 
 IF
+  %BGT_VAR%
     InParty("C0Sirene")
     InParty("Dorn")
     Global("C0SireneDorn","GLOBAL",0)
@@ -593,6 +633,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty("C0Sirene")
     InParty("Dorn")
     See(Player1)
@@ -611,6 +652,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
     InParty("C0Sirene")
     InParty("Dorn")
     See(Player1)
@@ -628,6 +670,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	!Dead("C0Sirene")
 	!Dead("C0Dorn")
 	Global("C0SireneDornConflict","GLOBAL",1)
@@ -639,6 +682,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
   Global("C0SireneDornConflict","GLOBAL",1)
   HaveSpell(PALADIN_LAY_ON_HANDS)
   HPPercentLT(Myself,50)
@@ -648,6 +692,7 @@ THEN
 END
 
 IF
+  %BGT_VAR%
 	Dead("Dorn")
 	Global("C0SireneDornConflict","GLOBAL",1)
 THEN
