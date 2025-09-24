@@ -88,6 +88,18 @@ END
 
 EXTEND_TOP ~BDINTRO.bcs~ ~%MOD_FOLDER%/scripts/BDINTRO.baf~
 
+ACTION_IF GAME_IS ~EET~ BEGIN
+
+APPEND ~bgdialog.2da~
+~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
+UNLESS ~C0Sirene~
+
+APPEND ~bgbanter.2da~
+~C0Sirene       BC0Siren C0SirenEE~
+UNLESS ~C0Sirene~
+  
+END ELSE BEGIN
+
 APPEND ~pdialog.2da~
 ~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
 UNLESS ~C0Sirene~
@@ -96,6 +108,8 @@ APPEND ~interdia.2da~
 ~C0Sirene       BC0Siren C0SirenEE~
 UNLESS ~C0Sirene~
   
+END
+
 COPY ~%MOD_FOLDER%/items/C0sw2h.BAM~ ~override~
 COPY ~%MOD_FOLDER%/items/C0csw2h.BAM~ ~override~
 COPY ~%MOD_FOLDER%/Items/C0SW2H.itm~ ~override/C0SW2H.itm~

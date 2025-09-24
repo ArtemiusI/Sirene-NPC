@@ -79,13 +79,10 @@ EXTEND_TOP ~bd4601.bcs~ ~%MOD_FOLDER%/scripts/bd4601.baf~
 EXTEND_TOP ~bd0104.bcs~ ~%MOD_FOLDER%/scripts/bd0104.baf~
 EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/bdcut58.baf~
 
-APPEND ~pdialog.2da~ ~C0Sirene C02SireP C02SireJ~
-  UNLESS ~C0Sirene~
-  
 APPEND ~bddialog.2da~ ~C0Sirene C02SireP C02SireJ~
   UNLESS ~C0Sirene~
 
-APPEND ~interdia.2da~ ~C0Sirene C02SireB~
+APPEND ~bdbanter.2da~ ~C0Sirene C02SireB~
   UNLESS ~C0Sirene~
 	
 COPY ~%MOD_FOLDER%/items/c02amul.BAM~ ~override~
