@@ -82,8 +82,11 @@ EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/bdcut58.baf~
 APPEND ~bddialog.2da~ ~C0Sirene C02SireP C02SireJ~
   UNLESS ~C0Sirene~
 
+ACTION_IF FILE_EXISTS_IN_GAME ~bdbanter.2da~ THEN BEGIN
 APPEND ~bdbanter.2da~ ~C0Sirene C02SireB~
   UNLESS ~C0Sirene~
+
+END
 	
 COPY ~%MOD_FOLDER%/items/c02amul.BAM~ ~override~
 COPY ~%MOD_FOLDER%/items/c02amul.eff~ ~override~
